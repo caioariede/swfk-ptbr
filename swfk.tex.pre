@@ -13,6 +13,7 @@
 \usepackage[absolute]{textpos}
 \usepackage{wrapfig}
 \usepackage{eso-pic}
+\usepackage[utf8]{inputenc}
 
 \parindent 1cm
 \parskip 0.2cm
