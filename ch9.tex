@@ -15,7 +15,7 @@ All these kinds of graphic displays have one thing in common---the need to draw 
 Three-dimensional graphics is done in a considerably different manner to two-dimensional graphics, but still, the basic idea is the same.  By the time your turtle has finished drawing even a small portion of the picture it would be time to turn the page and start drawing the next one$\ldots$
 
 \begin{center}
-\includegraphics*[width=100mm]{turtle1.eps}
+\includegraphics*[width=100mm]{eps/turtle1.eps}
 \end{center}
 
 \section{Quick Draw}
@@ -27,7 +27,7 @@ Python has a number of different ways to do graphics as well (including turtle, 
 Luckily, there is a module, which comes with Python, that we can use to do basic graphics (at a slightly faster speed than a turtle).  Perhaps even fast enough to be called the Quick Draw Turtle.
 
 \begin{center}
-\includegraphics*[width=100mm]{turtle2.eps}
+\includegraphics*[width=100mm]{eps/turtle2.eps}
 \end{center}
 
 The module is called \code{tkinter}\index{modules!tkinter} (a strange name, which stands for `Tk interface') and it can be used to create full applications (you could even create a simple Word Processor program if you wanted to) as well as simple drawing. We could create a simple application with a button using the following code:
@@ -59,7 +59,7 @@ In this case, it's better to say exactly which is which, for example: \code{rect
 The final line (4) is an instruction to tell the button to draw itself. At which point, the window that was created in line 2 will shrink to the size of a small button containing the words `click me'. It will look something like this:
 
 \begin{center}
-\includegraphics*[width=30mm]{figure31.eps}
+\includegraphics*[width=30mm]{eps/figure31.eps}
 \end{center}
 
 The button doesn't do much but you can, at least, click it. We can make it do something by changing the previous example a little (make sure you close the window we created earlier). First we can create a function to print out some text:
@@ -102,7 +102,7 @@ Similar to the button example, a window will appear when you type line 2.  When 
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure32.eps}
+\includegraphics[width=80mm]{eps/figure32.eps}
 \end{center}
 \caption{Canvas x and y axis.}\label{fig32}
 \end{figure}
@@ -174,7 +174,7 @@ That last rectangle is basically saying: go 100 pixels across the canvas (from t
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure33.eps}
+\includegraphics[width=80mm]{eps/figure33.eps}
 \end{center}
 \caption{tkinter boxes.}\label{fig33}
 \end{figure}
@@ -223,7 +223,7 @@ Which produces a bit of a mess (figure~\ref{fig34}, but is interesting nonethele
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure34.eps}
+\includegraphics[width=80mm]{eps/figure34.eps}
 \end{center}
 \caption{A mess of rectangles.}\label{fig34}
 \end{figure}
@@ -308,7 +308,7 @@ You can use that with the random\_rectangle function we created earlier:
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure35.eps}
+\includegraphics[width=80mm]{eps/figure35.eps}
 \end{center}
 \caption{A purple rectangle.}\label{fig35}
 \end{figure}
@@ -325,7 +325,7 @@ canvas.create_arc(10, 10, 200, 100, extent=180, style=ARC)
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure36.eps}
+\includegraphics[width=80mm]{eps/figure36.eps}
 \end{center}
 \caption{An arc fitting inside a rectangle.}\label{fig36}
 \end{figure}
@@ -344,7 +344,7 @@ This places the top left corner of the rectangle at the coordinates 10, 10 (that
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure37.eps}
+\includegraphics[width=80mm]{eps/figure37.eps}
 \end{center}
 \caption{Differing degrees of arcs.}\label{fig37}
 \end{figure}
@@ -372,14 +372,14 @@ This example draws an oval in the (imaginary) square drawn from pixel positions 
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure38.eps}
+\includegraphics[width=80mm]{eps/figure38.eps}
 \end{center}
 \caption{The outline of an oval.}\label{fig38}
 \end{figure}
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure39.eps}
+\includegraphics[width=80mm]{eps/figure39.eps}
 \end{center}
 \caption{The outline of an oval inside a rectangle.}\label{fig39}
 \end{figure}
@@ -398,7 +398,7 @@ To draw a circle, rather than an elliptical oval, the imaginary rectangle should
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure40.eps}
+\includegraphics[width=80mm]{eps/figure40.eps}
 \end{center}
 \caption{A simple circle.}\label{fig40}
 \end{figure}
@@ -419,7 +419,7 @@ A polygon is any shape with 3 or more sides. Triangles, squares, rectangles, pen
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure41.eps}
+\includegraphics[width=80mm]{eps/figure41.eps}
 \end{center}
 \caption{A simple triangle.}\label{fig41}
 \end{figure}
@@ -434,7 +434,7 @@ We can add an irregular polygon using the following code. Figure~\ref{fig42} sho
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure42.eps}
+\includegraphics[width=80mm]{eps/figure42.eps}
 \end{center}
 \caption{A simple triangle.}\label{fig42}
 \end{figure}
@@ -479,7 +479,7 @@ Copy your image into that directory and then load it using the PhotoImage functi
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure43.eps}
+\includegraphics[width=80mm]{eps/figure43.eps}
 \end{center}
 \caption{A photo image.}\label{fig43}
 \end{figure}
@@ -510,7 +510,7 @@ The moment you press the Enter key after typing the last line, the triangle will
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure44.eps}
+\includegraphics[width=80mm]{eps/figure44.eps}
 \end{center}
 \caption{The triangle moving across the screen.}\label{fig44}
 \end{figure}
@@ -554,7 +554,7 @@ Figure~\ref{fig45} shows the triangle part way down the screen. Move the triangl
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=80mm]{figure45.eps}
+\includegraphics[width=80mm]{eps/figure45.eps}
 \end{center}
 \caption{The triangle moving down the screen.}\label{fig45}
 \end{figure}
