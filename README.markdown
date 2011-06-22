@@ -33,7 +33,7 @@ Current Work Progress
 =====================
 
 * Front Matter (frontmatter.tex) *pending*
-* Preface (preface.tex) **work in progress** @caioariede
+* Preface (preface.tex) **work in progress - revision** @caioariede
 * Chapter 1 (ch1.tex) *pending*
 * Chapter 2 (ch2.tex) *pending*
 * Chapter 3 (ch2.tex) *pending*
