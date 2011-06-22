@@ -18,4 +18,13 @@ The original version written by Jason R Briggs in english can be found at http:/
 Building from Source
 ====================
 
-To build, you'll need latex, and dvipdf
+To build, you'll need latex, and dvipdf.
+
+Run the following command to build:
+
+    python setup.py build
+
+On MacOSX, you can use [BasicTeX](http://www.tug.org/mactex/morepackages.html), but you must execute the following commands *before* building the source.
+
+    sudo tlmgr update --self
+    sudo tlmgr install textpos wrapfig
