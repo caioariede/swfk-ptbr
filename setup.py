@@ -39,7 +39,7 @@ class CleanCommand(Command):
     user_options = [ ]
 
     def initialize_options(self):
-        self._clean_me = [ ]
+        self._clean_me = ['swfk.tex']
         for root, dirs, files in os.walk(target_dir):
             for f in files:
                 self._clean_me.append(os.path.join(root, f))
