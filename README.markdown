@@ -24,7 +24,27 @@ Run the following command to build:
 
     python setup.py build
 
-On MacOSX, you can use [BasicTeX](http://www.tug.org/mactex/morepackages.html), but you must execute the following commands *before* building the source.
+On MacOSX, you can use [BasicTeX](http://www.tug.org/mactex/morepackages.html), but you must execute the following commands **before** building the source.
 
     sudo tlmgr update --self
     sudo tlmgr install textpos wrapfig
+
+Current Work Progress
+=====================
+
+* Front Matter (frontmatter.tex) *pending*
+* Preface (preface.tex) *work in progress* @caioariede
+* Chapter 1 (ch1.tex) *pending*
+* Chapter 2 (ch2.tex) *pending*
+* Chapter 3 (ch2.tex) *pending*
+* Chapter 4 (ch4.tex) *pending*
+* Chapter 5 (ch5.tex) *pending*
+* Chapter 6 (ch6.tex) *pending*
+* Chapter 7 (ch7.tex) *pending*
+* Chapter 8 (ch8.tex) *pending*
+* Chapter 9 (ch9.tex) *pending*
+* Chapter 10 (ch10.tex) *pending*
+* Appendix A (appendixa.tex) *pending*
+* Appendix B (appendixb.tex) *pending*
+* Appendix C (appendixc.tex) *pending*
+* Appendix D (appendixd.tex) *pending*
