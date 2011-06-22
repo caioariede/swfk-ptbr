@@ -22,7 +22,8 @@ platforms = 'win', 'mac', 'linux'
 #
 latex = find_executable('latex')
 makeindex = find_executable('makeindex')
-dvipdf = find_executable('dvipdf')
+dvipdf = find_executable('dvips') or find_executable('dvipdf')
+pspdf = find_executable('pstopdf')
 
 #
 # Get the book version
@@ -99,7 +100,11 @@ class LatexCommand(Command):
             spawn([latex, '--output-directory=%s' % target_dir, tex])
 
             pdf = '%s/swfk-%s-%s%s.pdf' % (target_dir, platform, version, fname_suffix)
-            spawn([dvipdf, '%s/swfk.dvi' % target_dir, pdf])
+            if dvipdf.endswith('dvips'):
+                spawn([dvipdf, '-o', pdf.rstrip('.pdf'), '%s/swfk.dvi' % target_dir])
+                spawn([pspdf, pdf.rstrip('.pdf'), '-o', pdf])
+            else:
+                spawn([dvipdf, '%s/swfk.dvi' % target_dir, pdf])
 
             zf = ZipFile('%s/swfk-%s-%s%s.zip' % (target_dir, platform, version, fname_suffix), 'w')
             zf.write(pdf)
