@@ -35,6 +35,9 @@
 
 \newcommand{\code}{\textcolor{OliveGreen}\bfseries}
 
+\renewcommand{\chaptername}{Capítulo}
+\renewcommand{\contentsname}{Conteúdo}
+
 \@FRONTCOVER_INC@version{FRONTCOVER}
 \@WINDOWS_INC@version{WINDOWS}
 \@MAC_INC@version{MAC}
