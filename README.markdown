@@ -32,6 +32,8 @@ On MacOSX, you can use [BasicTeX](http://www.tug.org/mactex/morepackages.html), 
 Current Work Progress
 =====================
 
+[Get the current work (Linux version)](http://cloud.github.com/downloads/caioariede/swfk-ptbr/swfk-linux-0.7.7.pdf)
+
 * Front Matter (frontmatter.tex) *pending*
 * Preface (preface.tex) **pending revision**
 * Chapter 1 (ch1.tex) **in progress** *@caioariede*
