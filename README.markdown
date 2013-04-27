@@ -37,7 +37,7 @@ Current Work Progress
 * Front Matter (frontmatter.tex) *pending*
 * Preface (preface.tex) **pending revision**
 * Chapter 1 (ch1.tex) **pending revision**
-* Chapter 2 (ch2.tex) **in progress** *@caioariede*
+* Chapter 2 (ch2.tex) **in progress**
 * Chapter 3 (ch2.tex) *pending*
 * Chapter 4 (ch4.tex) *pending*
 * Chapter 5 (ch5.tex) *pending*
