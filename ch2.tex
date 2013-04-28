@@ -75,47 +75,47 @@ Mas e se você gastasse R\$10 toda semana? Quanto lhe sobraria no final do ano? 
 
 Isso seria R\$5 mais R\$30, menos R\$10, multiplicado pelas 52 semanas no ano. E lhe sobraria R\$1300 no final do ano. Certo, mas isso não está parecendo muito útil. Nós poderiamos fazer tudo isso com uma calculadora. Mas nós voltaremos mais tarde nesse assunto e demonstraremos como tornar isso muito mais útil.
 
-You can do multiplication\index{multiplication} and addition\index{addition} (obviously), and subtraction\index{subtraction} and division\index{division} in the Python console, along with a bunch of other maths operations that we won't go into now.  For the moment the basic maths symbols for Python (actually they're called operators\index{operators}) are:
+Você pode multiplicar\index{multiplication}, somar\index{addition} (obviamente), subtrair\index{subtraction} e dividir, usando o terminal do Python, junto à diversas outras operações matemáticas que não nos aprofudaremos no momento. Para agora, os símbolos matemáticos mais básicos (chamados operadores\index{operators}) em Python, são:
 
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-+ & Addition \\
++ & Adição \\
 \hline
-- & Subtraction \\
+- & Subtração \\
 \hline
-* & Multiplication \\
+* & Multiplicação \\
 \hline
-/ & Division \\
+/ & Divisão \\
 \hline
 \end{tabular}
 \end{center}
 
-The reason the forward-slash (/) is used for division, is that it would be rather difficult to draw a division line (plus they didn't bother to put a division symbol $\div$ on the computer keyboard) as you're supposed to use for written equations.  For example if you had 100 eggs and 20 boxes, you might want to know how many eggs would go in each box, so you'd show dividing 100 into 20, by writing the following equation:
+O motivo da barra (/) ser utilizada para divisão, é que seria muito difícil desenhar a linha de divisão (além disso, o teclado dos computadores não contempla o símbolo de divisão $\div$) que você está acostumado a usar nas equações. Por exemplo, se você tem 100 ovos e 20 caixas e gostaria de saber quantos ovos deveriam ir em cada caixa, você dividiria 100 por 20, escrevendo a seguinte equação:
 
 \begin{displaymath}
 \frac{100}{20}
 \end{displaymath}
 
-Or if you know about long division, you might write it out fully like this:
+Ou se você usa o método de Divisão Longa, você escreveria dessa forma:
 
 \begin{displaymath}
 \longdiv{100}{20}
 \end{displaymath}
 
-Or you might even write it like this:
+Ou ainda, você poderia escrever assim:
 
 \begin{displaymath}
 100 \div 20
 \end{displaymath}
 
-However, in Python terms you would just type it as ``100 / 20''.
+Porém, em Python você apenas digitaria ``100 / 20''.
 
-\emph{Which is much easier, I think.  But then, I'm a book---what do I know?}
+\emph{Que eu acho muito mais simples. Porém eu sou apenas um livro --- do que eu sei?}
 
-\section{Use of brackets and ``Order of Operations''}\index{order of operations}
+\section{Uso de parênteses e ``Prioridade de Operações''}\index{order of operations}
 
-We use brackets in a programming language to control what is called ``Order of Operations''.  An operation is the use of an operator (one of those symbols in the table above).  There are more operators than those basic symbols, but for that simple list (addition, subtraction, multiplication and division), it's enough to know that multiplication and division both have a higher order than addition and subtraction.  Which means you do the multiplication or division part of an equation before you do the addition or subtraction part.  In the following equation, all the operators are addition (+), the numbers are added in order:
+Nós usamos parênteses em uma linguagem de programação para controlar o que chamamos de ``Prioridade de Operações''. Uma operação é a utilização de um operador (algum daqueles símbolos da tabela acima). Existem outros operadores além dos símbolos matemáticos básicos, mas para estes operadores (adição, subtração, multiplicação e divisão), é o suficiente saber que a multiplicação e a divisão tem mais prioridade que a adição e a subtração. Que significa que você faz a multiplicação e a divisão em uma equação, antes da adição e da subtração. Na equação abaixo, onde todos os operadores são de adição (+), os números são adicionados em ordem:
 
 \begin{listing}
 \begin{verbatim}
