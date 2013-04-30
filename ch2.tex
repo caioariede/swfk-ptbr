@@ -125,7 +125,7 @@ Nós usamos parênteses em uma linguagem de programação para controlar o que c
 \end{listing}
 
 \noindent
-Similarly, in this equation, there are only addition and subtraction operators, so again Python considers each number in the order it appears:
+Da mesma forma, nesta equação, existem somente operadores de adição e subtração, por isso o Python considera cada número na ordem em que ele aparece.
 
 \begin{listing}
 \begin{verbatim}
@@ -135,7 +135,7 @@ Similarly, in this equation, there are only addition and subtraction operators, 
 \end{listing}
 
 \noindent
-But in the following equation, there is a multiplication operator, so the numbers 30 and 20 are considered first.  The equation is another way of saying, ``multiply 30 by 20, then add 5 to the result'' (multiplication first, because it has a higher order than addition):
+Mas na equação abaixo, existe um operador de multiplicação, então os números 30 e 20 são considerados primeiro. Esta equação é outro jeito de se dizer, ``multiplique 30 por 20 e então adicione 5 ao resultado'' (multiplicação primeiro, pois ela tem mais prioridade que a adição):
 
 \begin{listing}
 \begin{verbatim}
@@ -145,7 +145,7 @@ But in the following equation, there is a multiplication operator, so the number
 \end{listing}
 
 \noindent
-So what happens when we add brackets?  The following equation shows the result:
+Então o que acontece se nós usarmos parênteses? A seguinte equação nos mostrará o resultado:
 
 \begin{listing}
 \begin{verbatim}
@@ -155,8 +155,9 @@ So what happens when we add brackets?  The following equation shows the result:
 \end{listing}
 
 \noindent
-Why is the number different?  Because brackets control the order of operations.  With brackets, Python knows to calculate using the operators in the brackets first, then do the operators outside.  So that equation is another way of saying, ``add 5 and 30, then multiply the result by 20''.
-The use of brackets can become more complicated.  There can be brackets inside brackets:
+Por que o resultado é diferente? Porque os parênteses controlam a ordem das operações. Com os parênteses, o Python sabe que deve realizar as operações entre parênteses primeiro, e depois as que estiverem fora. Então, essa equação é outra maneira de dizer, ``adicione 5 e 30, então multiplique o resultado por 20''.
+
+O uso dos parênteses pode se tornar complicado. Podem existir parênteses dentro de parênteses:
 
 \begin{listing}
 \begin{verbatim}
@@ -166,7 +167,7 @@ The use of brackets can become more complicated.  There can be brackets inside b
 \end{listing}
 
 \noindent
-In this case, Python evaluates the \textbf{inner} most brackets first, then the outer brackets, and then the other operator.  So this equation is a way of saying, ``add 5 and 30, then multiply the result by 20, finally divide that result by 10''.  The result without brackets is again slightly different:
+Neste caso, o Python calculará o que estiver \textbf{dentro} dos parênteses primeiro, depois o que estiver fora, e assim por diante. Então essa equação é outra maneira de se dizer, ``adicione 5 e 30, então multiplique o resultado por 20, finalmente divida o resultado por 10''. O resultado, sem parênteses, é novamente um pouco diferente:
 
 \begin{listing}
 \begin{verbatim}
