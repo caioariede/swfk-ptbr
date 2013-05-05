@@ -236,40 +236,41 @@ Claro que, `fred' não é um nome muito útil para uma variável. Ele não nos d
 Suponha que você tenha iniciado o terminal do Python, digitado `fred = 200' e então tenha saído --- passou 10 anos escalando o Monte Everest, atravessando o Deserto do Saara, pulando de uma ponte na Nova Zelândia e finalmente, passeou por todo o rio Amazonas --- quando você voltou para o seu computador, como você se lembraria o que o número 200 significa (e para que ele seria usado)?
 
 \noindent
-\emph{I don't think I would.}
+\emph{Eu acho que eu não lembraria.}
 
 \noindent
-I just made it up now, and I have no idea what `fred = 200' means (other than a \emph{name} pointing at the number \emph{200}).  So after 10 years, you'll have absolutely no chance of remembering.
+Eu só fiz isso até agora e não tenho ideia do que `fred = 200` significa (a não ser um \emph{nome} apontando para o número \emph{200}). Então após 10 anos, você não teria nenhuma chance de se lembrar.
 \par
 Aha!  But, what if we called our variable: \emph{number\_of\_students}.
+Ahá! Mas e se nós chamassemos nossa variável de: \emph{numero\_de\_estudantes}.
 
 \begin{listing}
 \begin{verbatim}
->>> number_of_students = 200
+>>> numero_de_estudantes = 200
 \end{verbatim}
 \end{listing}
 
-We can do that because variable names can be made up of letters, numbers and (\_) underscores---although they cannot start with a number.  If you come back after 10 years, `number\_of\_students' still makes sense.  You can type:
+Nós podemos fazer isso, pois o nome das variáveis podem conter letras, números e (\_) sublinhados --- embora elas não possam começar com um número. Se você voltar após 10 anos, `numero\_de\_estudantes' ainda vai fazer sentido. Você pode digitar:
 
 \begin{listing}
 \begin{verbatim}
->>> print(number_of_students)
+>>> print(numero_de_estudantes)
 200
 \end{verbatim}
 \end{listing}
 
 \noindent
-And you'll immediately know that we're talking about 200 students.  It's not always important to come up with meaningful names for variables.  You can use anything from single letters (such as `a') to large sentences; and sometimes, if you're doing something quick, a simple and short variable name is just as useful.  It depends very much upon whether you want to be able to look at that variable name later and figure out what on earth you were thinking at the time you typed it in.
+E você vai imediatamente se lembrar que estamos falando de 200 estudantes. Nem sempre é importante usar nomes significativos para variávies. Você pode usar qualquer coisa, desde uma única letra (como o `a') até grandes sentenças. E de vez em quando, se estiver fazendo algo rápido, um nome de variável simples e curto também será útil. Depende muito do que você vai querer pensar posteriormente, ao olhar para o nome dessa variável.
 
 \begin{listing}
 \begin{verbatim}
-this_is_also_a_valid_variable_name_but_perhaps_not_very_useful
+este_nome_de_variavel_tambem_eh_valido_porem_nao_eh_muito_util
 \end{verbatim}
 \end{listing}
 
-\section{Using Variable}\index{Variables}
+\section{Usando uma variável}\index{Variáveis}
 
-Now we know how to create a variable, how do we use it?  Remember that equation we came up with earlier?  The one to work out how much money you'd have left at the end of the year, if you earned \$5 a week doing chores, \$30 a week on a paper round, and spent \$10 per week.  So far we have:
+Agora que nós sabemos como criar uma variável, como nós a usamos? Lembra da equação que nós vimos lá atrás? Aquela para saber quanto você teria em dinheiro no final do ano, caso ganhasse R\$5 por semana fazendo alguns pequenos trabalhos, R\$30 por semana entregando jornais e gastasse R\$10 por semana. Até agora, o que temos é:
 
 \begin{listing}
 \begin{verbatim}
