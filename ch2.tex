@@ -280,51 +280,51 @@ Agora que nós sabemos como criar uma variável, como nós a usamos? Lembra da e
 \end{listing}
 
 \noindent
-What if we turn the first 3 numbers into variables?  Try typing the following:
+Que tal se transformarmos os 3 primeiros números em variáveis? Tente digitar o seguinte:
 
 \begin{listing}
 \begin{verbatim}
->>> chores = 5
->>> paper_round = 30
->>> spending = 10
+>>> trabalhos = 5
+>>> entregas_de_jornal = 30
+>>> gastos = 10
 \end{verbatim}
 \end{listing}
 
 \noindent
-We've just created variables named `chores', `paper\_round' and `spending'.  We can then re-type the equation to get:
+Nós apenas criamos as variáveis `trabalhos', `entregas\_de\_jornal' e `gastos'. Nós podemos redigir a equação para ver:
 
 \begin{listing}
 \begin{verbatim}
->>> print((chores + paper_round - spending) * 52)
+>>> print((trabalhos + entregas_de_jornal - gastos) * 52)
 1300
 \end{verbatim}
 \end{listing}
 
-Which gives the exact same answer.  What if you get \$2 more per week, for doing extra chores.  Change the `chores' variable to 7, then hit the up-arrow key ($\uparrow$) on your keyboard a couple of times, until the equation re-appears, and hit the Enter key:
+Que dará exatamente o mesmo resultado. E se você ganhasse mais R\$2 por semana, fazendo alguns trabalhos extras? Mude a variável `trabalhos' para 7, então aperte a tecla para cima ($\uparrow$) até que a equação apareça novamente e aperte Enter:
 
 \begin{listing}
 \begin{verbatim}
->>> chores = 7
->>> print((chores + paper_round - spending) * 52)
+>>> trabalhos = 7
+>>> print((trabalhos + entregas_de_jornal - gastos) * 52)
 1404
 \end{verbatim}
 \end{listing}
 
-That's a lot less typing to find out that you now end up with \$1404 at the end of the year.  You can try changing the other variables, then hit the up-arrow to perform the calculation again, and see what effect it has.
+Assim é muito mais fácil descobrir que você ficou com R\$1404 no final do ano. Você pode tentar alterar outras variáveis e apertar a seta para cima para realizar a conta novamente e você verá o efeito que terá.
 
 \begin{listing}
 \begin{verbatim}
-If you spend twice as much money per week:
->>> spending = 20
->>> print((chores + paper_round - spending) * 52)
+Se você gastar o dobro do dinheiro por semana:
+>>> gastos = 20
+>>> print((trabalhos + entregas_de_jornal - gastos) * 52)
 884
 \end{verbatim}
 \end{listing}
 
-You're only left with \$884 savings at the end of the year. This is still only slightly useful.  We haven't hit really useful yet.  But for the moment, it's enough to understand that variables are used to store things.
+Você terá poupado apenas R\$884 no final do ano. Isso ainda é bem pouco útil. Nós ainda não chegamos em algo realmente útil. Mas para o momento, é o bastante para entender que variávies são usadas para armazenar coisas.
 
 \noindent
-\emph{Think of a mailbox with a label on it!}
+\emph{Pense em uma caixa de correios com uma etiqueta colada!}
 
 \section{A Piece of String?}\index{strings}
 
