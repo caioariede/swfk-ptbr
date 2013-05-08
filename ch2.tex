@@ -326,73 +326,73 @@ Você terá poupado apenas R\$884 no final do ano. Isso ainda é bem pouco útil
 \noindent
 \emph{Pense em uma caixa de correios com uma etiqueta colada!}
 
-\section{A Piece of String?}\index{strings}
+\section{Um pedaço de `string'?}\index{strings}
 
-If you're paying attention, and not just skimming through looking for the good bits, you might remember I mentioned that variables can be used for all sorts of things---not just numbers. In programming, most of the time we call text a `string'. Which might seem a bit weird; but if you think that text is just `stringing together' (or joining together) a bunch of letters, perhaps it might make a little more sense.
+Se você está prestando atenção, não apenas folheando as páginas olhando as partes boas, você deve se lembrar que eu mencionei que variáveis podem ser usadas para tudo --- não somente números. Em programação, na maior parte do tempo nós chamamos um texto de `string' (corda). Que pode parecer um pouco estranho; mas se você pensar que um texto é apenas um punhado de letras `amarradas' umas as outras, talvez faça um pouco mais sentido.
 
 \noindent
-\emph{Then again, perhaps it doesn't.}
+\emph{E novamente, caso não faça.}
 
-In which case, all you need to know, is that a string is just a bunch of letters and numbers and other symbols put together in some meaningful way. All the letters, and numbers, and symbols in this book could make up a string.  Your name could be a string.  So could your home address.  The first Python program we created in Chapter \ref{ch:notallsnakeswillsquishyou}, used a string: `Hello World'.
+Neste caso, tudo que você deve saber é que uma string é apenas um punhado de letras, números e outros símbolos juntos, formando algo mais significativo. Todas as letras, números e símbolos neste livro poderiam formar uma string. O seu nome pode ser uma string. Assim como o endereço da sua casa. Nosso primeiro programa em Python, no capítulo \ref{ch:notallsnakeswillsquishyou}, usou uma string: `Ola mundo'.
 \par
-In Python, we create a string by putting quotes around the text.  So we can take our useless \code{fred} variable, and put a string inside it like this:
+Em Python, nós criamos uma string colocando aspas ao redor do texto. Então nós podemos pegar a nossa variável de pouca utilidade `fred' e colocar uma string dentro:
 
 \begin{listing}
 \begin{verbatim}
->>> fred = "this is a string"
+>>> fred = "esta é uma string"
 \end{verbatim}
 \end{listing}
 
 \noindent
-And we can see what's inside the \code{fred} variable, by typing \code{print(fred)}:
+E nós podemos ver o que está dentro da variável \code{fred}, digitando \code{print(fred)}:
 
 \begin{listing}
 \begin{verbatim}
 >>> print(fred)
-this is a string
+esta é uma string
 \end{verbatim}
 \end{listing}
 
 \noindent
-We can also use single-quotes to create a string:
+Nós também podemos usar aspas simples para criar uma string:
 
 \begin{listing}
 \begin{verbatim}
->>> fred = 'this is yet another string'
+>>> fred = 'esta também é uma string'
 >>> print(fred)
-this is yet another string
+esta também é uma string
 \end{verbatim}
 \end{listing}
 
-However, if you try to type more than one line of text for your string using a single quote (') or double quote ("), you'll get an error message in the console. For example, type the following line and hit Enter, and you'll get a fairly scary error message similar to the following:
+Porém, se você tentar digitar mais de uma linha de texto na sua string, usando aspas simples (') ou duplas ("), você receberá uma mensagem de erro. Por exemplo, digite a seguinte linha e aperte Enter. Você verá uma mensagem de erro assustadora, parecida com a seguinte:
 
 \begin{listing}
 \begin{verbatim}
->>> fred = "this is two
+>>> fred = "estas são duas
   File "<stdin>", line 1
-    fred = "this is two
-                      ^
+    fred = "estas são duas
+                         ^
 SyntaxError: EOL while scanning string literal
 \end{verbatim}
 \end{listing}
 
-\index{multi-line string}We'll talk more about errors later, but for the moment, if you want more than one line of text, you can use 3 single quotes:
+\index{multi-line string}Nós falaremos sobre errors mais tarde, mas por agora, se você quiser mais de uma linha de texto, você pode usar 3 aspas simples:
 
 \begin{listing}
 \begin{verbatim}
->>> fred = '''this is two
-... lines of text in a single string'''
+>>> fred = '''estas são duas
+... linhas de texto em uma única string'''
 \end{verbatim}
 \end{listing}
 
 \noindent
-Print out the contents to see if it worked:
+Imprima o conteúdo para ver se funcionou:
 
 \begin{listing}
 \begin{verbatim}
 >>> print(fred)
-this is two
-lines of text in a single string
+estas são duas
+linhas de texto em uma única string
 \end{verbatim}
 \end{listing}
 
