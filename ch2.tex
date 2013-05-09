@@ -437,48 +437,48 @@ Na primeira linha, a variável `meutexto' foi criada contendo uma string com alg
 
 \begin{listing}
 \begin{verbatim}
->>> mytext = 'Hello %s, how are you today?'
->>> name1 = 'Joe'
->>> name2 = 'Jane'
->>> print(mytext % name1)
-Hello Joe, how are you today?
->>> print(mytext % name2)
-Hello Jane, how are you today?
+>>> meutexto = 'Olá %s, como vai você hoje?'
+>>> nome1 = 'Joe'
+>>> nome2 = 'Jane'
+>>> print(meutexto % name1)
+Olá Joe, como vai você hoje?
+>>> print(meutexto % name2)
+Olá Jane, como vai você hoje?
 \end{verbatim}
 \end{listing}
 
-In the above example, 3 variables (mytext, name1 and name2) are created---the first includes the string with the marker.  Then we can print the variable `mytext', and again use the \% operator to pass in variables `name1' and `name2'.  You can use more than one placeholder:
+No exemplo acima, 3 variáveis (meutexto, nome1 e nome2) foram criadas --- o primeiro inclui a string com o sinalizador. Em seguida nós imprimimos a variável `meutexto' e usamos novamente o operador \% para passar as variáveis `nome1' e `nome2'. E você pode usar mais de um sinalizador:
 
 \begin{listing}
 \begin{verbatim}
->>> mytext = 'Hello %s and %s, how are you today?'
->>> print(mytext % (name1, name2))
-Hello Joe and Jane, how are you today?
+>>> meutexto = 'Olá %s e %s, como vocês estão hoje?'
+>>> print(meutexto % (nome1, nome2))
+Olá Joe a Jane, como vocês estão hoje?
 \end{verbatim}
 \end{listing}
 
-When using more than one marker, you need to wrap the replacement values with brackets---so (name1, name2) is the proper way to pass 2 variables. A set of values surrounded by brackets (the round ones, not the square ones) is called a \emph{tuple}, and is a little bit like a list, which we'll talk about next.
+Quando utilizar mais de um sinalizador, você precisa envolver os valores entre parênteses --- então, (nome1, nome2) é a forma apropriada de se passar 2 variáveis. Uma série de valores entre parênteses é chamado de \emph{tupla} e é bem parecido com uma lista, que nós abordaremos depois.
 
-\section{Not quite a shopping list}\index{lists}
+\section{Não é igual a uma lista de compras}\index{lists}
 
-Eggs, milk, cheese, celery, peanut butter, and baking soda.  Which is not quite a full shopping list, but good enough for our purposes. If you wanted to store this in a variable you could create a string:
+Ovos, leite, queijo, salsinha e margarina. Que não é uma lista de compras completa, mas serve para o que precisamos. Se você quiser armazenar isso em uma variável, você pode criar uma string:
 
 \begin{listing}
 \begin{verbatim}
->>> shopping_list = 'eggs, milk, cheese, celery, peanut butter, baking soda'
->>> print(shopping_list)
-eggs, milk, cheese, celery, peanut butter, baking soda
+>>> lista_de_compras = 'ovos, leite, queijo, salsinha, margarina'
+>>> print(lista_de_compras)
+ovos, leite, queijo, salsinha, margarina
 \end{verbatim}
 \end{listing}
 
-Another way would be to create a `list', which is a special kind of object in Python:
+Uma outra forma, seria criar uma `lista', que é um tipo de objeto especial em Python:
 
 \begin{listing}
 \begin{verbatim}
->>> shopping_list = [ 'eggs', 'milk', 'cheese', 'celery', 'peanut butter', 
-... 'baking soda' ]
->>> print(shopping_list)
-['eggs', 'milk', 'cheese', 'celery', 'peanut butter', 'baking soda']
+>>> lista_de_compras = ['ovos', 'leite', 'queijo', 'salsinha'
+... 'margarina' ]
+>>> print(lista_de_compras)
+['ovos', 'leite', 'queijo', 'salsinha', 'margarina']
 \end{verbatim}
 \end{listing}
 
