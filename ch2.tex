@@ -396,16 +396,16 @@ linhas de texto em uma única string
 \end{verbatim}
 \end{listing}
 
-By the way, you'll see those 3 dots (...) quite a few times when you're typing something that continues onto another line (like a multi line string).  In fact, you'll see it a lot more as we continue.
+A propósito, você verá esses 3 pontinhos (...) sempre que estiver digitando algo que continue na próxima linha (como as strings de várias linhas). Na verdade, você ainda verá muitos destes conforme continuamos.
 
-\section{Tricks with Strings}\label{trickswithstrings}
+\section{Truques com Strings}\label{trickswithstrings}
 
-Here's an interesting question:  what's 10 * 5 (10 times 5)?  The answer is, of course, 50.
+Aqui está uma questão interessante: quanto é 10 * 5 (10 vezes 5)? A resposta é 50, claro.
 
 \noindent
-\emph{All right, that's not an interesting question at all.}
+\emph{Ok, essa não é uma questão das mais interessantes.}
 
-But what is 10 * 'a' (10 times the letter a)?  It might seem like a nonsensical question, but here's the answer from the World of Python:
+Mas quanto é 10 * 'a' (10 vezes a letra a)? Isso pode parecer uma questão sem sentido, mas aqui está a resposta diretamente do Mundo do Python:
 
 \begin{listing}
 \begin{verbatim}
@@ -414,7 +414,7 @@ aaaaaaaaaa
 \end{verbatim}
 \end{listing}
 
-This works with more than just single character strings:
+Isso funciona ainda com mais caracteres:
 
 \begin{listing}
 \begin{verbatim}
@@ -423,17 +423,17 @@ abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd
 \end{verbatim}
 \end{listing}
 
-Another trick with a string, is embedding values.  You can do this by using \%s, which is like a marker (or a placeholder) for a value you want to include in a string.  It's easier to explain with an example:
+Outro truque com uma string é embutir valores. Você pode fazer isso usando o sinalizador \%s, que será substituido pelo valor que você quer incluir na string. É mais fácil de explicar com um exemplo:
 
 \begin{listing}
 \begin{verbatim}
->>> mytext = 'I am %s years old'
->>> print(mytext % 12)
-I am 12 years old
+>>> meutexto = 'Eu tenho %s anos de idade'
+>>> print(meutexto % 12)
+Eu tenho 12 anos de idade
 \end{verbatim}
 \end{listing}
 
-In the first line, the variable mytext is created with a string containing some words and a placeholder (\%s).  The \%s is a little beacon saying ``replace me with something'' to the Python console.  So on the next line, when we call \code{print(mytext)}, we use the \% symbol, to tell Python to replace the marker with the number 12. We can reuse that string and pass in different values:
+Na primeira linha, a variável `meutexto' foi criada contendo uma string com algumas palavras e o sinalizador (\%s). O \%s está dizendo ``substitua-me com algo'' para o terminal do Python. Então na linha seguinte, quando nós chamamos \code{print(meutexto)}, nós usamos o símbolo \%, que diz ao Python para substituir o sinalizador pelo número 12. Nós podemos reutilizar a string e passar diferentes valores:
 
 \begin{listing}
 \begin{verbatim}
