@@ -12,6 +12,24 @@ Este trabalho está sobre a licença [Creative Commons Attribution-Noncommercial
 
 A versão original foi escrita por Jason R Briggs, em inglês e pode ser encontrada em http://code.google.com/p/swfk/
 
+## Como contribuir?
+
+### Processo de tradução
+
+* **Fork**  
+Use a sua versão do projeto para fazer as alterações
+* **Escolha um capítulo**  
+Altere o README, marcando o capítulo que você vai traduzir, adicionando "em andamento" (igual ao rodapé)
+* **Informe a sua escolha**  
+Faça um "Pull Request" com essa alteração
+* **Traduza**  
+Deve ser feito apenas 1 commit por página traduzida, seguindo a mensagem padrão: "Traduzido capítulo X página Y".  
+Isso facilitará o processo de revisão.
+
+### Processo de revisão
+
+Nenhuma revisão deve ser feita até que o processo de tradução esteja finalizado.
+
 ## Compilando o livro a partir do código fonte
 
 ### Linux
