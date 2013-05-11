@@ -482,63 +482,63 @@ Uma outra forma, seria criar uma `lista', que é um tipo de objeto especial em P
 \end{verbatim}
 \end{listing}
 
-This is more typing, but it's also more useful.  We could print the 3rd item in the list by using its position (called its index position), inside square brackets []:
+É um pouco mais de digitação, porém mais útil. Nós poderíamos imprimir o terceiro item da lista, usando a sua posição (chamado de índice), usando colchetes []:
 
 \begin{listing}
 \begin{verbatim}
->>> print(shopping_list[2])
-cheese
+>>> print(lista_de_compras[2])
+queijo
 \end{verbatim}
 \end{listing}
 
-Lists start at index position 0---so the first item in a list is 0, the second is 1, the third is 2.  That doesn't make a lot of sense to most people, but it does to programmers.  Pretty soon, when you walk up some stairs you'll start counting with zero rather than one.  That will really confuse your little brother or sister.
+Listas iniciam no índice 0 --- então o primeiro item da lista é 0, o segundo é 1 e o terceiro é 2. Isso não faz muito sentido para a maioria das pessoas, mas faz para os programadores. Um pouco a frente, quando você subir mais alguns degraus você vai começar a contar a partir do zero, ao invés do um. Isso deve confundir um pouco o seu irmão ou irmã.
 \par
-We can show all the items from the 3rd item up to the 5th in the list, by using a colon inside the square brackets:
+Nós podemos exibir todos os itens, do 3º ao 5º da lista, usando o dois pontos dentro do colchetes:
 
 \begin{listing}
 \begin{verbatim}
->>> print(shopping_list[2:5])
-['cheese', 'celery', 'peanut butter']
+>>> print(lista_de_compras[2:5])
+['queijo', 'salsinha', 'margarina']
 \end{verbatim}
 \end{listing}
 
-[2:5] is the same as saying that we are interested in items from index position 2 up to (but not including) index position 5.  And, of course, because we start counting with 0, the 3rd item in the list is actually number 2, and the 5th item is actually number 4. Lists can be used to store all sorts of items.  They can store numbers:
+[2:5] é o mesmo que dizer que nós estamos interessados nos itens do índice 2 ao 5 (mas não o incluindo). E por começarmos a contar do 0, o 3º item da lista é o número 2 e o 5º item é o número 4. Listas podem ser usadas para armazenar qualquer tipo de item. Elas podem armazenar números:
 
 \begin{listing}
 \begin{verbatim}
->>> mylist = [ 1, 2, 5, 10, 20 ]
-\end{verbatim}
-\end{listing}
-
-\noindent
-And strings:
-
-\begin{listing}
-\begin{verbatim}
->>> mylist = [ 'a', 'bbb', 'ccccccc', 'ddddddddd' ]
+>>> minhalista = [1, 2, 5, 10, 20]
 \end{verbatim}
 \end{listing}
 
 \noindent
-And mixtures of numbers and strings:
+E strings:
 
 \begin{listing}
 \begin{verbatim}
->>> mylist = [1, 2, 'a', 'bbb']
->>> print(mylist)
+>>> minhalista = ['a', 'bbb', 'ccccccc', 'ddddddddd']
+\end{verbatim}
+\end{listing}
+
+\noindent
+E misturar números e strings:
+
+\begin{listing}
+\begin{verbatim}
+>>> minhalista = [1, 2, 'a', 'bbb']
+>>> print(minhalista)
 [1, 2, 'a', 'bbb']
 \end{verbatim}
 \end{listing}
 
 \noindent
-And even lists of lists:
+E até listas de listas:
 
 \begin{listing}
 \begin{verbatim}
->>> list1 = [ 'a', 'b', 'c' ]
->>> list2 = [ 1, 2, 3 ]
->>> mylist = [ list1, list2 ]
->>> print(mylist)
+>>> lista1 = ['a', 'b', 'c']
+>>> lista2 = [1, 2, 3]
+>>> minhalista = [lista1, lista2]
+>>> print(minhalista)
 [['a', 'b', 'c'], [1, 2, 3]]
 \end{verbatim}
 \end{listing}
