@@ -1,57 +1,72 @@
-# Snake Wrangling for Kids Book Contents
+# Livro Domando Serpentes para Crianças
 
-"Snake Wrangling for Kids" is a printable electronic book, for children 8 years and older, who would like to learn computer programming. It covers the very basics of programming, and uses the Python 3 programming language to teach the concepts.
+"Domando Serpentes para Crianças" é um livro eletrônico que pode ser impresso, para crianças de 8 anos em diante que querem aprender a programar. Os conceitos básicos da programação são abrangidos usando a linguagem de programação Python 3.
 
-There are 3 different versions of the book (one for Mac, one for Linux and one for Windows). There have been around 19,000 downloads, as of September 2009.
+Existem 3 versões diferentes do livro (uma para Mac, uma para Linux e outra para Windows). Com mais de 50.000 downloads, desde Setembro de 2009.
 
-## The Book Source
+## O código fonte do livro
 
-LaTeX source of "Snake Wrangling for Kids"
+O código fonte do livro "Domando Serpentes para Crianças" está em LaTeX.
 
-This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 3.0 New Zealand License.
-To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/nz or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+Este trabalho está sobre a licença [Creative Commons Attribution-Noncommercial-Share Alike 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/br/).
 
-The original version written by Jason R Briggs in english can be found at http://code.google.com/p/swfk/
+A versão original foi escrita por Jason R Briggs, em inglês e pode ser encontrada em http://code.google.com/p/swfk/
 
-## Building from Source
+## Como contribuir?
+
+### Processo de tradução
+
+* **Fork**  
+Use a sua versão do projeto para fazer as alterações
+* **Escolha um capítulo**  
+Altere o README, marcando o capítulo que você vai traduzir, adicionando "em andamento" (igual ao rodapé)
+* **Informe a sua escolha**  
+Faça um "Pull Request" com essa alteração
+* **Traduza**  
+Deve ser feito apenas 1 commit por página traduzida, seguindo a mensagem padrão: "Traduzido capítulo X página Y".  
+Isso facilitará o processo de revisão.
+
+### Processo de revisão
+
+Nenhuma revisão deve ser feita até que o processo de tradução esteja finalizado.
+
+## Compilando o livro a partir do código fonte
 
 ### Linux
 
-You'll need to get `latex` and `dvipdf` installed. The package names may vary between Linux distributions.
+Você vai precisar do `latex` e do `dvipdf` instalado. O nome dos pacotes pode variar entre as distribuições Linux.
 
-### MacOSX
+### Mac
 
-On OSX, I highly recommend you to use [BasicTeX](http://www.tug.org/mactex/morepackages.html) if you don't have [MacTeX](http://tug.org/mactex/) installed yet, because it's smaller, far smaller.
+No Mac, nós recomendamos que você use o [BasicTeX](http://www.tug.org/mactex/morepackages.html) caso não tenha o [MacTeX](http://tug.org/mactex/) instalado, pois ele é muito mais leve.
 
-After all you must execute the following commands **before** building the source.
+Logo depois de instalar, você precisa executar os seguintes comandos, **antes** de compilar:
 
     sudo tlmgr update --self
     sudo tlmgr install textpos wrapfig
 
-### Build
+### Compilando
 
-Run the following command to build:
+Execute o seguinte comando para compilar:
 
     python setup.py build
 
-Current Work Progress
+Andamento do trabalho
 =====================
 
-[Get the current work (Linux version)](http://cloud.github.com/downloads/caioariede/swfk-ptbr/swfk-linux-0.7.7.pdf)
-
-* Front Matter (frontmatter.tex) *pending*
-* Preface (preface.tex) **pending revision**
-* Chapter 1 (ch1.tex) **pending revision**
-* Chapter 2 (ch2.tex) **in progress**
-* Chapter 3 (ch2.tex) *pending*
-* Chapter 4 (ch4.tex) *pending*
-* Chapter 5 (ch5.tex) *pending*
-* Chapter 6 (ch6.tex) *pending*
-* Chapter 7 (ch7.tex) *pending*
-* Chapter 8 (ch8.tex) *pending*
-* Chapter 9 (ch9.tex) *pending*
-* Chapter 10 (ch10.tex) *pending*
-* Appendix A (appendixa.tex) *pending*
-* Appendix B (appendixb.tex) *pending*
-* Appendix C (appendixc.tex) *pending*
-* Appendix D (appendixd.tex) *pending*
+* Capa (frontmatter.tex)
+* Prefácio (preface.tex) **- pendente de revisão**
+* Capítulo 1 (ch1.tex) **- pendente de revisão**
+* Capítulo 2 (ch2.tex) **- em andamento**
+* Capítulo 3 (ch2.tex)
+* Capítulo 4 (ch4.tex)
+* Capítulo 5 (ch5.tex)
+* Capítulo 6 (ch6.tex)
+* Capítulo 7 (ch7.tex)
+* Capítulo 8 (ch8.tex)
+* Capítulo 9 (ch9.tex)
+* Capítulo 10 (ch10.tex)
+* Apêndice A (appendixa.tex)
+* Apêndice B (appendixb.tex)
+* Apêndice C (appendixc.tex)
+* Apêndice D (appendixd.tex)
