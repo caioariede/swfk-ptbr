@@ -543,37 +543,36 @@ E até listas de listas:
 \end{verbatim}
 \end{listing}
 
-In the above example, a variable called `list1' is created with 3 letters, `list2' is created with a 3 numbers, and `mylist' is created using list1 and list2. Things can get rather confusing, rather quickly, if you start creating lists of lists of lists of lists$\ldots$ but luckily there's not usually much need for making things that complicated in Python. Still it is handy to know that you can store all sorts of items in a Python list.
+No exemplo acima, ama variável chamada `lista' é criada contendo 3 letras, `lista2' é criada contendo 3 números e `minhalista' é criada contendo a `lista1' e a `lista2'. As coisas podem ficar um pouco confusas, rapidamente, se você começar a criar listas de listas de listas$\ldots$ mas felizmente não há muita necessidade de se fazer coisas desse tipo em Python. Ainda assim, é útil para você saber que pode armazenar quaisquer tipos de itens em uma lista em Python.
 
 \noindent
-\emph{And not just your shopping.}
+\emph{E não somente a sua lista de compras.}
 
-\subsection*{\color{BrickRed}Replacing items}\index{lists!replacing}
+\subsection*{\color{BrickRed}Substituindo itens}\index{lists!replacing}
 
-We can replace an item in the list, by setting its value in a similar way to setting the value of a normal variable. For example, we could change celery to lettuce by setting the value in index position 3:
-
-\begin{listing}
-\begin{verbatim}
->>> shopping_list[3] = 'lettuce'
->>> print(shopping_list)
-['eggs', 'milk', 'cheese', 'lettuce', 'peanut butter', 'baking soda']
-\end{verbatim}
-\end{listing}
-
-\subsection*{\color{BrickRed}Adding more items...}\index{lists!appending}
-
-We can add items to a list by using a method called `append'.  A method is an action or command that tells Python that we want to do something.  We'll talk more about methods later, but for the moment, to add an item to our shopping list, we can do the following:
+Nós podemos substituir um item em uma lista, apenas trocando o seu valor, da mesma forma que é trocado o valor de uma variável. Por exemplo, nós podemos trocar a salsinha por alface, trocando o valor do índice 3:
 
 \begin{listing}
 \begin{verbatim}
->>> shopping_list.append('chocolate bar')
->>> print(shopping_list)
-['eggs', 'milk', 'cheese', 'lettuce', 'peanut butter', 'baking soda', 
-'chocolate bar']
+>>> lista_de_compras[3] = 'alface'
+>>> print(lista_de_compras)
+['ovos', 'leite', 'queijo', 'alface', 'margarina']
 \end{verbatim}
 \end{listing}
 
-Which, if nothing else, is certainly an improved shopping list.
+\subsection*{\color{BrickRed}Adicionando itens...}\index{lists!appending}
+
+Nós podemos adicionar itens à uma lista, usando o método `append'. Um método é uma ação ou comando que diz ao Python que nós queremos fazer algo. Nós falaremos mais adiante sobre métodos, por agora, para adicionar um item à nossa lista de compras, nós fazemos:
+
+\begin{listing}
+\begin{verbatim}
+>>> lista_de_compras.append('barra de chocolate')
+>>> print(lista_de_compras)
+['ovos', 'leite', 'queijo', 'alface', 'margarina', 'barra de chocolate']
+\end{verbatim}
+\end{listing}
+
+Que certamente torna a lista de compras muito melhor.
 
 \subsection*{\color{BrickRed}$\ldots$and removing items}\index{lists!removing}
 
