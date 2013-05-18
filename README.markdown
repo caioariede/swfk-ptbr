@@ -4,6 +4,14 @@
 
 Existem 3 versões diferentes do livro (uma para Mac, uma para Linux e outra para Windows). Com mais de 50.000 downloads, desde Setembro de 2009.
 
+## Download
+
+* [Versão Linux](https://s3.amazonaws.com/swfk-ptbr/swfk-linux-latest.pdf)
+* [Versão Mac](https://s3.amazonaws.com/swfk-ptbr/swfk-mac-latest.pdf)
+* [Versão Windows](https://s3.amazonaws.com/swfk-ptbr/swfk-windows-latest.pdf)
+
+O livro está em processo de tradução. Veja como está o [andamento do trabalho.](#andamento)
+
 ## O código fonte do livro
 
 O código fonte do livro "Domando Serpentes para Crianças" está em LaTeX.
@@ -51,6 +59,7 @@ Execute o seguinte comando para compilar:
 
     python setup.py build
 
+<a name='andamento'/>
 Andamento do trabalho
 =====================
 
