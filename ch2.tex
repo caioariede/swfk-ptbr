@@ -460,13 +460,13 @@ Quando utilizar mais de um sinalizador, você precisa envolver os valores entre 
 
 \section{Não é igual a uma lista de compras}\index{lists}
 
-Ovos, leite, queijo, salsinha e margarina. Que não é uma lista de compras completa, mas serve para o que precisamos. Se você quiser armazenar isso em uma variável, você pode criar uma string:
+Ovos, leite, queijo, salsinha, margarina e fermento. Que não é uma lista de compras completa, mas serve para o que precisamos. Se você quiser armazenar isso em uma variável, você pode criar uma string:
 
 \begin{listing}
 \begin{verbatim}
->>> lista_de_compras = 'ovos, leite, queijo, salsinha, margarina'
+>>> lista_de_compras = 'ovos, leite, queijo, salsinha, margarina, fermento'
 >>> print(lista_de_compras)
-ovos, leite, queijo, salsinha, margarina
+ovos, leite, queijo, salsinha, margarina, fermento
 \end{verbatim}
 \end{listing}
 
@@ -474,10 +474,10 @@ Uma outra forma, seria criar uma `lista', que é um tipo de objeto especial em P
 
 \begin{listing}
 \begin{verbatim}
->>> lista_de_compras = ['ovos', 'leite', 'queijo', 'salsinha'
-... 'margarina' ]
+>>> lista_de_compras = ['ovos', 'leite', 'queijo', 'salsinha', 'margarina',
+... 'fermento' ]
 >>> print(lista_de_compras)
-['ovos', 'leite', 'queijo', 'salsinha', 'margarina']
+['ovos', 'leite', 'queijo', 'salsinha', 'margarina', 'fermento']
 \end{verbatim}
 \end{listing}
 
@@ -555,7 +555,7 @@ Nós podemos substituir um item em uma lista, apenas trocando o seu valor, da me
 \begin{verbatim}
 >>> lista_de_compras[3] = 'alface'
 >>> print(lista_de_compras)
-['ovos', 'leite', 'queijo', 'alface', 'margarina']
+['ovos', 'leite', 'queijo', 'alface', 'margarina', 'fermento']
 \end{verbatim}
 \end{listing}
 
@@ -567,21 +567,21 @@ Nós podemos adicionar itens à uma lista, usando o método `append'. Um método
 \begin{verbatim}
 >>> lista_de_compras.append('barra de chocolate')
 >>> print(lista_de_compras)
-['ovos', 'leite', 'queijo', 'alface', 'margarina', 'barra de chocolate']
+['ovos', 'leite', 'queijo', 'alface', 'margarina', 'fermento', 'barra de chocolate']
 \end{verbatim}
 \end{listing}
 
 Que certamente torna a lista de compras muito melhor.
 
-\subsection*{\color{BrickRed}$\ldots$and removing items}\index{lists!removing}
+\subsection*{\color{BrickRed}$\ldots$e removendo itens}\index{lists!removing}
 
-We can remove items from a list by using the command `del' (short for delete).  For example, to remove the 6th item in the list (baking soda):
+Nós podemos remover itens de uma lista, usando o comando `del' (nome curto para delete). Por exemplo, para remover o quinto item da lista (fermento):
 
 \begin{listing}
 \begin{verbatim}
->>> del shopping_list[5]
->>> print(shopping_list)
-['eggs', 'milk', 'cheese', 'lettuce', 'peanut butter', 'chocolate bar']
+>>> del lista_de_compras[5]
+>>> print(lista_de_compras)
+['ovos', 'leite', 'queijo', 'alface', 'margarina', 'barra de chocolate']
 \end{verbatim}
 \end{listing}
 
