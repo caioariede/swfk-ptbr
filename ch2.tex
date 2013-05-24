@@ -585,51 +585,51 @@ Nós podemos remover itens de uma lista, usando o comando `del' (nome curto para
 \end{verbatim}
 \end{listing}
 
-Remember that positions start at zero, so shopping\_list[5] actually refers to the 6th item.
+Lembre-se que as posições iniciam em zero, então lista\_de\_compras[5] se refere ao sexto item.
 
-\subsection*{\color{BrickRed}2 lists are better than 1}\index{lists!joining}
+\subsection*{\color{BrickRed}Duas listas é melhor que apenas 1}\index{lists!joining}
 
-We can join lists together by adding them, as if we were adding two numbers:
+Nós podemos unir listas, apenas somando-as como se fossem dois números:
 
 \begin{listing}
 \begin{verbatim}
->>> list1 = [ 1, 2, 3 ]
->>> list2 = [ 4, 5, 6 ]
->>> print(list1 + list2)
+>>> lista1 = [1, 2, 3]
+>>> lista2 = [4, 5, 6]
+>>> print(lista1 + lista2)
 [1, 2, 3, 4, 5, 6]
 \end{verbatim}
 \end{listing}
 
 \noindent
-We can also add the two lists and set the result to another variable:
+Nós podemos também associar o resultado à uma outra variável:
 
 \begin{listing}
 \begin{verbatim}
->>> list1 = [ 1, 2, 3 ]
->>> list2 = [ 4, 5, 6 ]
->>> list3 = list1 + list2
->>> print(list3)
+>>> lista1 = [1, 2, 3]
+>>> lista2 = [4, 5, 6]
+>>> lista3 = lista1 + lista2
+>>> print(lista3)
 [1, 2, 3, 4, 5, 6]
 \end{verbatim}
 \end{listing}
 
 \noindent
-And you can multiply a list in the same way we multiplied a string:
+E você pode multiplicar uma lista, da mesma forma que nós multiplicamos uma string:
 
 \begin{listing}
 \begin{verbatim}
->>> list1 = [ 1, 2 ]
->>> print(list1 * 5)
+>>> lista1 = [1, 2]
+>>> print(lista1 * 5)
 [1, 2, 1, 2, 1, 2, 1, 2, 1, 2]
 \end{verbatim}
 \end{listing}
 
 \noindent
-In the above example, multiplying list1 by five is another way of saying ``repeat list1 five times''. However, division (/) and subtraction (-) don't make sense when working with lists, so you'll get errors when trying the following examples:
+No exemplo acima, multiplicando a lista1 por cinco, é outra forma de se dizer ``repita a lista1 cinco vezes''. Porém, a divisão (/) e a subtração (-) não fazem sentido, quando se trabalhando com listas, então você verá erros quando tentar os seguintes exemplos:
 
 \begin{listing}
 \begin{verbatim}
->>> list1 / 20
+>>> lista1 / 20
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: unsupported operand type(s) for /: 'list' and 'int'
@@ -637,11 +637,11 @@ TypeError: unsupported operand type(s) for /: 'list' and 'int'
 \end{listing}
 
 \noindent
-or:
+ou:
 
 \begin{listing}
 \begin{verbatim}
->>> list1 - 20
+>>> lista1 - 20
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: unsupported operand type(s) for -: 'type' and 'int'
@@ -649,7 +649,7 @@ TypeError: unsupported operand type(s) for -: 'type' and 'int'
 \end{listing}
 
 \noindent
-You'll get a rather nasty error message.
+Você receberá uma mensagem de erro bastante desagradável.
 
 \section{Tuples and Lists}\label{tuplesandlists}\index{tuples}
 
