@@ -59,6 +59,15 @@ Execute o seguinte comando para compilar:
 
     python setup.py build
 
+### Reduzindo o tamanho dos PDFs gerados
+
+```bash
+find target -name "*.pdf" ! -name "compressed-*" -exec bash -c '
+    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH \
+       -sOutputFile=target/compressed-$(basename {}) {}
+' \;
+```
+
 <a name='andamento'/>
 Andamento do trabalho
 =====================
