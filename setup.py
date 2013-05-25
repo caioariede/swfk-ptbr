@@ -6,6 +6,9 @@ import os
 import re
 
 
+os.chdir('./src')
+
+
 #
 # where to write target files
 #
