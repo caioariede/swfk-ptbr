@@ -2,7 +2,7 @@
 
 "Domando Serpentes para Crianças" é um livro eletrônico que pode ser impresso, para crianças de 8 anos em diante que querem aprender a programar. Os conceitos básicos da programação são abrangidos usando a linguagem de programação Python 3.
 
-Existem 3 versões diferentes do livro (uma para Mac, uma para Linux e outra para Windows). Com mais de 50.000 downloads, desde Setembro de 2009.
+Existem 3 versões diferentes do livro (uma para Mac, uma para Linux e outra para Windows). Mais de 50.000 downloads foram realizados da versão original (em inglês), desde Setembro de 2009.
 
 ## Download
 
