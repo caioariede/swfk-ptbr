@@ -27,6 +27,7 @@ latex = find_executable('latex')
 makeindex = find_executable('makeindex')
 dvipdf = find_executable('dvips') or find_executable('dvipdf')
 pspdf = find_executable('pstopdf')
+gs = find_executable('gs')
 
 #
 # Get the book version
@@ -108,6 +109,19 @@ class LatexCommand(Command):
                 spawn([pspdf, pdf.rstrip('.pdf'), '-o', pdf])
             else:
                 spawn([dvipdf, '%s/swfk.dvi' % target_dir, pdf])
+
+            # compress pdf
+            spawn([
+                gs,
+                '-sDEVICE=pdfwrite',
+                '-dCompatibilityLevel=1.4',
+                '-dNOPAUSE',
+                '-dQUIET',
+                '-dBATCH',
+                '-sOutputFile=%s_compressed' % pdf,
+                pdf])
+
+            spawn(['mv', '%s_compressed' % pdf, pdf])
 
             zf = ZipFile('%s/swfk-%s-%s%s.zip' % (target_dir, platform, version, fname_suffix), 'w')
             zf.write(pdf)
