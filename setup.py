@@ -17,8 +17,7 @@ target_dir = 'target'
 #
 # 
 #
-platforms = 'win', 'mac', 'linux'
-#platforms = 'win',
+platforms = 'windows', 'mac', 'linux'
 
 #
 # find the executables to use in compiling the books
@@ -29,12 +28,8 @@ dvipdf = find_executable('dvips') or find_executable('dvipdf')
 pspdf = find_executable('pstopdf')
 gs = find_executable('gs')
 
-#
-# Get the book version
-#
-s = open('frontmatter.tex').read()
-mat = re.compile(r'Version\s*(.*)').search(s)
-version = mat.group(1)
+# Version
+version = 'latest'
 
 if not os.path.exists(target_dir):
     os.mkdir(target_dir)
@@ -78,7 +73,7 @@ class LatexCommand(Command):
                 s = s.replace('@FRONTCOVER_INC@', 'exclude')
                 fname_suffix = '-nc'
                 
-            if platform == 'win':
+            if platform == 'windows':
                 s = s.replace('@WINDOWS_INC@', 'include')
                 s = s.replace('@MAC_INC@', 'exclude')
                 s = s.replace('@LINUX_INC@', 'exclude')
