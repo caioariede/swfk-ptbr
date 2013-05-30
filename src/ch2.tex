@@ -651,9 +651,9 @@ TypeError: unsupported operand type(s) for -: 'type' and 'int'
 \noindent
 Você receberá uma mensagem de erro bastante desagradável.
 
-\section{Tuples and Lists}\label{tuplesandlists}\index{tuples}
+\section{Tuplas e Listas}\label{tuplesandlists}\index{tuples}
 
-A tuple (mentioned earlier) is a little bit like a list, but rather than using square brackets, you use round brackets---e.g. `(' and `)'.  You can use tuples in a similar way to a list:
+Uma tupla (mencionada anteriormente) se parece muito com uma lista, mas ao invés de usar colchetes, você usa parênteses --- ex. `(' e `)'. Você pode usar tuplas da mesma forma que usa uma lista:
 
 \begin{listing}
 \begin{verbatim}
@@ -663,7 +663,7 @@ A tuple (mentioned earlier) is a little bit like a list, but rather than using s
 \end{verbatim}
 \end{listing}
 
-The main difference is that, unlike lists, tuples can't change, once you've created them.  So if you try to replace a value like we did earlier with the list, you'll get another error message:
+A principal diferença é que, diferente das listas, as tuplas não mudam após serem criadas. Então se você tentar substituir um valor, assim como nós fizemos com a lista anteriormente, você verá uma mensagem de erro:
 
 \begin{listing}
 \begin{verbatim}
@@ -674,16 +674,16 @@ TypeError: 'tuple' object does not support item assignment
 \end{verbatim}
 \end{listing}
 
-That doesn't mean you can't change the variable containing the tuple to something else.  For example, this code will work fine:
+Isso não significa que você não pode alterar o valor da variável contendo a tupla para um outro valor qualquer. Por exemplo, esse código funcionará:
 
 \begin{listing}
 \begin{verbatim}
->>> myvar = (1, 2, 3)
->>> myvar = [ 'a', 'list', 'of', 'strings' ]
+>>> minhavariavel = (1, 2, 3)
+>>> minhavariavel = ['uma', 'lista', 'de', 'strings']
 \end{verbatim}
 \end{listing}
 
-First we create the variable \code{myvar} pointing to a tuple of 3 numbers.  Then we change \code{myvar} to point at a list of strings. This might be a bit confusing at first.  But think of it like lockers in a school.  Each locker has a name tag on it. You put something in the locker, close the door, lock it, then throw away the key.  You then peel the name tag off, wander over to another empty locker, and stick something else in that (but this time you keep the key).  A tuple is like the locked locker.  You can't change what's inside it.  But you can take the label off and stick it on an unlocked locker, and then put stuff inside that locker and take stuff out---that's the list.
+Primeiro nós criamos a variável \code{minhavariavel} apontando para uma tupla de 3 números. Então nós alteramos \code{minhavariavel} para apontar para uma lista de strings. Isso pode ser um pouco confuso inicialmente. Mas pense nisso como os armários de uma escola. Cada armário possui uma etiqueta com um nome. Você coloca algo no armário, fecha a porta, tranca e tira a chave. Você então tira a etiqueta, vai até outro armário vazio e coloca algo dentro (só que agora você deixa a chave). A tupla é como um armário trancado. Você não pode mudar o que está dentro dele, mas você pode retirar a etiqueta e colar em outro armário destrancado, que você pode colocar e retirar coisas de dentro --- como uma lista.
 
 \section{Things to try}
 
