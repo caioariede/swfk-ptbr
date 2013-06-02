@@ -24,31 +24,32 @@ Vamos começar e ver como isso funciona. O primeiro passo, é dizer ao Python qu
 \end{verbatim}
 \end{listing}
 
-Then we need to display a canvas to draw on.  A canvas is just like the material an artist might use for painting; in this case it's a blank space for drawing on:
+Então nós precisamos exibir uma tela para desenhar. Uma tela parecida com a que os artistas usam para pintar; neste caso é um espaço branco para desenhar:
 
 \begin{listing}
 \begin{verbatim}
->>> t = turtle.Pen()
+>>> tartaruga = turtle.Pen()
 \end{verbatim}
 \end{listing}
 
-In this code, we call a special function (Pen\index{Pen}) on the module turtle, which automatically creates a canvas we can draw on.  A function is a re-useable piece of code (again we'll come to functions later) that does something useful---in this case, an object which represents the turtle is returned by the Pen function---we set that object to the variable `t' (in effect we're giving our turtle canvas the name `t'). When you type the code into the Python console, you'll see a blank box (the canvas) appear, looking something like figure~\ref{fig10}.
+Nesse código, nós chamamos uma função (Pen\index{Pen}) do módulo `turtle', que automaticamente cria uma tela para nós desenharmos. Uma função é um pedaço de código reutilizável (nós veremos funções mais tarde) que faz algo útil --- neste caso, um objeto que representa uma tartaruga é retornado pela função `Pen' --- nós armazenamos esse objeto na variável `tartaruga'. Quando você digitar o código no terminal do Python, você verá uma tela em branco, assim como na figura~\ref{fig10}.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=72mm]{eps/figure10.eps}
 \end{center}
-\caption{An arrow representing the turtle.}\label{fig10}
+\caption{Uma seta representando a tartaruga.}\label{fig10}
 \end{figure}
 
-\emph{Yes, that little arrow in the middle of the screen really is the turtle.  And, no, it's not very turtle-like.}
+\emph{Sim, aquela pequena seta no meio da tela é a nossa tartaruga. E, não, ela não se parece nenhum pouco com uma tartaruga.}
 
-You can send instructions to the turtle, by using functions on the object that was created (by calling \code{turtle.Pen})---since we assigned that object to the variable \code{t}, we use \code{t} to send the instructions.
-One turtle instruction is \code{forward}.  Forward\index{turtle!forward} tells the turtle to move forward in whatever direction she is facing (I have no idea whether it's a boy or a girl turtle, but let's just assume it's a girl-turtle for the moment). Let's tell the turtle to move forward 50 pixels (we'll talk about pixels in a minute):
+Você pode enviar instruções à tartaruga, usando algumas funções do objeto que nós criamos (chamando \code{turtle.Pen}) --- uma vez que nós atribuimos o objeto à variável \code{tartaruga}, nós usamos \code{tartaruga} para enviar instruções.
+
+Uma das instruções é a \code{forward}. Forward (ir para frente, em português) diz à tartaruga para se mover para frente, seja qual for a direção que ela esteja. Vamos dizer à tartaruga para se mover 40 pixels para frente (nós falaremos sobre pixels em um minuto).
 
 \begin{listing}
 \begin{verbatim}
->>> t.forward(50)
+>>> tartaruga.forward(50)
 \end{verbatim}
 \end{listing}
 
