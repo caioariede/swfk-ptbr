@@ -4,6 +4,7 @@
 % or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
 
 \documentclass[12pt,leqno,a4paper]{book}
+\usepackage[portuges,brazilian]{babel}
 \usepackage[dvips]{graphicx}
 \usepackage[usenames]{color}
 \usepackage[colorlinks,pdfauthor={Jason R Briggs},pdftitle={Snake Wrangling for Kids - Learning to Program with Python},pdfsubject={Programming for Kids},pdfkeywords={python,kids,programming}]{hyperref}
