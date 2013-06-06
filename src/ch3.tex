@@ -78,35 +78,35 @@ Um pixel\index{pixels} é um ponto na tela. Quando você olha para o seu computa
 
 Nós falaremos mais tarde sobre esses pontos, ou pixels, em outro capítulo.
 
-Next, we can tell the turtle to turn left\index{turtle!turning left} or right\index{turtle!turning right}:
+Depois, podemos dizer para a tartaruga virar para a esquerda\index{turtle!turning left} ou direita\index{turtle!turning right}:
 
 \begin{listing}
 \begin{verbatim}
->>> t.left(90)
+>>> tartaruga.left(90)
 \end{verbatim}
 \end{listing}
 
-This tells the turtle to turn left, 90 degrees.  You may not have learned about degrees\index{degrees} in school so far, but the easiest way to think about them, is that they are like the divisions on the face of a clock as seen in figure~\ref{fig13}.
+Isso diz à tartaruga para virar para a esquerda, 90 graus. Você pode não ter aprendido sobre graus\index{degrees} na escola ainda, mas uma maneira fácil de se pensar, é que eles são como as divisões em um relógio, assim como na figura~\ref{fig13}.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=52mm]{eps/figure13.eps}
 \end{center}
-\caption{The `divisions' on a clock.}\label{fig13}
+\caption{As `divisões' em um relógio.}\label{fig13}
 \end{figure}
 
-The difference to a clock, is that rather than 12 divisions (or 60, if you're counting minutes rather than hours), there are 360 divisions.  So, if you count 360 divisions around the face of a clock, you get 90 where there's normally a 3, 180 where there's normally a 6, and 270 where there's normally a 9; and 0 would be at the top (at the start), where you normally see a 12.  Figure~\ref{fig14} shows you the degree divisions.
+A diferença de um relógio é que, ao invés de 12 divisões (ou 60, caso esteja contando em minutos ao invés de horas), existem 360 divisões. Então, se você contar as 360 divisões do relógio, você terá 90 onde marca 3 horas, 180 onde marca 6 horas e 270 onde marca 9 horas; e o 0, no começo, onde marca 12 horas. A figura~\ref{fig14} mostra as divisões em graus.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=52mm]{eps/figure14.eps}
 \end{center}
-\caption{Degrees.}\label{fig14}
+\caption{Graus.}\label{fig14}
 \end{figure}
 
-So, what does it actually mean when you call \code{left(90)}?
+Então, o que realmente significa quando você chama \code{left(90)}?
 \par
-If you stand and face one direction, point your arm out directly away from your shoulder, THAT is 90 degrees.  If you point your left arm, that's 90 degrees left.  If you point your right arm, that's 90 degrees right.  When Python's turtle turns left, she plants her nose in one spot then swivels her body around the face the new direction (same as if you turned your body to face where your arm is pointing).  So, \code{t.left(90)} results in the arrow now pointing upwards, as shown in figure~\ref{fig15}.
+Se você estender o seu braço para o lado, na direção do seu ombro, isso é 90 graus. Se você estender o seu braço esquerdo, isso é 90 graus para a esquerda. Se você estender o seu braço direito, isso é 90 graus para a direita. Quando a tartaruga do Python se vira à esquerda, ela posiciona o seu rosto para a esquerda e então gira o seu corpo para a nova direção (da mesma forma que você faria para saber para onde o seu braço está apontando). Então, \code{tartaruga.left(90)} faz com que a seta agora aponte para cima, como exibido na figura~\ref{fig15}.
 
 \begin{figure}
 \begin{center}
