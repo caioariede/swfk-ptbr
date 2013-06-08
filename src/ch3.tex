@@ -112,40 +112,40 @@ Se você estender o seu braço para o lado, na direção do seu ombro, isso é 9
 \begin{center}
 \includegraphics[width=72mm]{eps/figure15.eps}
 \end{center}
-\caption{The turtle after turning left.}\label{fig15}
+\caption{A tartaruga, após virar para a esquerda.}\label{fig15}
 \end{figure}
 
-Let's try the same commands again a few times:
+Vamos tentar os mesmos comandos novamente, algumas vezes:
 
 \begin{listing}
 \begin{verbatim}
->>> t.forward(50)
->>> t.left(90)
->>> t.forward(50)
->>> t.left(90)
->>> t.forward(50)
->>> t.left(90)
+>>> tartaruga.forward(50)
+>>> tartaruga.left(90)
+>>> tartaruga.forward(50)
+>>> tartaruga.left(90)
+>>> tartaruga.forward(50)
+>>> tartaruga.left(90)
 \end{verbatim}
 \end{listing}
 
-Our turtle has drawn a square and is left facing the same direction as she started (see figure~\ref{fig16}).
+Nossa tartaruga desenhou um quadrado e ficou virada para a mesma direção que estava (veja a figura~\ref{fig16}).
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=72mm]{eps/figure16.eps}
 \end{center}
-\caption{Drawing a square.}\label{fig16}
+\caption{Desenhando um quadrado.}\label{fig16}
 \end{figure}
 
-We can erase what's on the canvas by using clear\index{turtle!clear}:
+Nós podemos limpar o que está na tela, usando o comando clear\index{turtle!clear}:
 
 \begin{listing}
 \begin{verbatim}
->>> t.clear()
+>>> tartaruga.clear()
 \end{verbatim}
 \end{listing}
 
-Some of the other basic functions you can use with your turtle are: \code{reset}\index{turtle!reset}, which also clears the screen, but puts the turtle automatically back into her starting position; \code{backward}\index{turtle!backward}, which moves the turtle backwards; \code{right}, which turns the turtle to the right; \code{up}\index{turtle!up (stop drawing)} which tells the turtle to stop drawing as she moves (in other words pick her pen up off the canvas); and finally \code{down}\index{turtle!down (start drawing)} which tells the turtle to start drawing again. You call these functions in the same way we've used the others:
+Algumas das outras funções básicas que você pode usar são: \code{reset}\index{turtle!reset}, que também limpa a tela, mas também coloca a tartaruga de volta na sua posição inicial; \code{backward}\index{turtle!backward}, que move a tartaruga para trás; \code{right}, que vira a tartaruga para a direita; \code{up}\index{turtle!up (stop drawing)} que diz à tartaruga para parar de desenhar conforme ela anda (como se tirasse o pincel da tela); e finalmente o \code{down}\index{turtle!down (start drawing)} que diz à tartaruga para voltar a desenhar. Você pode chamar essas funções da mesma forma que chamou as outras:
 
 \begin{listing}
 \begin{verbatim}
