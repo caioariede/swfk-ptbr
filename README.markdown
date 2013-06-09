@@ -76,8 +76,8 @@ Andamento do trabalho
 * Prefácio (preface.tex) **- pendente de revisão**
 * Capítulo 1 (ch1.tex) **- pendente de revisão**
 * Capítulo 2 (ch2.tex) **- pendente de revisão**
-* Capítulo 3 (ch3.tex) **- em andamento**
-* Capítulo 4 (ch4.tex)
+* Capítulo 3 (ch3.tex) **- pendente de revisão**
+* Capítulo 4 (ch4.tex) **- em andamento**
 * Capítulo 5 (ch5.tex)
 * Capítulo 6 (ch6.tex)
 * Capítulo 7 (ch7.tex)
