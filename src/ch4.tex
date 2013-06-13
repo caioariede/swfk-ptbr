@@ -4,46 +4,46 @@
 % or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
 
 
-\chapter{How to ask a question}\label{ch:howtoaskaquestion}
+\chapter{Como fazer uma pergunta}\label{ch:howtoaskaquestion}
 
-In programming terms, a question usually means we want to do either one thing, or another, depending upon the answer to the question.  This is called an \textbf{if-statement}\index{if-statement}.  For example:
+Em termos de programação, uma pergunta normalmente significa que nós queremos fazer ou uma coisa, ou outra, dependendo da resposta. Isso é chamado de \textbf{expressão if}\index{if-statement}. Por exemplo:
 
 \begin{quotation}
-How old are you?  If you're older than 20, you're too old!
+Quantos anos você tem? Se você tem mais de 20 anos, você é muito velho!
 \end{quotation}
 
-This might be written in Python as the following if-statement:
+Isso pode ser escrito em Python usando a seguinte expressão `if':
 
 \begin{listing}
 \begin{verbatim}
-if age > 20:
-    print('you are too old!')
+if idade > 20:
+    print('você é muito velho!')
 \end{verbatim}
 \end{listing}
 
-An if-statement is made up of an `if' followed by what is called a `condition' (more on that in a second), followed by a colon (:).  The lines following the if must be in a block---and if the answer to the question is `yes' (or True, as we call it in programming terms) the commands in the block will be run.
+Uma expressão `if' é composta de um `if' seguido pelo que chamamos de `condição', seguido por dois-pontos (:). As linhas linhas após o `if' devem ficar em um bloco --- e se a resposta para a pergunta for `sim' (ou `True', como chamamos em programação) os comandos no bloco serão executados.
 \par
-A condition\index{conditions} is a programming statement that returns `yes' (True) or `no' (False).  There are certain symbols (or operators) used to create conditions, such as:
+A condição\index{conditions} é uma expressão de programação que retorna `sim' (True) ou `não' (False). Existem alguns símbolos (ou operadores) usados para criar condições, como:
 
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-== & equals \\
+== & igual \\
 \hline
-!= & not equals \\
+!= & diferente \\
 \hline
-$>$ & greater than \\
+$>$ & maior que \\
 \hline
-$<$ & less than \\
+$<$ & menor que \\
 \hline
-$>$= & greater than or equal to \\
+$>$= & maior que, ou igual \\
 \hline
-$<$= & less than or equal to \\
+$<$= & menor que, ou igual \\
 \hline
 \end{tabular}
 \end{center}
 
-For example, if you are 10 years old, then the condition \code{your\_age == 10} would return True (yes), but if you are not 10, it would return False.  Remember: don't mix up the \textbf{two} equals symbols used in a condition (==), with the equals used in assigning values (=)---if you use a single = symbol in a \emph{condition}, you'll get an error message.
+Por exemplo, se você tem 10 anos, então a condição \code{sua\_idade == 10} retornaria True (sim), mas se você não tem 10 anos, retornaria False (não). Lembre-se: não confunda os \textbf{dois} símbolos de igual, usados na condição (==), com os usados para associar valores (=) --- se você usar apenas um igual em uma \emph{condição}, você receberá uma mensagem de erro.
 \par
 Assuming you set the variable \code{age} to your age, then if you are 12 years old, the condition$\ldots$
 
