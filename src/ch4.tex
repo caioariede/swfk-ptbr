@@ -45,57 +45,58 @@ $<$= & menor que, ou igual \\
 
 Por exemplo, se você tem 10 anos, então a condição \code{sua\_idade == 10} retornaria True (sim), mas se você não tem 10 anos, retornaria False (não). Lembre-se: não confunda os \textbf{dois} símbolos de igual, usados na condição (==), com os usados para associar valores (=) --- se você usar apenas um igual em uma \emph{condição}, você receberá uma mensagem de erro.
 \par
-Assuming you set the variable \code{age} to your age, then if you are 12 years old, the condition$\ldots$
+Assumindo que você tenha a variável \code{idade} com a sua idade, então se você tiver 12 anos, a condição$\ldots$
 
 \begin{listing}
 \begin{verbatim}
-age > 10
+idade > 10
 \end{verbatim}
 \end{listing}
 
-$\ldots$ would again return True.  If you are 8 years old, it would return False.  If you are 10 years old, it would also return False---because the condition is checking for greater than ($>$) 10, and not greater than or equal ($>$=) to 10.
+$\ldots$ retornará `True' novamente. Se você tiver 8 anos de idade, retornará `False'. Se você tiver 10 anos de idade, retornará `False' --- pois a condição verifica se é maior que ($>$) 10, não se é maior ou igual ($>$=) à 10.
 
-Let's try a few examples:
+Vamos tentar alguns exemplos:
 
 \begin{listing}
 \begin{verbatim}
->>> age = 10
->>> if age > 10:
-...     print('got here')
+>>> idade = 10
+>>> if idade > 10:
+...     print('chegou aqui')
 \end{verbatim}
 \end{listing}
 
 \noindent
-If you enter the above example into the console, what might happen?
+Se você digitar o exemplo acima no terminal, o que deve acontecer?
 \par
 \noindent
-Nothing.
+Nada.
 \par
 \noindent
-Because the value of the variable \code{age} is not greater than 10, the print command in the block will not be run. How about:
+Pois o valor da variável \code{idade} não é maior que 10, o comando `print' no bloco não será executado. Que tal:
 
 \begin{listingignore}
 \begin{verbatim}
->>> age = 10
->>> if age >= 10:
-...     print('got here')
+>>> idade = 10
+>>> if idade >= 10:
+...     print('chegou aqui')
+chegou aqui
 \end{verbatim}
 \end{listingignore}
 
-If you try this example, then you should see the message got here printed to the console.  The same will happen for the next example:
+Se você tentar este exemplo, então você deverá ver a mensagem exibida no terminal. O mesmo ocorrerá com o próximo exemplo:
 
 \begin{listing}
 \begin{verbatim}
->>> age = 10
->>> if age == 10:
-...     print('got here')
-got here
+>>> idade = 10
+>>> if idade == 10:
+...     print('chegou aqui')
+chegou aqui
 \end{verbatim}
 \end{listing}
 
-\section{Do this$\ldots$ or ELSE!!!}
+\section{Faça isso$\ldots$ SENÃO!!!}
 
-We can also extend an if-statement, so that it does something when a condition is not true.  For example, print the word `Hello' out to the console if your age is 12, but print `Goodbye' if it's not.  To do this, we use an if-then-else-statement\index{if-then-else-statement} (this is another way of saying \emph{``if something is true, then do \textbf{this}, otherwise do \textbf{that}''}):
+Nós também podemos estender a expressão `if', para que faça algo caso a condição não seja verdade. Por exemplo, exibir a palavra `Olá' no terminal, se a idade for 12, senão exibir a mensagem `Tchau'. Para fazer isso, nós precisamos usar uma expressão `se-então-senão'\index{if-then-else-statement} (o mesmo que dizer \emph{``se algo é verdadeiro, então faça \textbf{isso}, senão faça \textbf{aquilo}''}):
 
 \begin{listing}
 \begin{verbatim}
