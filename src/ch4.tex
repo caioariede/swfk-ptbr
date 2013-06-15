@@ -129,48 +129,48 @@ Nós podemos estender a expressão `if' ainda mais, usando o `elif' (abreviaçã
 
 \begin{listing}
 \begin{verbatim}
- 1. >>> age = 12
- 2. >>> if age == 10:
- 3. ...     print('you are 10')
- 4. ... elif age == 11:
- 5. ...     print('you are 11')
- 6. ... elif age == 12:
- 7. ...     print('you are 12')
- 8. ... elif age == 13:
- 9. ...     print('you are 13')
+ 1. >>> idade = 12
+ 2. >>> if idade == 10:
+ 3. ...     print('você tem 10')
+ 4. ... elif idade == 11:
+ 5. ...     print('você tem 11')
+ 6. ... elif idade == 12:
+ 7. ...     print('você tem 12')
+ 8. ... elif idade == 13:
+ 9. ...     print('você tem 13')
 10. ... else:
-11. ...     print('huh?')
+11. ...     print('ahn?')
 12. ...
-13. you are 12
+13. você tem 12
 \end{verbatim}
 \end{listing}
 
-In the code above, line 2 checks whether the value of the age variable is equal to 10.  It's not, so it then jumps to line 4 to check whether the value of the \code{age} variable is equal to 11.  Again, it's not, so it jumps to line 6 to check whether the variable is equal to 12.  In this case it is, so Python moves to the block in line 7, and runs the print command.  (Hopefully you've also noticed that there are 5 groups in this code---lines 3, 5, 7, 9 and line 11)
+No código acima, a linha 2 verifica se o valor da variável \code{idade} é igual a 10. Se não, então ele pula para a linha 4, onde é verificado se o valor da variável \code{idade} é igual a 11. Novamente, se não, então ele pula para a linha 6, para verificar se a variável é igual a 12. Neste caso é, então o Python prossegue no bloco na linha 7 e executa o comando `print'. (Felizmente você deve ter notado que existem 5 grupos neste código --- linhas 3, 5, 7, 9 e linha 11)
 
-\section{Combining conditions}\index{conditions!combining}
-You can combine conditions together using the keywords `and' and `or'.  We can shrink the example above, a little, by using `or' to join the conditions together:
+\section{Combinando condições}\index{conditions!combining}
+Você pode combinar condições usando a palavra-chave `and' (`e', em inglês) e `or' (`ou', em inglês). Nós podemos reduzir o exemplo acima, um pouco, usando o `or' para juntar as condições:
 
 \begin{listing}
 \begin{verbatim}
-1. >>> if age == 10 or age == 11 or age == 12 or age == 13:
-2. ...     print('you are %s' % age)
+1. >>> if idade == 10 or idade == 11 or idade == 12 or idade == 13:
+2. ...     print('você tem %s' % idade)
 3. ... else:
-4. ...     print('huh?')
+4. ...     print('ahn?')
 \end{verbatim}
 \end{listing}
 
-If any of the conditions in line 1 are true (i.e. if age is 10 \textbf{or} age is 11 \textbf{or} age is 12 \textbf{or} age is 13), then the block of code in line 2 is run, otherwise Python moves to line 4.  We could shrink the example a little bit more by using the `and', $>$= and $<$= symbols:
+Se qualquer uma das condições na linha 1 forem verdade (ex.: se idade for 10 \textbf{ou} idade for 11 \textbf{ou} idade for 12 \textbf{ou} idade for 13), então o bloco de código na linha 2 será executado, senão o Python executará a linha 4. Nós podemos reduzir um pouco o exemplo, usando o `and' e os símbolos $>$= e $<$=.
 
 \begin{listing}
 \begin{verbatim}
-1. >>> if age >= 10 and age <= 13:
-2. ...     print('you are %s' % age)
+1. >>> if idade >= 10 and idade <= 13:
+2. ...     print('você tem %s' % idade)
 3. ... else:
-4. ...     print('huh?')
+4. ...     print('ahn?')
 \end{verbatim}
 \end{listing}
 
-Hopefully, you've figured out that if \textbf{both} the conditions on line 1 are true then the block of code in line 2 is run (if age is greater than or equal to 10 \textbf{and} age is less than or equal to 13). So if the value of the variable age is 12, then `you are 12' would be printed to the console:  because 12 is greater than 10 and it is also less than 13.
+Felizmente você deve ter notado que se \textbf{ambas} as condições na linha 1 forem verdade, então o bloco de código na linha 2 será executado (se a idade for maior ou igual a 10 \textbf{e} a idade for menor ou igual a 13). Então  se o valor da variável idade for 12, então `você tem 12' será impresso no terminal: pois 12 é maior que 10 e também é menor que 13.
 
 \section{Emptiness}\index{None}
 
