@@ -172,44 +172,44 @@ Se qualquer uma das condições na linha 1 forem verdade (ex.: se idade for 10 \
 
 Felizmente você deve ter notado que se \textbf{ambas} as condições na linha 1 forem verdade, então o bloco de código na linha 2 será executado (se a idade for maior ou igual a 10 \textbf{e} a idade for menor ou igual a 13). Então  se o valor da variável idade for 12, então `você tem 12' será impresso no terminal: pois 12 é maior que 10 e também é menor que 13.
 
-\section{Emptiness}\index{None}
+\section{Vácuo}\index{None}
 
-There is another sort of value, that can be assigned to a variable, that we didn't talk about in the previous chapter:  \textbf{Nothing}.
+Existe outro tipo de valor, que pode ser atribuído à uma variável, que não falamos sobre nos capítulos anteriores: \textbf{Nada}.
 \par
-In the same way that numbers, strings and lists are all values that can be assigned to a variable, `nothing' is also a kind of value that can be assigned.  In Python, an empty value is referred to as \code{None} (in other programming languages, it is sometimes called null) and you can use it in the same way as other values:
+Da mesma forma que números, strings e listas podem ser atribuídos à uma variável, `nada' também é um valor que pode ser atribuído. Em Python, um valor vazio é referenciado como \code{None} (em outras linguagens de programação, muitas vezes chamado de `null') e você pode usar da mesma maneira que os outros valores:
 
 \begin{listing}
 \begin{verbatim}
->>> myval = None
->>> print(myval)
+>>> minhavar = None
+>>> print(minhavar)
 None
 \end{verbatim}
 \end{listing}
 
-None is a way to reset a variable back to being un-used, or can be a way to create a variable without setting its value before it is used.
+`None' é uma forma de apagar o conteúdo de uma variável, ou apenas de criar uma variável definindo um valor padrão antes de ser usada.
 \par
-For example, if your football team were raising funds for new uniforms, and you were adding up how much money had been raised, you might want to wait until all the team had returned with the money before you started adding it all up.  In programming terms, we might have a variable for each member of the team, and then set all the variables to None:
+Por exemplo, se o seu time de futebol estiver levantando fundos para um novo uniforme e você está somando quanto já foi levantado, você pode querer esperar até que todo time dê o dinheiro antes de iniciar a contagem. Em termos de programação, nós poderiamos ter uma variável para cada membro do time e então atribuir todas as variáveis para `None':
 
 \begin{listing}
 \begin{verbatim}
->>> player1 = None
->>> player2 = None
->>> player3 = None
+>>> jogador1 = None
+>>> jogador2 = None
+>>> jogador3 = None
 \end{verbatim}
 \end{listing}
 
-We could then use an if-statement, to check these variables, to determine if all the members of the team had returned with the money they'd raised:
+Nós podemos usar a expressão `if', para verificar essas variáveis e determinar se todos os membros do time já retornaram com o dinheiro que levantaram:
 
 \begin{listing}
 \begin{verbatim}
->>> if player1 is None or player2 is None or player3 is None:
-...     print('Please wait until all players have returned')
+>>> if jogador1 is None or jogador2 is None or jogador3 is None:
+...     print('Por favor, aguarde até que todos jogadores tenham retornado')
 ... else:
-...     print('You have raised %s' % (player1 + player2 + player3))
+...     print('Você levantou %s' % (jogador1 + jogador2 + jogador3))
 \end{verbatim}
 \end{listing}
 
-The if-statement checks whether any of the variables have a value of \code{None}, and prints the first message if they do.  If each variable has a real value, then the second message is printed with the total money raised. If you try this code out with all variables set to None, you'll see the first message (don't forget to create the variables first or you'll get an error message):
+A expressão `if' verifica se alguma das variáveis possui o valor \code{None}, e imprime a primeira mensagem, se sim. Se cada uma das variáveis possuir um valor, então a segunda mensagem é impressa, com o valor total levantado. Se você tentar este código com todas as variáveis com `None', você verá a primeira mensagem (não se esqueça de criar as variáveis primeiro, senão você receberá uma mensagem de erro):
 
 \begin{listing}
 \begin{verbatim}
