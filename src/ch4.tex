@@ -205,7 +205,7 @@ Nós podemos usar a expressão `if', para verificar essas variáveis e determina
 >>> if jogador1 is None or jogador2 is None or jogador3 is None:
 ...     print('Por favor, aguarde até que todos jogadores tenham retornado')
 ... else:
-...     print('Você levantou %s' % (jogador1 + jogador2 + jogador3))
+...     print('Você conseguiu %s' % (jogador1 + jogador2 + jogador3))
 \end{verbatim}
 \end{listing}
 
@@ -213,58 +213,58 @@ A expressão `if' verifica se alguma das variáveis possui o valor \code{None}, 
 
 \begin{listing}
 \begin{verbatim}
->>> if player1 is None or player2 is None or player3 is None:
-...     print('Please wait until all players have returned')
+>>> if jogador1 is None or jogador2 is None or jogador3 is None:
+...     print('Por favor, aguarde até que todos jogadores tenham retornado')
 ... else:
-...     print('You have raised %s' % (player1 + player2 + player3))
-Please wait until all players have returned
+...     print('Você conseguiu %s' % (jogador1 + jogador2 + jogador3))
+Por favor, aguarde até que todos jogadores tenham retornado
 \end{verbatim}
 \end{listing}
 
-Even if we set one or two of the variables, we'll still get the message:
+Até mesmo se nós definirmos uma ou duas variáveis, nós ainda receberemos a mensagem:
 
 \begin{listing}
 \begin{verbatim}
->>> player1 = 100
->>> player3 = 300
->>> if player1 is None or player2 is None or player3 is None:
-...     print('Please wait until all players have returned')
+>>> jogador1 = 100
+>>> jogador3 = 300
+>>> if jogador1 is None or jogador2 is None or jogador3 is None:
+...     print('Por favor, aguarde até que todos jogadores tenham retornado')
 ... else:
-...     print('You have raised %s' % (player1 + player2 + player3))
-Please wait until all players have returned
+...     print('Você conseguiu %s' % (jogador1 + jogador2 + jogador3))
+Por favor, aguarde até que todos jogadores tenham retornado
 \end{verbatim}
 \end{listing}
 
 \noindent
-Finally, once all variables are set, you'll see the message in the second block:
+Finalmente, assim que todas variáveis estiverem definidas, você verá a mensagem do segundo bloco:
 
 \begin{listing}
 \begin{verbatim}
->>> player1 = 100
->>> player3 = 300
->>> player2 = 500
->>> if player1 is None or player2 is None or player3 is None:
-...     print('Please wait until all players have returned')
+>>> jogador1 = 100
+>>> jogador3 = 300
+>>> jogador2 = 500
+>>> if jogador1 is None or jogador2 is None or jogador3 is None:
+...     print('Por favor, aguarde até que todos jogadores tenham retornado')
 ... else:
-...     print('You have raised %s' % (player1 + player2 + player3))
-You have raised 900
+...     print('Você conseguiu %s' % (jogador1 + jogador2 + jogador3))
+Você conseguiu 900
 \end{verbatim}
 \end{listing}
 
-\section{What's the difference$\ldots$?}\label{whatsthedifference}\index{equality}
+\section{Qual é a diferença$\ldots$?}\label{whatsthedifference}\index{equality}
 
-What's the difference between \code{10} and \code{'10'}?
+Qual é a diferença entre \code{10} e \code{'10'}?
 \par
-Not much apart from the quotes, you might be thinking.  Well, from reading the earlier chapters, you know that the first is a number and the second is a string. This makes them differ more than you might expect.  Earlier we compared the value of a variable (age) to a number in an if-statement:
+Nada além das aspas, você deve estar pensando. Bem, pelo que foi lido nos primeiros capítulos, você sabe que o primeiro é um número e o segundo é uma `string'. Isso os diferencia mais do que você deve estar pensando. Mais cedo, nós comparamos o valor da variável (idade) à um número em uma expressão `if':
 
 \begin{listing}
 \begin{verbatim}
->>> if age == 10:
-...     print('you are 10')
+>>> if idade == 10:
+...     print('você tem 10')
 \end{verbatim}
 \end{listing}
 
-If you set variable age to 10, the print statement will be called:
+Se você definir a variável idade com 10, o comando `print' será chamado:
 
 \begin{listing}
 \begin{verbatim}
