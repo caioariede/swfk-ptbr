@@ -268,61 +268,61 @@ Se você definir a variável idade com 10, o comando `print' será chamado:
 
 \begin{listing}
 \begin{verbatim}
->>> age = 10
->>> if age == 10:
-...     print('you are 10')
+>>> idade = 10
+>>> if idade == 10:
+...     print('você tem 10')
 ...
-you are 10
+você tem 10
 \end{verbatim}
 \end{listing}
 
-However, if age is set to \code{'10'} (note the quotes), then it won't:
+Porém, se `idade' for definida como \code{'10'} (note as aspas), não será:
 
 \begin{listing}
 \begin{verbatim}
->>> age = '10'
->>> if age == 10:
-...     print('you are 10')
+>>> idade = '10'
+>>> if idade == 10:
+...     print('você tem 10')
 ...
 \end{verbatim}
 \end{listing}
 
-Why is the code in the block not run?  Because a string is different from a number, even if they look the same:
+Por que o código no bloco não foi executado? Porque uma string é diferente de um número, mesmo que eles se pareçam:
 
 \begin{listing}
 \begin{verbatim}
->>> age1 = 10
->>> age2 = '10'
->>> print(age1)
+>>> idade1 = 10
+>>> idade2 = '10'
+>>> print(idade1)
 10
->>> print(age2)
+>>> print(idade2)
 10
 \end{verbatim}
 \end{listing}
 
-See!  They look exactly the same.  Yet, because one is a string, and the other is a number, they are different values. Therefore age == 10 (age equals 10) will never be true, if the value of the variable is a string.
+Veja! Eles parecem exatamente iguais. Ainda, por um ser uma string e outro um número, eles tem valores diferentes. Portanto \code{idade == 10} (idade igual à 10) nunca será verdade, se o valor da variável é uma string.
 \par
-Probably the best way to think about it, is to consider 10 books and 10 bricks.  The number of items might be the same, but you couldn't say that 10 books are exactly the same as 10 bricks, could you? Luckily in Python we have magic functions which can turn strings into numbers and numbers into strings (even if they won't quite turn bricks into books). For example, to convert the string '10' into a number you would use the function \code{int}:
+Provavelmente, a melhor forma de pensar sobre isso é considerar 10 livros e 10 tijolos. O número de itens pode ser o mesmo, mas você não poderia dizer que 10 livros são 10 tijolos, poderia? Felizmente em Python, nós temos funções mágicas que podem transformar strings em números e números em strings (mesmo que elas não transformem tijolos em livros). Por exemplo, para converter uma string '10' em um número, você pode usar a função \code{int}:
 
 \begin{listing}
 \begin{verbatim}
->>> age = '10'
->>> converted_age = int(age)
+>>> idade = '10'
+>>> idade_convertida = int(idade)
 \end{verbatim}
 \end{listing}
 
 \noindent
-The variable converted\_age now holds the number 10, and not a string. To convert a number into a string, you would use the function \code{str}:
+A variável \code{idade\_convertida} agora contém o número 10 e não uma string. Para converter um número para uma string, você pode usar a função \code{str}:
 
 \begin{listing}
 \begin{verbatim}
->>> age = 10
->>> converted_age = str(age)
+>>> idade = 10
+>>> idade_convertida = str(idade)
 \end{verbatim}
 \end{listing}
 
 \noindent
-converted\_age now holds the string 10, and not a number. Back to that if-statement which prints nothing:
+A variável \code{idade\_convertida} agora contém a string 10 e não um número. De volta àquela expressão `if' que não imprime nada:
 
 \begin{listing}
 \begin{verbatim}
