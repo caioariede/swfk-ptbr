@@ -8,7 +8,7 @@
 
 Não existe coisa pior do que ter que fazer a mesma coisa mais e mais vezes. Existe um motivo para que seus pais peçam para você contar ovelhas para tentar dormir e isso não tem nada a ver com um maravilhoso sono --- induzindo poderes de mamíferos fofinhos. Isso tem a ver com o fato de que contar infinitamente, a mesma coisa, é chato e a sua mente se desligará mais fácil para dormir, se não estiver focando em algo interessante.
 \par
-Além disso, especialmente os programadores não gostam de ser repetitivos. Isso os coloca para dormir de certa forma. Que é uma boa razão para que todas as linguagens de programação tenham o que é chamado de \textbf{for-loop}\index{for-loop}. Por exemplo, para imprimir `olá', 5 vezes em Python, você poderia fazer o seguinte:
+Além disso, especialmente os programadores não gostam de ser repetitivos. Isso os coloca para dormir de certa forma. Que é uma boa razão para que todas as linguagens de programação tenham o que é chamado de \textbf{laço-for}\index{for-loop}. Por exemplo, para imprimir `olá', 5 vezes em Python, você poderia fazer o seguinte:
 
 \begin{listing}
 \begin{verbatim}
@@ -27,22 +27,22 @@ Olá
 
 Que é$\ldots$ bastante entediante.
 
-Ou você poderia usar o `for-loop' (observe: existe 4 espaços na segunda linha, antes do comando `print' --- Eu os substituí por @ para que nós o pudessemos ver):
+Ou você poderia usar o `laço-for' (observe: existe 4 espaços na segunda linha, antes do comando `print' --- Eu os substituí por @ para que nós o pudessemos ver):
 
 \begin{listingignore}
 \begin{verbatim}
 >>> for x in range(0, 5):
-... @@@@print('hello')
+... @@@@print('Olá')
 ... 
-hello
-hello
-hello
-hello
-hello
+Olá
+Olá
+Olá
+Olá
+Olá
 \end{verbatim}
 \end{listingignore}
 
-\code{range}\index{functions!range} is a function and is a quick and easy way to create a list of numbers ranging between a start and end number. For example:
+\code{range}\index{functions!range} é uma função e uma forma rápida e fácil de criar uma lista contendo uma sequência de números entre um `início' e um `fim'. Por exemplo:
 
 \begin{listing}
 \begin{verbatim}
@@ -51,38 +51,38 @@ hello
 \end{verbatim}
 \end{listing}
 
-So in the case of the for-loop, what the code `\code{for x in range(0, 5)}' is actually telling Python, is to create a list of numbers (0, 1, 2, 3, 4) and then for each number, store the value in the variable \code{x}. We can then use the x in our print statement if we want to:
+Então, no caso do `laço-for', o código `\code{for x in range(0, 5)}' está dizendo ao Python para criar uma lista de números (0, 1, 2, 3, 4) e então para cada número, armazenar seu valor na variável \code{x}. Nós podemos então usar o \code{x} no nosso comando `print', se quisermos:
 
 \begin{listing}
 \begin{verbatim}
 >>> for x in range(0, 5):
-...     print('hello %s' % x)
-hello 0
-hello 1
-hello 2
-hello 3
-hello 4
+...     print('Olá %s' % x)
+Olá 0
+Olá 1
+Olá 2
+Olá 3
+Olá 4
 \end{verbatim}
 \end{listing}
 
-If we get rid of the for-loop again, it might look something like this:
+Se nos livrarmos do `laço-for' novamente, nós teríamos que fazer algo assim:
 
 \begin{listing}
 \begin{verbatim}
 x = 0
-print('hello %s' % x)
+print('Olá %s' % x)
 x = 1
-print('hello %s' % x)
+print('Olá %s' % x)
 x = 2
-print('hello %s' % x)
+print('Olá %s' % x)
 x = 3
-print('hello %s' % x)
+print('Olá %s' % x)
 x = 4
-print('hello %s' % x)
+print('Olá %s' % x)
 \end{verbatim}
 \end{listing}
 
-So the loop has actually saved us from writing an extra 8 lines of code.  This is extremely useful, since the average programmer is more lazy than a hippopotamus on a hot day, when it comes to typing. Good programmers hate doing things more than once, so the for-loop is one of the more useful statements in a programming language.
+Então o laço nos fez economizar, escrevendo 8 linhas a menos de código. Isso é extremamente útil, visto que um programador médio é mais preguiçoso que um hipopotamo no calor, quando o assunto é digitar. Bons programadores odeiam fazer coisas mais de uma vez, então o `laço-for' é um dos comandos mais úteis em uma linguagem de programação.
 
 \fbox{\colorbox{PaleBlue}{\parbox{.75\linewidth} {
 \subsection*{WARNING!!!}
