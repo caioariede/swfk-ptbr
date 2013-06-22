@@ -85,36 +85,36 @@ print('Olá %s' % x)
 Então o laço nos fez economizar, escrevendo 8 linhas a menos de código. Isso é extremamente útil, visto que um programador médio é mais preguiçoso que um hipopotamo no calor, quando o assunto é digitar. Bons programadores odeiam fazer coisas mais de uma vez, então o `laço-for' é um dos comandos mais úteis em uma linguagem de programação.
 
 \fbox{\colorbox{PaleBlue}{\parbox{.75\linewidth} {
-\subsection*{WARNING!!!}
+\subsection*{AVISO!!!}
 
-If you've been trying out the examples as you go along, you might have got a funny error message when typing in the code for that for-loop.  If you did, it might have looked something like this:
+Se você esteve tentando os exemplos conforme foi lendo, você pode ter recebido uma mensagem de erro quando digitou o código para aquele `laço-for'. Se recebeu, foi algo assim:
 
 \begin{listing}
 IndentationError: expected an indented block
 \end{listing}
 
-If you see an error like this, then you missed typing the spaces on the second line.  Spaces in Python (either a normal space or a tab) are extremely important.  We'll talk more about this shortly$\ldots$
+Se você ver um erro parecido com esse, então você esqueceu de colocar os espaços na segunda linha. Os espaços em Python (ou tabs) são extremamente importantes. Nós falaremos mais sobre isso depois$\ldots$
 }}}
 \linebreak
 \par
-We don't have to stick to using \code{range}, we can also use lists we've already created.  Such as the shopping list we created in the last chapter:
+Nós não precisamos continuar usando o \code{range}, nós também podemos usar listas, como já criamos. Assim como a lista de compras que criamos no último capítulo:
 
 \begin{listing}
 \begin{verbatim}
->>> shopping_list = [ 'eggs', 'milk', 'cheese', 'celery', 'peanut butter', 
-... 'baking soda' ]
->>> for i in shopping_list:
+>>> lista_compras = [ 'ovos', 'leite', 'queijo', 'salsinha', 'margarina', 
+... 'fermento' ]
+>>> for i in lista_compras:
 ...     print(i)
-eggs
-milk
-cheese
-celery
-peanut butter
-baking soda
+ovos
+leite
+queijo
+salsinha
+margarina
+fermento
 \end{verbatim}
 \end{listing}
 
-The above code is a way of saying, ``for each item in the list, store the value in the variable `i' and then print the contents of that variable''.  Again, if we got rid of the for-loop, we'd have to do something like this:
+O código acima é uma forma de dizer, ``para cada item na lista, armazene na variável `i' e então imprima o conteúdo dessa variável''. Novamente, se nós não usassemos o `laço-for', nós teríamos que fazer algo assim:
 
 \begin{listing}
 \begin{verbatim}
