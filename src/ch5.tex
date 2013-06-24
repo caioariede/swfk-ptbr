@@ -118,52 +118,52 @@ O código acima é uma forma de dizer, ``para cada item na lista, armazene na va
 
 \begin{listing}
 \begin{verbatim}
->>> shopping_list = [ 'eggs', 'milk', 'cheese', 'celery', 'peanut butter', 
-... 'baking soda' ]
->>> print(shopping_list[0])
-eggs
->>> print(shopping_list[1])
-milk
->>> print(shopping_list[2])
-cheese
->>> print(shopping_list[3])
-celery
->>> print(shopping_list[4])
-peanut butter
->>> print(shopping_list[5])
-baking soda
+>>> lista_compras = [ 'ovos', 'leite', 'queijo', 'salsinha', 'margarina', 
+... 'fermento' ]
+>>> print(lista_compras[0])
+ovos
+>>> print(lista_compras[1])
+leite
+>>> print(lista_compras[2])
+queijo
+>>> print(lista_compras[3])
+salsinha
+>>> print(lista_compras[4])
+margarina
+>>> print(lista_compras[5])
+fermento
 \end{verbatim}
 \end{listing}
 
-So once again, the loop has saved us from a lot of typing.
+Então, novamente, o laço nos salvos de digitar muita coisa.
 
-\section{When is a block not square?}\index{blocks of code}
+\section{Quando um bloco não é quadrado?}\index{blocks of code}
 
-When it's a block of code.
+Quando é um bloco de código.
 \par
 \noindent
-So what's a `block of code' then?
+O que é um `bloco de código' então?
 \par
-A block of code is a set of programming statements you want to group together.  For example, in the for-loop example above, you might want to do more than just print out the items.  Perhaps you'd want to buy each item and then print out what it was.  Supposing we had a function called `buy', you might write code like this:
+Um bloco de código é uma série de comandos de programação que você quer juntar. Por exemplo, no laço `for' do exemplo acima, você pode querer mais que apenas imprimir os itens. Talvez você quisesse comprar cada item e então imprimí-lo. Supondo que nós tivessemos uma função chamada `comprar', você poderia escrever o código assim:
 
 \begin{listingignore}
 \begin{verbatim}
->>> for i in shopping_list:
-...     buy(i)
+>>> for i in lista_compras:
+...     comprar(i)
 ...     print(i)
 \end{verbatim}
 \end{listingignore}
 
-Don't bother typing that example into the Python console---because we don't have a buy function and you'll get an error message if you do try to run it---but it does demonstrate a simple Python block made up of 2 commands:
+Não há necessidade de tentar digitar esse exemplo no terminal do Python --- pois nós não temos uma função `comprar' e você receberá uma mensagem de erro se tentar --- mas isso demonstra um simples bloco de código em Python, formado por 2 comandos:
 
 \begin{listingignore}
 \begin{verbatim}
-buy(i)
+comprar(i)
 print(i)
 \end{verbatim}
 \end{listingignore}
 
-In Python, white space\index{white space} such as tab (when you press the tab key) and space (when you press the space bar) is \emph{very} important.  Code that is at the same position is grouped together into blocks.
+Em Python, os espaços em branco\index{white space} como o tab (quando você pressiona a tecla Tab) e o espaço (quando você aperta a barra de espaço) é \emph{muito} importante. Códigos que estão alinhados na mesma posição, são agrupados como blocos.
 
 \begin{listing}
 \begin{verbatim}
