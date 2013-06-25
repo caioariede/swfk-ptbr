@@ -167,65 +167,65 @@ Em Python, os espaços em branco\index{white space} como o tab (quando você pre
 
 \begin{listing}
 \begin{verbatim}
-	this would be block 1
-	this would be block 1
-	this would be block 1
-	    this would be block 2
-	    this would be block 2
-	    this would be block 2
-	this would still be block 1
-	this would still be block 1
-	    this would be block 3
-	    this would be block 3
-	        this would be block 4
-	        this would be block 4
-	        this would be block 4
+	este seria o bloco 1
+	este seria o bloco 1
+	este seria o bloco 1
+	    este seria o bloco 2
+	    este seria o bloco 2
+	    este seria o bloco 2
+	este ainda seria o bloco 1
+	este ainda seria o bloco 1
+	    este seria o bloco 3
+	    este seria o bloco 3
+	        este seria o bloco 4
+	        este seria o bloco 4
+	        este seria o bloco 4
 \end{verbatim}
 \end{listing}
 
-But you must be consistent with your spacing.  For example:
+Mas você deve ser consistente com seus espaços. Por exemplo:
 
 \begin{listingignore}
 \begin{verbatim}
->>> for i in shopping_list:
-...     buy(i)
+>>> for i in lista_compras:
+...     comprar(i)
 ...       print(i)
 \end{verbatim}
 \end{listingignore}
 
-The second line (\code{function buy(i)}) starts with \textbf{4} spaces.  The third line (print(i)) starts with \textbf{6} spaces.  Let's take another look at that code with visible spaces (using @ again):
+A segunda linha (\code{function comprar(i)}) inicia com \textbf{4} espaços. A terceira linha (\code{print(i)}) inicia com \textbf{6} espaços.  Vamos olhar novamente o código, com os espaços visíveis (usando @ no lugar):
 
 \begin{listingignore}
 \begin{verbatim}
->>> for i in shopping_list:
-... @@@@buy(i)
+>>> for i in lista_compras:
+... @@@@comprar(i)
 ... @@@@@@print(i)
 \end{verbatim}
 \end{listingignore}
 
-This would cause an error.  Once you start using 4 spaces, you need to continue using 4 spaces.  And if you want to put a block \emph{inside} another block, you'll need 8 spaces (2 x 4) at the beginning of the lines for that inner block.
+Isso causaria um erro. Assim que você começou usando 4 espaços, você precisa continuar usando 4 espaços. E se você quiser colocar um bloco \emph{dentro} de outro bloco, você precisará de 8 espaços (2 x 4) no começo de cada linha dentro desse bloco.
 \par
-So the first block has 4 spaces (I'll highlight them again so you can see them):
+Então o primeiro bloco tem 4 espaços (Eu vou destacar novamente, para você ver):
 
 \begin{listing}
 \begin{verbatim}
-@@@@here's my first block
-@@@@here's my first block
+@@@@aqui está o meu primeiro bloco
+@@@@aqui está o meu primeiro bloco
 \end{verbatim}
 \end{listing}
 
-And then the second block (which is `inside' the first) needs 8 spaces:
+E então o segundo bloco (que está `dentro' do primeiro) precisa de 8 espaços:
 
 \begin{listing}
 \begin{verbatim}
-@@@@here's my first block
-@@@@here's my first block
-@@@@@@@@here's my second block
-@@@@@@@@here's my second block
+@@@@aqui está o meu primeiro bloco
+@@@@aqui está o meu primeiro bloco
+@@@@@@@@aqui está o meu segundo bloco
+@@@@@@@@aqui está o meu segundo bloco
 \end{verbatim}
 \end{listing}
 
-Why do we want to put one block `inside' another?  Usually we do this when the second block relies on the first in some way.  Such as our for-loop.  If the line with the for-loop is the first block, then the statements we want to run over and over again are in the second block---in a way they rely on the first block to work properly.
+Porque nós iriamos querer um bloco `dentro' de outro? Normalmente nós fazemos isso quando o segundo bloco depende do primeiro, de alguma forma. Como o nosso laço `for'. Se a linha com o laço é o primeiro bloco, os comandos que nós queremos executar várias vezes estará no segundo bloco --- de certa forma eles dependem do primeiro bloco para funcionar.
 
 In the Python console, once you start typing code in a block, Python continues that block until you press the Enter key on a blank line (you'll see the 3 dots at the beginning of the line showing that you're still inside a block.
 
