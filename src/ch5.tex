@@ -227,14 +227,14 @@ E então o segundo bloco (que está `dentro' do primeiro) precisa de 8 espaços:
 
 Porque nós iriamos querer um bloco `dentro' de outro? Normalmente nós fazemos isso quando o segundo bloco depende do primeiro, de alguma forma. Como o nosso laço `for'. Se a linha com o laço é o primeiro bloco, os comandos que nós queremos executar várias vezes estará no segundo bloco --- de certa forma eles dependem do primeiro bloco para funcionar.
 
-In the Python console, once you start typing code in a block, Python continues that block until you press the Enter key on a blank line (you'll see the 3 dots at the beginning of the line showing that you're still inside a block.
+No terminal do Python, assim que você começar a digitar o código em um bloco, o Python continuará naquele bloco até que você pressione `Enter' em uma linha em branco (você verá os 3 pontos no começo da linha, mostrando que você ainda está em um bloco).
 
-Let's try some real examples.  Open the console and type the following (remember that you need to press the space bar 4 times at the beginning of the print lines):
+Vamos tentar alguns exemplos reais. Abra o terminal e digite o seguinte (lembre-se de colocar 4 espaços no começo das linhas com o comando `print'):
 
 \begin{listing}
 \begin{verbatim}
->>> mylist = [ 'a', 'b', 'c' ]
->>> for i in mylist:
+>>> minhalista = [ 'a', 'b', 'c' ]
+>>> for i in minhalista:
 ...     print(i)
 ...     print(i)
 ...
@@ -247,15 +247,15 @@ c
 \end{verbatim}
 \end{listing}
 
-After the second print, press the Enter key on the blank line---which tells the console you want to end the block. It will then print each item in the list twice.
+Após o segundo `print', pressione a tecla `Enter' em uma linha em branco --- que irá dizer ao terminal que você quer finalizar o bloco. Isso então imprimirá cada item da lista, duas vezes.
 \par
 \noindent
-The next example will cause an error message to be displayed:
+O próximo exemplo causará uma mensagem de erro:
 
 \begin{listing}
 \begin{verbatim}
->>> mylist = [ 'a', 'b', 'c' ]
->>> for i in mylist:
+>>> minhalista = [ 'a', 'b', 'c' ]
+>>> for i in minhalista:
 ...     print(i)
 ...       print(i)
 ...
@@ -266,7 +266,7 @@ IndentationError: unexpected indent
 \end{verbatim}
 \end{listing}
 
-The second print line has 6 spaces, not 4, which Python doesn't like because it wants spacing to stay the same.
+A segunda linha tem 6 espaços, não 4, coisa que o Python não gosta, pois ele quer que os espaços se mantenham os mesmos.
 
 \fbox{\colorbox{PaleBlue}{\parbox{.75\linewidth} {
 \subsection*{REMEMBER}
