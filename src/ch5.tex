@@ -269,59 +269,59 @@ IndentationError: unexpected indent
 A segunda linha tem 6 espaços, não 4, coisa que o Python não gosta, pois ele quer que os espaços se mantenham os mesmos.
 
 \fbox{\colorbox{PaleBlue}{\parbox{.75\linewidth} {
-\subsection*{REMEMBER}
+\subsection*{LEMBRE-SE}
 
-If you start your blocks of code with 4 spaces you must continue using 4 spaces.  If you start blocks with 2 spaces, you must continue with 2 spaces.  Stick to 4 spaces, because that's what most people use.
+Se você inicia o seu bloco de código com 4 espacos, você deve continuar usando 4 espaços. Se você inicia blocos com 2 espaços, você deve continuar usando 2 espaços. Continue com os 4 espaços, porque é o que as pessoas mais usam.
 
 }}}
 
 \par
-Here's a more complicated example with 2 blocks of code:
+Aqui está um exemplo mais cimplicado, com 2 blocos de código:
 
 \begin{listing}
 \begin{verbatim}
->>> mylist = [ 'a', 'b', 'c' ]
->>> for i in mylist:
+>>> minhalista = [ 'a', 'b', 'c' ]
+>>> for i in minhalista:
 ...     print(i)
-...     for j in mylist:
+...     for j in minhalista:
 ...         print(j)
 ...
 \end{verbatim}
 \end{listing}
 
 \noindent
-Where are the blocks in this code and what is it going to do...?
+Onde estão os blocos nesse código e o que ele faz?
 \par
 \noindent
-There are \textbf{two} blocks---number one is part of the first for-loop:
+Existem \textbf{dois} blocos --- o primeiro é parte do primeiro laço `for':
 
 \begin{listing}
 \begin{verbatim}
->>> mylist = [ 'a', 'b', 'c' ]
->>> for i in mylist:
+>>> minhalista = [ 'a', 'b', 'c' ]
+>>> for i in minhalista:
 ...     print(i)                #
-...     for j in mylist:        #-- these lines are the FIRST block
+...     for j in minhalista:    # estas linhas são o PRIMEIRO bloco
 ...         print(j)            #
 ...
 \end{verbatim}
 \end{listing}
 
-Block number two is the single print line in the second for-loop:
+O segundo bloco tem somente o `print' , no segundo laço `for':
 
 \begin{listing}
 \begin{verbatim}
->>> mylist = [ 'a', 'b', 'c' ]
->>> for i in mylist:
+>>> minhalista = [ 'a', 'b', 'c' ]
+>>> for i in minhalista:
 ...     print(i)
-...     for j in mylist:
-...         print(j)               # this line is the SECOND block
+...     for j in minhalista:
+...         print(j)               # esta linha é o SEGUNDO bloco
 ...
 \end{verbatim}
 \end{listing}
 
-Can you figure out what this little bit of code is going to do?
+Você consegue descobrir o que esse pequeno pedaço de código irá fazer?
 \par
-It's going to print out the 3 letters from `mylist', but how many times?  If we look at each line, we can probably figure out the number. We know that the first loop statement will go through each of the items in the list, and then run the commands in block number 1. So it will print out a letter, then start the next loop. This loop will also go through each of the items in the list and then run the command in block number 2.  So what we should get when this code runs, is `a' followed by `a', `b', `c', then `b' followed by `a', `b', `c' and so on. Enter the code into the Python console and see for yourself:
+Ele irá imprimir as 3 letras em `minhalista', mas quantas vezes? Se nós olharmos cada linha, nós descobriremos. Nós sabemos que o primeiro laço irá caminhar por cada um dos itens na lista e então executar os comandos no bloco 1. Então ele irá imprimir uma letra, então iniciar o próximo laço. Esse laço também caminhará por cada item na lista e executará o comando no bloco 2. Então o que nós teremos quando esse código rodar, é o `a' seguido por `a', `b', `c', e então `b' seguido por `a', `b', `c' e por assim em diante. Digite o código você mesmo no terminal do Python para ver:
 
 \begin{listing}
 \begin{verbatim}
