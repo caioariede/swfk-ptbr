@@ -325,10 +325,10 @@ Ele irá imprimir as 3 letras em `minhalista', mas quantas vezes? Se nós olharm
 
 \begin{listing}
 \begin{verbatim}
->>> mylist = [ 'a', 'b', 'c' ]
->>> for i in mylist:
+>>> minhalista = [ 'a', 'b', 'c' ]
+>>> for i in minhalista:
 ...     print(i)
-...     for j in mylist:
+...     for j in minhalista:
 ...         print(j)
 ... 
 a
@@ -346,10 +346,10 @@ c
 \end{verbatim}
 \end{listing}
 
-How about something more useful than just printing letters?  Remember that calculation we came up with at the beginning of this book to work out how much you might have saved at the end of the year, if you earned \$5 doing chores, \$30 doing a paper route and spent \$10 a week?
+Que tal algo mais útil que apenas imprimir letras? Lembra daquele cálculo que usamos no começo deste livro, com intuito de saber quanto você teria no final do ano, se você ganhasse R\$5 fazendo alguns trabalhos, R\$30 por entregar alguns jornais, mas gastasse R\$10, toda semana?
 \par
 \noindent
-It looked like this:
+Algo assim:
 
 \begin{listing}
 \begin{verbatim}
@@ -358,35 +358,35 @@ It looked like this:
 \end{listing}
 
 \noindent
-(That's \$5 + \$30 - \$10 multiplied by 52 weeks in the year).
+(Isto é R\$5 + R\$30 - R\$10 multiplicado por 52 semanas em um ano).
 
-It might be useful to see how much your savings are increasing during the year, rather than working out what they will be at the very end.  We can do this with another for-loop.  But first of all, we need to load those numbers into variables:
+Seria útil ver como as suas economias aumentaram durante o ano, ao invés de calcular quanto você teria no final do ano. Nós podemos fazer isso através de outro laço `for'. Mas antes de tudo, nós precisamos carregar esses números em variáveis:
 
 \begin{listing}
 \begin{verbatim}
->>> chores = 5
->>> paper = 30
->>> spending = 10
+>>> trabalhos = 5
+>>> jornal = 30
+>>> gastos = 10
 \end{verbatim}
 \end{listing}
 
-We can perform the original calculation using the variables:
+Nós podemos realizar o cálculo original usando as variáveis:
 
 \begin{listing}
 \begin{verbatim}
->>> (chores + paper - spending) * 52
+>>> (trabalhos + jornal - gastos) * 52
 1300
 \end{verbatim}
 \end{listing}
 
-Or we can see the savings increase over the year, by creating another variable called savings, and then using a loop:
+Ou nós podemos ver a economia aumentar durante o ano, criando outra variável chamada `economia', e usar ela no laço:
 
 \begin{listing}
 \begin{verbatim}
-1. >>> savings = 0
-2. >>> for week in range(1, 53):
-3. ...     savings = savings + chores + paper - spending
-4. ...     print('Week %s = %s' % (week, savings))
+1. >>> economia = 0
+2. >>> for semana in range(1, 53):
+3. ...     economia = economia + trabalhos + jornal - gastos
+4. ...     print('Semana %s = %s' % (semana, economia))
 5. ...
 \end{verbatim}
 \end{listing}
