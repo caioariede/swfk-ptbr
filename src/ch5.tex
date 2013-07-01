@@ -418,43 +418,43 @@ Semana 15 = 375
 
 $\ldots$até a semana 52.
 
-\section{While we're talking about looping$\ldots$}\index{while-loop}
+\section{Já que estamos falando de laços$\ldots$}\index{while-loop}
 
-A for-loop isn't the only kind of looping you can do in Python. There's also the while-loop. If a for-loop is a loop where you know exactly when you'll stop running, a while-loop is a loop where you don't necessarily know ahead of time when you'll stop. Imagine a staircase with 20 steps.  You know you can easily climb 20 steps.  That's a for-loop.
+O `for' não é o único tipo de laço que você pode fazer em Python. Existe também o laço `while' (enquanto). Se o `for' é um laço onde você sabe exatamente quando irá parar, o laço `while' é um laço onde você não sabe, necessariamente, quantas vezes irá rodar. Imagine uma escada com 20 degraus. Você sabe facilmente que pode subir 20 degraus. Isso é um laço `for'.
 
 \begin{listing}
 \begin{verbatim}
->>> for step in range(0,20):
-...     print(step)
+>>> for degrau in range(0,20):
+...     print(degrau)
 \end{verbatim}
 \end{listing}
 
-Now imagine a staircase going up a mountainside.  You might run out of energy before you reach the top.  Or the weather might turn bad forcing you to stop climbing.  This is a while-loop.
+Agora imagine uma escada que sobe uma montanha. Você pode perder a energia antes de chegar no topo. Ou o tempo pode piorar, forçando você a parar a escalada. Esse é um laço `while'.
 
 \begin{listingignore}
 \begin{verbatim}
->>> step = 0
->>> while step < 10000:
-...     print(step)
-...     if tired == True:
+>>> degrau = 0
+>>> while degrau < 10000:
+...     print(degrau)
+...     if cansado == True:
 ...         break
-...     elif badweather == True:
+...     elif tempo_ruim == True:
 ...         break
 ...     else:
-...         step = step + 1
+...         degrau = degrau + 1
 \end{verbatim}
 \end{listingignore}
 
-Don't bother running the code sample above, because we haven't bothered to create the variables \code{tired} and \code{badweather}.  But it demonstrates the basics of a while-loop.  \emph{While} the value of variable \code{step} is less than 10000 (step $<$ 10000) the code in the block is executed.  In the block, we print the value of \code{step}, then check whether \code{tired} or \code{badweather} is true.  If \code{tired} is true, then the \code{break} statement stops the code in the loop executing (basically we jump out of the loop to the next line of code immediately following the block).  If \code{badweather} is true, we also break out of the loop.  If not, then \textbf{1} is added to the value of \code{step}, and the condition of the while loop (step $<$ 10000) is checked again.
+Não se preocupe em executar o código de exemplo acima, pois nós ainda não criamos as variáveis \code{cansado} e \code{tempo_ruim}. Mas ele demonstra um laço `while' básico. \emph{Enquanto} o valor da variável \code{degrau} for menor que 10000 (degrau $<$ 10000) o código no bloco será executado. No bloco, nós imprimimos o valor da variável \code{degrau} e então checamos se o valor de \code{cansado} ou \code{tempo_ruim} é `True'. Se \code{cansado} for `True', então o comando \code{break} para a execução do laço (basicamente, nós pulamos para fora do laço, imediatamente para a primeira linha do próximo bloco). Se \code{tempo_ruim} for `True', nós também paramos o laço. Se não, então \textbf{1} é somado ao valor em \code{degrau}, e a condição do laço (degrau $<$ 10000) é verificada novamente.
 \par
 \noindent
-So the steps of a while loop are basically:
+Então os passos de um laço `while', basicamente, são:
 
 {\renewcommand{\labelitemi}{$\triangleright$}
 \begin{itemize}
-\item check the condition,
-\item execute the code in the block,
-\item repeat
+\item verifique a condição,
+\item execute o código que está no bloco,
+\item repita
 \end{itemize}}
 
 More commonly, a while-loop might be created with a couple of conditions:
