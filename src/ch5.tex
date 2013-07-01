@@ -391,32 +391,32 @@ Ou nós podemos ver a economia aumentar durante o ano, criando outra variável c
 \end{verbatim}
 \end{listing}
 
-On line 1 the variable `savings' is loaded with 0 (because we haven't saved anything yet).\\
-Line 2 sets up the for-loop, which will run the commands in the block (the block is made up of lines 3 and 4).  Each time it loops, the variable week is loaded with the next number in the range 1-52.\\
-Line 3 is a bit more complicated.  Basically, each week we want to add what we've saved to our total savings.  Think of the variable `savings' as something like a bank.  We add up the money we earn doing odd jobs and the paper route, subtract our spending money and then take the rest to the bank.  So in computer-speak, line 3 really means, ``replace the contents of the variable savings with my current savings, plus what I've earned this week''. Basically, the equals symbol (=) is a bossy piece of code that is a way of saying, ``work out some stuff on the right first and then save it for later, using the name on the left''.\\
-Line 4 is a slightly more complicated print statement, which prints the week number and the total amount saved (for that week) to the screen.  Check the section \emph{Tricks with Strings} on page~\pageref{trickswithstrings}, if this line doesn't make a lot of sense to you. So, if you run this program, you'll see something like the following$\ldots$
+Na linha 1, a variável `economia' é iniciada com 0 (pois nós não temos nenhuma economia ainda).\\
+A linha 2 inicia o laço, que vai rodar os comandos que estão no bloco (o bloco é composto das linhas 3 e 4). Cada vez que o laço roda, a variável `semana' é carregada com o próximo número dentro da série de 1 à 52.\\
+A linha 3 é um pouco mais complicada. Basicamente, a cada semana, nós queremos adicionar o que economizamos ao total economizado. Pense na variável `economia' como se fosse um banco. Juntamos o dinheiro que ganhamos fazendo alguns bicos e a entrega de jornais, subtraimos o dinheiro que gastamos e colocamos o restante no banco. Então, na linguagem de computador, a linha 3 significa: ``substitua o conteúdo da variável `economia' pela minha economia atual, mais o que eu ganhei essa semana''. Basicamente, o símbolo igual (=) é um pedaço de código `mandão' que diz algo como ``calcule algo que está à direita e salve para depois, com o nome que está à esquerda''.\\
+A linha 4 possui um comando `print' um pouco mais complicado, que imprime o número da semana e o total economizado (naquela semana) na tela. Verifique a seção \emph{Truques com Strings} na página~\pageref{trickswithstrings}, se essa linha não lhe fizer muito sentido. Então, se você rodar o programa, você verá algo como abaixo:
 
 \begin{listing}
 \begin{verbatim}
-Week 1 = 25
-Week 2 = 50
-Week 3 = 75
-Week 4 = 100
-Week 5 = 125
-Week 6 = 150
-Week 7 = 175
-Week 8 = 200
-Week 9 = 225
-Week 10 = 250
-Week 11 = 275
-Week 12 = 300
-Week 13 = 325
-Week 14 = 350
-Week 15 = 375
+Semana 1 = 25
+Semana 2 = 50
+Semana 3 = 75
+Semana 4 = 100
+Semana 5 = 125
+Semana 6 = 150
+Semana 7 = 175
+Semana 8 = 200
+Semana 9 = 225
+Semana 10 = 250
+Semana 11 = 275
+Semana 12 = 300
+Semana 13 = 325
+Semana 14 = 350
+Semana 15 = 375
 \end{verbatim}
 \end{listing}
 
-$\ldots$going all the way up to week 52.
+$\ldots$até a semana 52.
 
 \section{While we're talking about looping$\ldots$}\index{while-loop}
 
