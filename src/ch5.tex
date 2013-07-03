@@ -499,24 +499,25 @@ Outro uso comum do laço `while', é criar um laço semi-eterno. Um laço que ba
 
 A condição do laço `while' é apenas `True'. Então ele sempre irá executar o código que está no bloco (assim, o laço é eterno, ou infinito). O laço somente irá parar quando a variável \code{alguma\_condicao} for verdadeira. Você pode ver um exemplo melhor disso no Apêndice~\ref{app:afewpythonmodules} (a seção sobre o módulo \code{random}), mas você poderia ler o próximo capítulo antes de pular para lá.
 
-\section{Things to try}
+\section{Coisas para tentar}
 
-\emph{In this chapter we saw how to use loops to perform repetitive tasks.  We used blocks of code inside the loops for the tasks to be repeated.}
+\emph{Neste capítulo, nós vimos como usar laços para fazer tarefas repetitivas. Nós usamos blocos de código dentro de laços para as tarefas a serem repetidas.}
 
-\subsection*{Exercise 1}
-What do you think will happen with the following code?
+\subsection*{Exercício 1}
+O que você acha que vai acontecer no código abaixo?
 
 \begin{listing}
 \begin{verbatim}
 >>> for x in range(0, 20):
-...     print('hello %s' % x)
+...     print('olá %s' % x)
 ...     if x < 9:
 ...         break
 \end{verbatim}
 \end{listing}
 
-\subsection*{Exercise 2}
-When you save money in a bank, you earn interest.  `Interest' is the money the bank pays you for letting them use your money---each year you are paid a small amount of money depending upon how much you've saved.  This payment is usually added back to your savings account at the bank, and it also makes you money$\ldots$ which is a bit confusing, so you might have to ask Mum or Dad to explain.
-Interest is calculated using percentages.  If you don't know what a percentage is, don't worry, it's enough to know that if the bank is paying you 1\% (1 percent) interest, you can multiply the monetary amount by the number 0.01 (if your amount is \$1000, then you will do: 1000 * 0.01).  If they're paying you 2\% interest, you can use the number 0.02, and so on.  
-If you have \$100 saved in a bank account, and they pay you 3\% interest every year, how much money do you think you will have each year, up to 10 years?  You can write a program using a for-loop to figure it out  (Hint: remember to add the interest to the total).
+\subsection*{Exercício 2}
+Quando você guarda dinheiro no banco, você ganha juros. `Juros' é o dinheiro que o banco lhe paga por deixar ele usar o seu dinheiro --- a cada ano você recebe uma pequena quantia de dinheiro, relativa ao tanto que você guardou. Esse pagamento, normalmente é adicionado de volta à sua conta no banco, que por sua vez também renderá mais dinheiro$\ldots$ o que é um pouco confuso, então pode ter que pedir a sua mãe ou ao seu pai para explicar.
+Juros são calculados usando porcentagens. Se você não sabe o que é porcentagem, não se preocupe, é o suficiente saber que se o banco está pagando à você 1\% (1 porcento) de juros, você pode multiplicar o valor monetário pelo número pelo número 0.01 (se o seu montante for R\$1000, então você ferá: 1000 * 0.01). Se eles estão pagando 2\% em juros, você pode usar o número 0.02 e por assim em diante.
+
+Se você tem R\$100 guardados no banco, e eles lhe pagam 3\% de juros todo ano, quanto em dinheiro você acha que teria ao longo de 10 anos? Você pode escrever um programa usando um laço `for' para descobrir isso. (Dica: Lembre-se de adicionar os juros ao total).
 \newpage
