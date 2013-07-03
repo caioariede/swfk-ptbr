@@ -445,7 +445,7 @@ Agora imagine uma escada que sobe uma montanha. Você pode perder a energia ante
 \end{verbatim}
 \end{listingignore}
 
-Não se preocupe em executar o código de exemplo acima, pois nós ainda não criamos as variáveis \code{cansado} e \code{tempo_ruim}. Mas ele demonstra um laço `while' básico. \emph{Enquanto} o valor da variável \code{degrau} for menor que 10000 (degrau $<$ 10000) o código no bloco será executado. No bloco, nós imprimimos o valor da variável \code{degrau} e então checamos se o valor de \code{cansado} ou \code{tempo_ruim} é `True'. Se \code{cansado} for `True', então o comando \code{break} para a execução do laço (basicamente, nós pulamos para fora do laço, imediatamente para a primeira linha do próximo bloco). Se \code{tempo_ruim} for `True', nós também paramos o laço. Se não, então \textbf{1} é somado ao valor em \code{degrau}, e a condição do laço (degrau $<$ 10000) é verificada novamente.
+Não se preocupe em executar o código de exemplo acima, pois nós ainda não criamos as variáveis \code{cansado} e \code{tempo\_ruim}. Mas ele demonstra um laço `while' básico. \emph{Enquanto} o valor da variável \code{degrau} for menor que 10000 (degrau $<$ 10000) o código no bloco será executado. No bloco, nós imprimimos o valor da variável \code{degrau} e então checamos se o valor de \code{cansado} ou \code{tempo\_ruim} é `True'. Se \code{cansado} for `True', então o comando \code{break} para a execução do laço (basicamente, nós pulamos para fora do laço, imediatamente para a primeira linha do próximo bloco). Se \code{tempo\_ruim} for `True', nós também paramos o laço. Se não, então \textbf{1} é somado ao valor em \code{degrau}, e a condição do laço (degrau $<$ 10000) é verificada novamente.
 \par
 \noindent
 Então os passos de um laço `while', basicamente, são:
@@ -457,7 +457,7 @@ Então os passos de um laço `while', basicamente, são:
 \item repita
 \end{itemize}}
 
-More commonly, a while-loop might be created with a couple of conditions:
+Geralmente, o laço `while' pode ser criado usando uma série de condições:
 
 \begin{listing}
 \begin{verbatim}
@@ -470,7 +470,7 @@ More commonly, a while-loop might be created with a couple of conditions:
 \end{verbatim}
 \end{listing}
 
-In this loop, we create a variable \code{x} with the value 45, and a variable \code{y} with the value 80.  There are two conditions that are checked by the loop: whether \code{x} is less than 50 and whether \code{y} is less than 100. While both conditions are true, the block of code is executed, adding 1 to both variables and then printing them. The output of this code is just:
+Nesse laço, nós criamos uma variável \code{x} com o valor 45 e uma variável \code{y} com o valor 80. Existem duas condições que são verificadas pelo laço: quando \code{x} é menor que 50 e quando \code{y} é menor que 100. Enquanto ambas condições forem verdadeiras, o bloco de código será executado, adicionando 1 à ambas variáveis e então imprimindo-as. O resultado desse código é:
 
 \begin{listing}
 \begin{verbatim}
@@ -482,22 +482,22 @@ In this loop, we create a variable \code{x} with the value 45, and a variable \c
 \end{verbatim}
 \end{listing}
 
-Maybe you can figure out why these numbers are printed?\footnote{We start counting at 45 in the variable \code{x} and at 80 in the variable \code{y}, and then increment (add one) to each variable every time the code in the loop is run.  The conditions check that \code{x} must be less than 50 and \code{y} must be less than 100.  After looping five times (adding 1 to each variable) the value in x reaches 50.  Now the first condition (x $<$ 50) is no longer true, so Python knows to stop looping.}
+Talvez você possa descobrir porque esses números são impressos?\footnote{Nós iniciamos contando em 45 na variável \code{x} e em 80 na variável \code{y}, então incrementamos (somamos 1) à cada variável, toda vez que o código no laço é executado. As condições verificam que \code{x} deve ser menor que 50 e \code{y} deve ser menor que 100.  Após rodar 5 vezes (adicionando 1 a cada variável), o valor em \code{x} chega à 50. Agora a primeira condição (x $<$ 50) não é mais verdadeira, então o Python sabe que deve parar o laço.}
 
-Another common usage of a while-loop, is to create a semi-eternal loop. This is a loop that basically goes forever, or at least until something happens in the code to break out of it. For example:
+Outro uso comum do laço `while', é criar um laço semi-eterno. Um laço que basicamente roda para sempre, ou até que algo aconteça no código que o faça parar. Por exemplo:
 
 \begin{listingignore}
 \begin{verbatim}
 >>> while True:
-...     lots of code here
-...     lots of code here
-...     lots of code here
-...     if some_condition == True:
+...     muitos códigos aqui
+...     muitos códigos aqui
+...     muitos códigos aqui
+...     if alguma_condicao == True:
 ...         break
 \end{verbatim}
 \end{listingignore}
 
-The condition for the while loop is just `True'.  So it will always run the code in the block (thus the loop is eternal or infinite). Only if the variable some\_condition is true will the code break out of the loop.  You can see a better example of this in Appendix~\ref{app:afewpythonmodules} (the section about the \code{random} module), but you might want to wait until you've read the next chapter before taking a look at it.
+A condição do laço `while' é apenas `True'. Então ele sempre irá executar o código que está no bloco (assim, o laço é eterno, ou infinito). O laço somente irá parar quando a variável \code{alguma\_condicao} for verdadeira. Você pode ver um exemplo melhor disso no Apêndice~\ref{app:afewpythonmodules} (a seção sobre o módulo \code{random}), mas você poderia ler o próximo capítulo antes de pular para lá.
 
 \section{Things to try}
 
