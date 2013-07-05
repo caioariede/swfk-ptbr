@@ -8,58 +8,58 @@
 
 Pense no montante de lixo que é criado todos os dias. Garrafas de água ou de refrigerante, pacotes de batata, embalagens de sanduíche, sacos de vegetais, carnes em bandejas de plástico, sacolas de compras de plástico, jornais, revistas e mais e mais$\ldots$
 \par
-Agora apenas imagine o que poderia acontecer se todo esse lixo fosse empilhado no fundo da sua garagem.
+Agora apenas imagine o que poderia acontecer se todo esse lixo fosse empilhado no entrada da sua garagem.
 
 \begin{center}
 \includegraphics*[width=100mm]{eps/trash.eps}
 \end{center}
 
-Of course, you probably recycle as much as possible.  Which is fortunate, because no one likes having to climb over a rubbish heap, on the way to school.  So, those glass bottles in the recycle bin are hopefully melted down, and then turned into new jars and bottles; paper is pulped into recycled paper; plastic turned into heavier plastic goods---so your front lawn doesn't disappear under tonnes of garbage. We get to reuse some of the goods we create, rather than eating a gaping hole in the side of the world to manufacture the same things over and over again.
+Claro que você reciclaria tudo que fosse possível. Que é uma coisa boa, pois ninguém gosta de andar por cima de uma montanha de lixo, a caminho da escola. Então, aquelas garrafas de vidro na lixeira de reciclagem serão derretidas e transformadas em novas garrafas e frascos; papel é transformado em papel reciclado; plástico se transforma em outras coisas de plástico --- então o gramado da frente da sua casa não desaparece em meio a uma pilha de lixo. Nós começamos a reutilizar alguns dos produtos que usamos, ao invés de tirar a mesma matéria prima da natureza de novo e de novo.
 
-Recycling or reuse, in the programming world, is just as important. Not because your program will disappear under a pile of garbage---but if you don't re-use some of what you're doing, you'll eventually wear your fingers down to painful stubs through over-typing.
+Reciclar ou reutilizar, no mundo da programação, é igualmente importante. Não porque o seu programa irá desaparecer debaixo de uma pilha de lixo --- mas se você não reutilizar algumas coisas que você faz, você eventualmente desgastará os seus dedos, digitando excessivamente.
 
-There are a number of different ways to reuse code in Python (and in programming languages in general), but we've seen one of the ways already, back in Chapter 3, with the function range.  Functions\index{functions} are one way to reuse code---so you can write the code once, then use it in your programs again and again.  Let's first try a simple example of a function:
+Existem diversas maneiras de reutilizar código em Python (e nas linguagens de programação em geral), mas nós já vimos uma das maneiras, no Capítulo 3, com a função `range'. Funções\index{functions} são uma maneira de reutilizar código --- assim você pode escrever o código apenas uma vez, então usá-lo nos seus programas várias vezes. Vamos primeiro tentar um exemplo simples de função:
 
 \begin{listing}
 \begin{verbatim}
->>> def myfunction(myname):
-...     print('hello %s' % myname)
+>>> def minhafuncao(nome):
+...     print('Olá %s' % nome)
 ...
 \end{verbatim}
 \end{listing}
 
-The above function has a name `myfunction' and has a parameter `myname'.  A \emph{parameter} is a variable which is only available within the `body' of the function (which is the block of code immediately after the line starting with \code{def}---in case you're wondering, \code{def} is short for define).  You can run the function by calling its name with brackets surrounding the parameter value:
+A função acima tem o nome `minhafuncao' e um parâmetro chamado `nome'. Um \emph{parâmetro} é uma variável que somente é acessível dentro do `corpo' da função (que é o bloco de código logo após a definição \code{def} (caso esteja se perguntando, \code{def} é uma abreviação para `defina'). Você pode executar a função, chamando-a pelo seu nome e os parâmetros entre parênteses:
 
 \begin{listing}
 \begin{verbatim}
->>> myfunction('Mary')
-hello Mary
+>>> minhafuncao('Maria')
+Olá Maria
 \end{verbatim}
 \end{listing}
 
 \noindent
-We could change the function to take 2 parameters:
+Nós podemos alterar a função para aceitar 2 parâmetros:
 
 \begin{listing}
 \begin{verbatim}
->>> def myfunction(firstname, lastname):
-...     print('Hello %s %s' % (firstname, lastname))
+>>> def minhafuncao(nome, sobrenome):
+...     print('Olá %s %s' % (nome, sobrenome))
 ...
 \end{verbatim}
 \end{listing}
 
 \noindent
-And then call it in a similar fashion to the first:
+E então chamá-la da mesma maneira:
 
 \begin{listing}
 \begin{verbatim}
->>> myfunction('Mary', 'Smith')
-Hello Mary Smith
+>>> minhafuncao('Maria', 'Almeida')
+Olá Maria Almeida
 \end{verbatim}
 \end{listing}
 
 \noindent
-Or we could create some variables and call the function with the variables:
+Ou nós poderíamos criar algumas variáveis e chamar a função com essas variáveis:
 
 \begin{listing}
 \begin{verbatim}
