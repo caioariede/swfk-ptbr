@@ -98,12 +98,12 @@ Porém, uma variável que nós usamos dentro do corpo de uma função, não ser�
 
 \begin{listing}
 \begin{verbatim}
->>> def testar_variavel():
+>>> def teste_variavel():
 ...     a = 10
 ...     b = 20
 ...     return a * b
 ...
->>> print(testar_variavel())
+>>> print(teste_variavel())
 200
 >>> print(a)
 Traceback (most recent call last):
@@ -112,30 +112,30 @@ NameError: name 'a' is not defined
 \end{verbatim}
 \end{listing} 
 
-No exemplo acima, nós criamos uma função \code{testar\_variavel}, que multiplica o valor de duas variáveis (\code{a} e \code{b}) e retorna o resultado. Se nós chamarmos essa função usando o \code{print}, nós teremos o resultado: 200. Porém se nós tentarmos imprimir o valor de \code{a} (ou \code{b}, por exemplo), nós receberemos uma mensagem a erro ```a' is not defined'' (`a' não está definido). Isso é algo que chamamos de `\emph{escopo}'\index{scope}, no mundo da programação.
+No exemplo acima, nós criamos uma função \code{teste\_variavel}, que multiplica o valor de duas variáveis (\code{a} e \code{b}) e retorna o resultado. Se nós chamarmos essa função usando o \code{print}, nós teremos o resultado: 200. Porém se nós tentarmos imprimir o valor de \code{a} (ou \code{b}, por exemplo), nós receberemos uma mensagem a erro ```a' is not defined'' (`a' não está definido). Isso é algo que chamamos de `\emph{escopo}'\index{scope}, no mundo da programação.
 \par
 Imagine uma função como uma pequena ilha flutuante no oceano --- e é muito longe para nadar da ilha até outro lugar qualquer. Ocasionalmente, um avião a sobrevoa e derruba pedaços de papel na ilha (são aqueles parâmetros, chegando na função) que os habitants então juntam e formam uma mensagem, colocam a mensagem dentro de uma garrafa e então lançam a garrafa ao mar (esse é o valor de retorno). O que os habitantes da ilha fazem, ou quantos deles foram necessários para formar a mensagem, não faz diferença à pessoa que pegou a garrafa e está lendo a mensagem. Essa é, provavelmente, a forma mais simples de explicar o escopo --- mas existe um pequeno problema nessa ideia. Um dos habitantes tem um par de binóculos gigante e pode ver tudo além do continente. Ele pode ver o que outras pessoas estão fazendo lá e isso pode afetar a mensagem que ele está criando:
 
 \begin{listing}
 \begin{verbatim}
 >>> x = 100
->>> def variable_test2():
+>>> def teste2_variavel():
 ...     a = 10
 ...     b = 20
 ...     return a * b * x
 ... 
->>> print(variable_test2())
+>>> print(teste2_variavel())
 20000
 \end{verbatim}
 \end{listing}
 
-So, even though variables \code{a} and \code{b} aren't able to be used outside of the function, the variable \code{x} (which was created outside the function) is usable inside.  Just think about the islander with the binoculars, and hopefully it might help that idea to make a little bit of sense.
+Assim, mesmo que as variáveis \code{a} e \code{b} não possam ser usadas de fora da função, a variável \code{x} (que foi criada fora da função) pode ser usada dentro. Pense no habitante da ilha com o binóculos, espero que isso o ajude a entender melhor essa ideia.
 
 \begin{center}
 \includegraphics*[width=100mm]{eps/islanders.eps}
 \end{center}
 
-The for-loop we created earlier to display savings over a year, could easily be added to a function:
+O laço `for' que nós criamos anteriormente para exibir as economias ao longo do ano, pode ser facilmente adicionado à uma função:
 
 \begin{listing}
 \begin{verbatim}
