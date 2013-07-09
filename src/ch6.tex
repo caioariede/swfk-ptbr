@@ -139,52 +139,52 @@ O laço `for' que nós criamos anteriormente para exibir as economias ao longo d
 
 \begin{listing}
 \begin{verbatim}
->>> def yearly_savings(chores, paper, spending):
-...     savings = 0
-...     for week in range(1, 53):
-...         savings = savings + chores + paper - spending
-...         print('Week %s = %s' % (week, savings))
+>>> def economias_no_ano(trabalhos, jornal, gastos):
+...     economias = 0
+...     for semana in range(1, 53):
+...         economias = economias + trabalhos + jornal - gastos
+...         print('Semana %s = %s' % (semana, economias))
 ...
 \end{verbatim}
 \end{listing}
 
-Try entering that function in the console, and call it with different values for \code{chores}, \code{paper} and \code{spending}:
+Tente digitar essa função no terminal, e chamá-la com diferentes valores para \code{trabalhos}, \code{jornal}, e \code{gastos}:
 
 \begin{listing}
 \begin{verbatim}
->>> yearly_savings(10, 10, 5)
-Week 1 = 15
-Week 2 = 30
-Week 3 = 45
-Week 4 = 60
-Week 5 = 75
-Week 6 = 90
-Week 7 = 105
-Week 8 = 120
-Week 9 = 135
-Week 10 = 150
+>>> economias_no_ano(10, 10, 5)
+Semana 1 = 15
+Semana 2 = 30
+Semana 3 = 45
+Semana 4 = 60
+Semana 5 = 75
+Semana 6 = 90
+Semana 7 = 105
+Semana 8 = 120
+Semana 9 = 135
+Semana 10 = 150
 
-(continues on...)
+(e por aí vai...)
 
->>> yearly_savings(25, 15, 10)
-Week 1 = 30
-Week 2 = 60
-Week 3 = 90
-Week 4 = 120
-Week 5 = 150
+>>> economias_no_ano(25, 15, 10)
+Semana 1 = 30
+Semana 2 = 60
+Semana 3 = 90
+Semana 4 = 120
+Semana 5 = 150
 
-(continues on...)
+(e por aí vai...)
 \end{verbatim}
 \end{listing}
 
-This is a bit more useful than re-typing the for-loop every time you want to try it with a different value. Functions can also be grouped together into something called `modules', which is where Python becomes really useful$\ldots$ as opposed to just mildly useful.
+Isso é um pouco mais eficiente que redigitar o laço `for' toda vez que você quiser tentar um valor diferente. Funções podem ser agrupadas no que chamamos de módulos, que tornam o Python muito mais eficiente.
 \par
 \noindent
-\emph{More about modules shortly.}
+\emph{Falaremos mais sobre módulos em breve.}
 
-\section{Bits and Pieces}
+\section{Pedaços e peças}
 
-When Python is installed on your computer, a whole pile of functions and modules are also installed. Some functions are available by default.  \code{range} is a function we've already seen. \code{file}\index{functions!file} is another function we haven't use yet.
+Quando o Python é instalado no seu computador, uma montanha de funções e módulos também são instalados. Algumas funções são disponibilizadas por padrão. \code{range} é dessas funções, que nós já vimos. \code{file}\index{functions!file} é outra função que não usamos ainda.
 
 \begin{WINDOWS}
 
