@@ -188,84 +188,84 @@ Quando o Python é instalado no seu computador, uma montanha de funções e mód
 
 \begin{WINDOWS}
 
-To see how \code{file} is used, open Notepad and type a few words, then save the file onto your C drive, by:
+Para ver como o \code{file} é usado, abra o Bloco de Notas, digite algumas palavras e então salve o arquivo como `teste.txt'.
 
 \begin{enumerate}
- \item clicking on the File menu, then Save,
- \item double-click on `My Computer' in the file dialog,
- \item double-click on `Local Drive (C:)',
- \item in the File name box (at the bottom) where it says `*.txt', type `test.txt' 
+ \item Clique no menu `Arquivo', então `Salvar',
+ \item Clique duas vezes em `Meu Computador' na janela de Arquivo,
+ \item Clique duas vezes em `Disco Local (C:)',
+ \item No nome do arquivo (na parte debaixo) onde está `*.txt', coloque `teste.txt' 
 \end{enumerate}
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=65mm]{eps/figure17.eps}
 \end{center}
-\caption{The save dialog from Windows Notepad.}\label{fig17}
+\caption{Janela de Salvar Arquivo no Bloco de Notas.}\label{fig17}
 \end{figure}
 
-Open the Python console again, and try the following:
+Abra o terminal do Python novamente e digite:
 
 \begin{listing}
 \begin{verbatim}
->>> f = open('c:\\test.txt')
+>>> f = open('c:\\teste.txt')
 >>> print(f.read())
 \end{verbatim}
 \end{listing}
 
-The contents of the file you just created should be printed to the console. You can now jump ahead to the bit that says: ``Continuing from here$\ldots$''.
+O conteúdo do arquivo que você acabou de criar será exibido.
 \end{WINDOWS}
 
 \begin{MAC}
-To see how \code{file} is used, open up the Text Editor, by clicking on the editor icon (\includegraphics*[width=12mm]{eps/textedit-icon.eps}).  Type a few words then save the file to the Desktop by clicking File, then Save, and entering the name `text.txt' in the entry box next to `Save As'.
+Para ver como o \code{file} é usado, abra o Editor de Texto, clicando no ícone do editor (\includegraphics([width=12mm]{eps/textedit-icon.eps}). Digite algumas palavras e então salve o arquivo na Mesa, clicando em Arquivo e Salvar, com o nome `teste.txt'.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=65mm]{eps/figure18.eps}
 \end{center}
-\caption{The save dialog from Mac OS X Text Editor.}\label{fig18}
+\caption{Janela de Salvar Arquivo no Editor de Texto do Mac OS X.}\label{fig18}
 \end{figure}
 
-Open the Python console again, and try the following:
+Abra o terminal do Python novamente e digite:
 
 \begin{listing}
 \begin{verbatim}
->>> f = open('Desktop/test.txt')
+>>> f = open('Desktop/teste.txt')
 >>> print(f.read())
 \end{verbatim}
 \end{listing}
 
-The contents of the file you just created should be printed to the console.  You can now jump ahead to the bit that says: ``Continuing from here$\ldots$''.
+O conteúdo do arquivo que você acabou de criar será exibido.
 \end{MAC}
 
 \begin{LINUX}
-To see how \code{file} is used, open a text editor, type a few words and then save the file to your home directory, by clicking File, Save, selecting `Home Folder' (or `Home Directory' or `Home') and typing `test.txt' in the file name box (see figure~\ref{fig19} for an example).
+Para ver como o \code{file} é usado, abra um editor de texto, digite algumas palavras e então salve o arquivo no seu diretório `Home', clicando em Arquivo, Salvar e então selecionando o diretório `Home'. Digite o nome do arquivo `teste.txt` (veja na figura~\ref{fig19} por exemplo).
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=65mm]{eps/figure19.eps}
 \end{center}
-\caption{The save dialog from the KEdit Text Editor.}\label{fig19}
+\caption{Janela de Salvar Arquivo do Editor de Texto KEdit.}\label{fig19}
 \end{figure}
 
-Open the Python console again, and try the following:
+Abra o terminal do Python novamente e digite:
 
 \begin{listing}
 \begin{verbatim}
->>> f = open('Desktop/test.txt')
+>>> f = open('~/teste.txt')
 >>> print(f.read())
 \end{verbatim}
 \end{listing}
 
 \end{LINUX}
 
-So what does that little bit of code do?  The first line calls the function \code{file}, passing the name of the file you just created, as a parameter.  The function returns a special type of value (called an object) which represents that file.  It's not the file itself; rather it's a bit like a big finger pointing at the file going ``HERE IT IS!!!!''  The file object is stored in the variable \code{f}.
+Então, o que esse pequeno trecho de código faz? A primeira linha chama a função \code{file}, passando o caminho do arquivo que você criou, como parâmetro. A função retorna um tipo de valor especial (chamado objeto) que representa um arquivo. Não é o arquivo em si; mas sim como se fosse um grande dedo apontando para o arquivo, dizendo ``AQUI ESTÁ ELE!!!'' O objeto de arquivo é armazenado na variável \code{f}.
 \par
-The next line calls a special function (\code{read}) on the file object, to read in the contents of the file, and print the result to the console.  Because the variable \code{f} contains an object, this means we need to call the read function using the dot symbol (.).
+A próxima linha, chama uma função especial (\code{read}) no objeto de arquivo, para ler o seu conteúdo e imprimir o resultado no terminal. Por a variável \code{f} conter um objeto, isso significa que nós precisamos chamar a função `read' usando o símbolo ponto (.).
 
 \fbox{\colorbox{PaleBlue}{\parbox{.75\linewidth} {
 \par
-Appendix~\ref{app:builtinfunctions} (at the back of this book) has more information about the functions that are built into Python.
+O apêndice~\ref{app:builtinfunctions} (no final do livro) tem mais informações sobre as funções embutidas no Python.
 \par
 }}}
 
