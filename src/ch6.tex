@@ -269,9 +269,9 @@ O apêndice~\ref{app:builtinfunctions} (no final do livro) tem mais informaçõe
 \par
 }}}
 
-\section{Modules}\index{modules}
+\section{Módulos}\index{modules}
 
-We've actually seen a couple of different ways to reuse code already. One is a standard function, which we can create ourselves, or use the functions built into Python (like \code{range} and \code{file} and \code{int} and \code{str}). Another is a special kind of function on objects---which we can call using the dot symbol---and the next are modules; which are a way of grouping lots of functions and objects together in useful ways. An example of this is the module `time'\index{modules!time}:
+Nós já vimos muitas formas diferentes de reutilizar códigos. Uma delas é criar uma função própria, ou então usar uma função pré-existente no Python (como o \code{range}, \code{file}, \code{int} e \code{str}). A outra é um tipo especial de função, em objetos --- que nós chamamos usando o símbolo ponto --- e a outra seria utilizando um módulo, que é uma forma de agrupar muitas funções e objetos, de forma eficiente. Um exemplo disso é o módulo `time'\index{modules!time}:
 
 \begin{listing}
 \begin{verbatim}
@@ -279,7 +279,7 @@ We've actually seen a couple of different ways to reuse code already. One is a s
 \end{verbatim}
 \end{listing}
 
-The import command is used to tell Python we want to access a module.  In the above example, we're saying we want to use the `time' module. We can then call functions and objects that are available in this module, using the dot symbol yet again:
+O comando `import' é usado para dizer ao Python que nós queremos usar um módulo. No exemplo acima, nós estamos dizendo que nós queremos usar o módulo `time'. Nós podemos então, chamar as funções e objetos disponíveis nesse módulo, usando o símbolo ponto, novamente:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -288,7 +288,7 @@ The import command is used to tell Python we want to access a module.  In the ab
 \end{verbatim}
 \end{listingignore}
 
-localtime\index{modules!time!localtime} is a function \emph{inside} the module time, that returns the current date and time, broken up into individual parts---year, month, day, hour, minute, second, day of the week, day of the year, and whether or not it's daylight savings (1 if it is, 0 if it isn't).  The individual parts are stored in a tuple (see \emph{Tuples and Lists} on page~\pageref{tuplesandlists}.  You can use another function in the time module to convert the datetime returned by localtime, into something a bit more understandable:
+\code{localtime}\index{modules|time|localtime} é uma função \emph{dentro} do módulo `time', que retorna a data e hora atual, quebrada em partes individuais --- ano, mês, dia, hora, minuto, segundo, dia da semana, dia do ano e se é horário de verão ou não (1 se for, 0 se não). As partes individuais são armazenadas em uma tupla (veja \emph{Tuplas e Listas} na página~\pageref{tuplesandlists}. Você pode usar outra função do módulo `time' para converter a data e hora retornada pelo \code{localtime}, em algo mais legível:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -299,7 +299,7 @@ Sat Nov 18 22:37:15 2006
 \end{listingignore}
 
 \noindent
-We can do that all in a single line if we wanted to:
+Nós podemos fazer tudo isso em apenas uma linha, se quisermos:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -308,7 +308,7 @@ Sat Nov 18 22:37:15 2006
 \end{verbatim}
 \end{listingignore}
 
-Suppose you want to ask for someone to enter a value. You can do this using a \code{print} statement and the module `\code{sys}'\index{modules!sys}---imported the same way we imported the \code{time} module:
+Suponha que você queira perguntar a alguém um valor. Você pode fazer isso usando o comando \code{print} e o módulo `\code{sys}'\index{modules!sys} --- importando-o da mesma forma que fez com o módulo \code{time}:
 
 \begin{listing}
 \begin{verbatim}
@@ -316,7 +316,7 @@ import sys
 \end{verbatim}
 \end{listing}
 
-Inside the sys module is an object called `stdin'\index{modules!sys!stdin} (short for standard input).  stdin has a rather useful method (or function) called \code{readline}---which is used to read a line of text someone types on the keyboard (up until the point when they press the Enter key).  You can test \code{readline}, by entering the following command in the Python console:
+Dentro do módulo `sys', tem um objeto chamado `stdin'\index{modules!sys!stdin} (abreviação de `standard input' ou `entrada padrão'). \code{stdin} tem um método (ou função) bastante útil, chamado \code{readline} --- que é usado para ler uma linha de texto que alguém digita (até que ela pressione Enter). Você pode testar o \code{readline}, usando os seguintes comandos no terminal do Python:
 
 \begin{listing}
 \begin{verbatim}
