@@ -378,43 +378,43 @@ Devido ao fato de que o \code{readline()} retorna o que uma pessoa digitou como 
 
 \begin{listingignore}
 \begin{verbatim}
->>> your_age()
-Please enter your age
+>>> sua_idade()
+Por favor, insira a sua idade
 10
-you are 10
->>> your_age()
-Please enter your age
+Você tem 10
+>>> sua_idade()
+Por favor, insira a sua idade
 15
-huh?
+ahn?
 \end{verbatim}
 \end{listingignore}
 
 \noindent
-\emph{The important thing to note here is that even though you're typing in a number (in the above case 10 or 15), readline always returns a string.}
+\emph{A coisa mais importante em observar aqui, é que mesmo que você esteja digitando um número (no caso, 10 ou 15), a função `readline' sempre retornará uma string.}
 
 \fbox{\colorbox{PaleBlue}{\parbox{.75\linewidth} {
-\code{sys} and \code{time} are just two of the many modules that are included with Python.  For more information on some (but not all) Python modules, see Appendix~\ref{app:afewpythonmodules}.
+O \code{sys} e \code{time} são apenas dois, de muitos módulos embutidos no Python. Para mais informações sobre alguns (não todos) módulos do Python, veja o Apêndice~\ref{app:afewpythonmodules}.
 }}}
 
-\section{Things to try}
+\section{Coisas para tentar}
 
-\emph{In this chapter we saw how to do recycling in Python; through the use of functions and modules.  We saw a little bit about the `scope' of variable, how variables outside of functions can be `seen' inside, whereas variables inside cannot be seen outside, and learned how to create our own functions using \code{def}}
+\emph{Neste capítulo, nós vimos como fazer reciclagem em Python; através do uso de funções e módulos. Nós vimos um pouco sobre o escopo de uma variável, como variáveis de fora da função podem ser `vistas' de dentro, enquanto variáveis `de dentro' não podem ser acessadas de fora, e aprendemos como criar nossas próprias funções usando o \code{def}}
 
-\subsection*{Exercise 1}
-In exercise 2 in Chapter~\ref{ch:againandagain}, we created a for-loop to work out the interest we might earn from \$100 over a period of 10 years.  That for-loop could easily be turned into a function.  Try creating a function which takes a starting amount, and a rate of interest.  You could call the function using code like:
+\subsection*{Exercício 1}
+No exercício 2 do Capítulo~\ref{ch:againandagain}, nós criamos um laço `for' para descobrir quanto, de R\$100, nós ganhamos com juros, em um período de 10 anos. Esse laço `for' pode ser facilmente colocado em uma função. Tente criar uma função que recebe um valor inicial e uma taxa de juros. Você pode chamar a função usando o seguinte código:
 
 \begin{listing}
 \begin{verbatim}
-calculate_interest(100, 0.03)
+calcular_juros(100, 0.03)
 \end{verbatim}
 \end{listing}
 
-\subsection*{Exercise 2}
-Take the function you've just created, and make it calculate interest for different periods---such as 5 years or 15 years.  Perhaps you could call it using code like:
+\subsection*{Exercício 2}
+Pegue a função que você acabou de criar e faça ela calcular os juros em diferentes períodos --- como 5 anos ou 15 anos. Talvez você possa chamá-la usando o seguinte código:
 
 \begin{listing}
 \begin{verbatim}
-calculate_interest(100, 0.03, 5)
+calcular_juros(100, 0.03, 5)
 \end{verbatim}
 \end{listing}
 
