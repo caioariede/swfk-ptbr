@@ -324,57 +324,57 @@ Dentro do módulo `sys', tem um objeto chamado `stdin'\index{modules!sys!stdin} 
 \end{verbatim}
 \end{listing}
 
-If you then type some words, and press the Enter key, what you've typed will be printed to the console. Think back, for a moment, to the code we wrote earlier, using an if-statement:
+Se você digitar algumas palavras e pressionar a tecla Enter, o que você digitar será impresso no console. Relembre, por um momento, o código que escrevemos anteriormente, usando a expressão `if':
 
 \begin{listing}
 \begin{verbatim}
-if age >= 10 and age <= 13:
-    print('you are %s' % age)
+if idade >= 10 and idade <= 13:
+    print('Você tem %s' % idade)
 else:
-    print('huh?')
+    print('ahn?')
 \end{verbatim}
 \end{listing}
 
-Rather than creating the variable \code{age} beforehand, we can now ask someone to enter the value instead.  How about first turning the code into a function$\ldots$
+Ao invés de criar uma variável \code{idade} antecipadamente, nós podemos pedir à alguém para digitar o valor. Por que não, primeiramente, colocar o código em uma função$\ldots$
 
 \begin{listing}
 \begin{verbatim}
->>> def your_age(age):
-...     if age >= 10 and age <= 13:
-...         print('you are %s' % age)
+>>> def sua_idade(idade):
+...     if idade >= 10 and idade <= 13:
+...         print('Você tem %s' % idade)
 ...     else:
-...         print('huh?')
+...         print('ahn?')
 ... 
 \end{verbatim}
 \end{listing}
 
-Which can be called, by passing a number as the parameter value.  We'll test that it works properly, first:
+Que pode ser chamada, passando um número como parâmetro. Primeiro, vamos testar para ver se funciona corretamente:
 
 \begin{listing}
 \begin{verbatim}
->>> your_age(9)
-huh?
->>> your_age(10)
-you are 10
+>>> sua_idade(9)
+ahn?
+>>> sua_idade(10)
+Você tem 10
 \end{verbatim}
 \end{listing}
 
-Now we know there are no problems with our function, we can change the function to ask for a person's age instead:
+Agora que nós sabemos que não há problemas com a nossa função, podemos alterar ela para pedir a idade de uma pessoa:
 
 \begin{listing}
 \begin{verbatim}
->>> def your_age():
-...     print('Please enter your age')
-...     age = int(sys.stdin.readline())
-...     if age >= 10 and age <= 13:
-...         print('you are %s' % age)
+>>> def sua_idade():
+...     print('Por favor, insira a sua idade')
+...     idade = int(sys.stdin.readline())
+...     if idade >= 10 and idade <= 13:
+...         print('Você tem %s' % idade)
 ...     else:
-...         print('huh?')
+...         print('ahn?')
 ... 
 \end{verbatim}
 \end{listing}
 
-Because \code{readline()} returns what a person typed as text (in other words, a string), we need to use the function \code{int} to convert it to a number (this so it will work correctly in the if-statement---check \emph{What's the difference} on page~\pageref{whatsthedifference} for more information about this).  To try it for yourself, call the your\_age function without any parameters, then type some text when `Please enter your age' appears:
+Devido ao fato de que o \code{readline()} retorna o que uma pessoa digitou como um texto (em outras palavras, uma string), nós precisamos usar a função \code{int} para converter isso para um número (assim então, a expressão `if' funcionará corretamente --- veja \emph{Qual é a diferença} na página~\pageref{whatsthedifference} para mais informações a respeito sobre isso). Para tentar isso, chame a função \code{sua\_idade} sem nenhum parâmetro e então digite a sua idade quando o texto `Por favor, insira a sua idade' aparecer:
 
 \begin{listingignore}
 \begin{verbatim}
