@@ -67,19 +67,19 @@ E então, precisamos dizer ao Python que nós terminamos e não queremos mais es
 
 \begin{listing}
 \begin{verbatim}
->>> f = open('myfile.txt', 'w')
->>> f.write('this is a test file')
+>>> f = open('novoarquivo.txt', 'w')
+>>> f.write('este é um arquivo de teste')
 >>> f.close()
 \end{verbatim}
 \end{listing}
 
-If you open the file using your favourite editor, you will see it contains the text: ``this is a test file''.  Or better yet, we can use Python to read it in again:
+Se você abrir o arquivo usando o seu editor de texto favorito, verá que ele contém o texto: ``este é um arquivo de teste''. Ou melhor ainda, nós podemos usar o Python para ler:
 
 \begin{listing}
 \begin{verbatim}
->>> f = open('myfile.txt')
+>>> f = open('novoarquivo.txt')
 >>> print(f.read())
-this is a test file
+este é um arquivo de teste
 \end{verbatim}
 \end{listing}
 
