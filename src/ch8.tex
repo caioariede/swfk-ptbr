@@ -53,22 +53,22 @@ Que de fato é muito menos para se digitar, mas para algo ainda mais interessant
 \end{verbatim}
 \end{listing}
 
-This code produces the 8-point star shown in figure~\ref{fig20} (the turtle turns 225 degrees, each time it goes forward 100 pixels).
+Este código produz uma estrela de 8 pontas, como exibido na figura~\ref{fig20} (a tartaruga vira 225 graus, cada vez que anda 100 pixels para frente).
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=72mm]{eps/figure20.eps}
 \end{center}
-\caption{The turtle drawing an 8-point star.}\label{fig20}
+\caption{A tartaruga desenhando uma estrela de 8 pontas.}\label{fig20}
 \end{figure}
 
 \noindent
-With a different angle (175 degrees), and a longer loop (37 times), we can make a star with even more points (shown in figure~\ref{fig21}):
+Em um ângulo diferente (175 graus), e um laço mais longo (37 vezes), nós podemos fazer uma estrela com ainda mais pontas (como visto na figura~\ref{fig21}):
 
 \begin{listing}
 \begin{verbatim}
 >>> t.reset()
->>> for x in range(1,38):
+>>> for x in range(1, 38):
 ...     t.forward(100)
 ...     t.left(175)
 ...
@@ -79,15 +79,15 @@ With a different angle (175 degrees), and a longer loop (37 times), we can make 
 \begin{center}
 \includegraphics[width=72mm]{eps/figure21.eps}
 \end{center}
-\caption{A star with a lot more points.}\label{fig21}
+\caption{Uma estrela com muito mais pontas.}\label{fig21}
 \end{figure}
 
 \noindent
-Or how about the following code, which produces the spiral-like star figure~\ref{fig22}.
+Ou, que tal o seguinte código, que produz uma estrela tipo espiral, na figura~\ref{fig22}.
 
 \begin{listing}
 \begin{verbatim}
->>> for x in range(1,20):
+>>> for x in range(1, 20):
 ...     t.forward(100)
 ...     t.left(95)
 ...
