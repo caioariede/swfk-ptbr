@@ -4,9 +4,9 @@
 % or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
 
 
-\chapter{Turtles galore}\index{turtle!advanced}\label{ch:turtlesgalore}
+\chapter{Mais e mais tartarugas}\index{turtle!advanced}\label{ch:turtlesgalore}
 
-Let's get back to the \code{turtle} module we started looking at in Chapter~\ref{ch:turtles}. Remember that to setup the canvas for the turtle to draw on, we need to import the module and the create the `Pen' object:
+Voltando ao módulo \code{turtle}, que começamos a ver no Capítulo~\ref{ch:turtles}. Lembre-se que para configurar a tela para a tartaruga desenhar, nós precisamos importar o módulo e criar um objeto `Pen':
 
 \begin{listing}
 \begin{verbatim}
@@ -15,7 +15,7 @@ Let's get back to the \code{turtle} module we started looking at in Chapter~\ref
 \end{verbatim}
 \end{listing}
 
-We can now use basic functions to move the turtle around the canvas and draw simple shapes, but it's more interesting to use some of what we've already covered in the previous chapters.  For example, the code we used to create a square earlier was:
+Agora nós podemos usar algumas funções básicas para mover a tartaruga pela tela e desenhar algumas formas simples, mas seria interessante usar algo que nós já abordamos anteriormente. Por exemplo, o código que nós usamos para criar o quadrado, foi:
 
 \begin{listing}
 \begin{verbatim}
@@ -29,24 +29,24 @@ We can now use basic functions to move the turtle around the canvas and draw sim
 \end{listing} 
 
 \noindent
-We can rewrite this using a for-loop:
+Nós podemos reescrever esse código, usando um laço `for':
 
 \begin{listing}
 \begin{verbatim}
 >>> t.reset()
->>> for x in range(1,5):
+>>> for x in range(1, 5):
 ...     t.forward(50)
 ...     t.left(90)
 ...
 \end{verbatim}
 \end{listing}
 
-This is certainly less typing, but for something a bit more interesting, try the following:
+Que de fato é muito menos para se digitar, mas para algo ainda mais interessante, tente o seguinte:
 
 \begin{listing}
 \begin{verbatim}
 >>> t.reset()
->>> for x in range(1,9):
+>>> for x in range(1, 9):
 ...     t.forward(100)
 ...     t.left(225)
 ...
