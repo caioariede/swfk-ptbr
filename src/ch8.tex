@@ -102,12 +102,12 @@ Ou, que tal o seguinte código, que produz uma estrela tipo espiral, na figura~\
 \end{figure}
 
 \noindent
-Here's something a bit more complicated:
+Aqui está algo um pouco mais complicado:
 
 \begin{listing}
 \begin{verbatim}
 >>> t.reset()
->>> for x in range(1,19):
+>>> for x in range(1, 19):
 ...     t.forward(100)
 ...     if x % 2 == 0:
 ...         t.left(175)
@@ -117,18 +117,18 @@ Here's something a bit more complicated:
 \end{verbatim}
 \end{listing}
 
-In the above code, we check to see if the variable \code{x} contains an even number.  To do this we use what is called a modulo operator (\%)\index{modulo operator}, in the expression: \code{x \% 2 == 0}.
+No código acima, nós verificamos se a variável \code{x} contém um número par. Para fazer isso, nós usamos um operador chamado módulo (\%)\index{modulo operator}, na expressão: \code{x \% 2 == 0}.
 \par
-x \% 2 is equal to zero, if the number in variable \code{x} can be divided by two, with nothing left over (no remainder)---if this doesn't make much sense, don't worry too much about it, just remember you can use `\code{x \% 2 == 0}' to check if a number in a variable is an even number.  The result of running this code is the 9-point star in figure~\ref{fig23}.
+x \% 2 é igual a zero, se o número na variável \code{x} puder ser dividido por dois, sem sobrar nada --- se isso não faz muito sentido, não se preocupe, apenas lembre de usar `\code{x \% 2 == 0}' para verificar se o número contido em uma variável é um número par. O resultado desse código, é uma estrela de 9 pontas, como na figura~\ref{fig23}.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=84mm]{eps/figure23.eps}
 \end{center}
-\caption{A 9-point star.}\label{fig23}
+\caption{Uma estrela de 9 pontas.}\label{fig23}
 \end{figure}
 
-You don't have to just draw stars and simple geometric shapes, using a combination of the functions calls, your turtle can draw many different things.  For example:
+Você não precisa apenas desenhar estrelas e simples formas geométricas. Usando uma combinação de chamadas de função, a sua tartaruga pode desenhar muitas coisas diferentes. Por exemplo:
 
 \begin{listing}
 \begin{verbatim}
