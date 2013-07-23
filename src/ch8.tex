@@ -184,22 +184,22 @@ Que é uma forma beeeem longa de se desenhar o carrinho feio e com visual bem pr
 
 A função \code{color}\index{turtle!color}, aceita 3 parâmetros. O primeiro parâmetro é o valor para o vermelho, o segundo é o valor para o verde e o último é o valor para o azul.
 \par
-\emph{Why red, green and blue?}
+\emph{Por que vermelho, verde e azul?}
 \par
-If you've ever played around with different colours of paint, you'll already know part of the answer to that question.  When you mix two different paint colours, you get another colour\footnote{Actually, the three \textbf{primary} paint colours are red, yellow and blue, and not the red/green/blue (RGB) on a computer.}.  When you mix blue and red together, you get purple$\ldots$ and when you mix too many colours together, you usually get a muddy brown. On a computer you can mix colours together in a similar fashion---put red and green together to get yellow---except with a computer, we are combining colours of light, not colours of paint.
+Se você já brincou com diferentes cores de tinta, você provavelmente já sabe parte da resposta para essa questão. Quando você mistura duas cores diferentes, você consegue outra cor\footnote{Na realidade, as três cores \textbf{primárias} são o vermelho, o amarelo e o azul e não vermelho/verde/azul (RGB -- Red/Green/Blue), no computador.}. Quando você mistura azul e vermelho, você consegue roxo$\ldots$ e quando você mistura várias cores, normalmente você consegue um marrom cor de lama. Em um computador, você pode misturar várias cores, da mesma forma --- coloca vermelho e verde juntos para conseguir amarelo --- exceto que com um computador, nós estamos combinando cores de luz, não cores de tinta.
  
-Even though we're not using paint, for a moment, think about 3 large pots of paint.  One red, one green, and one blue.  Each pot is full, so we'll say that a full pot of paint has a value of 1 (or 100\%).  We then pour all of the red paint (100\%) into a vat, followed by all of the green paint (again 100\%).  After a bit of mixing, we get a yellow colour.  Let's draw a yellow circle using turtle:
+Mesmo que não estejamos usando tinta, por um momento, pense em 3 potes grandes de tinta. Um vermelho, um verde e um azul. Os potes estão cheios, então nós vamos dizer que um pote cheio tem o valor de 1 (ou 100\%). Nós então derramamos todo o pote vermelho (100\%) em um tanque, seguido de toda a tinta verde (novamente, 100\%). Depois de misturar um pouco, nós teremos a cor amarela. Vamos desenhar um círculo amarelo usando a tartaruga:
 
 \begin{listing}
 \begin{verbatim}
->>> t.color(1,1,0)
+>>> t.color(1, 1, 0)
 >>> t.begin_fill()
 >>> t.circle(50)
 >>> t.end_fill()
 \end{verbatim}
 \end{listing}
 
-So in the above example, we call the color function with 100\% for red, 100\% for green and 0\% for blue (in other words, 1, 1, and 0).  To make it easier to experiment with different colours, let's turn that into a function:
+Então acima, nós chamamos a função `color' com 100\% de vermelho, 100\% de verde e 0\% de azul (em outras palavras, 1, 1 e 0). Para facilitar o teste de outras cores, vamos transformar isso em uma função:
 
 \begin{listing}
 \begin{verbatim}
