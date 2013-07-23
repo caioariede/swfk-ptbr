@@ -199,11 +199,11 @@ Mesmo que não estejamos usando tinta, por um momento, pense em 3 potes grandes 
 \end{verbatim}
 \end{listing}
 
-Então acima, nós chamamos a função `color' com 100\% de vermelho, 100\% de verde e 0\% de azul (em outras palavras, 1, 1 e 0). Para facilitar o teste de outras cores, vamos transformar isso em uma função:
+Então acima, nós chamamos a função `color' com 100\% de vermelho (red), 100\% de verde (green) e 0\% de azul (blue) -- em outras palavras, 1, 1 e 0. Para facilitar o teste de outras cores, vamos transformar isso em uma função:
 
 \begin{listing}
 \begin{verbatim}
->>> def mycircle(red, green, blue):
+>>> def meucirculo(red, green, blue):
 ...     t.color(red, green, blue)
 ...     t.begin_fill()
 ...     t.circle(50)
@@ -213,7 +213,7 @@ Então acima, nós chamamos a função `color' com 100\% de vermelho, 100\% de v
 \end{listing}
 
 \noindent
-We can draw a bright green circle, by using all of the green paint (1 or 100\%):
+Nós podemos desenhar um círculo verde brilhante, usando toda a tinta verde (1 ou 100\%):
 
 \begin{listing}
 \begin{verbatim}
@@ -222,37 +222,37 @@ We can draw a bright green circle, by using all of the green paint (1 or 100\%):
 \end{listing}
 
 \noindent
-And we can draw a darker green circle, by using only half the green paint (0.5 or 50\%):
+E nós podemos desenhar um círculo verde escuro, usando metade de toda a tinta verde (0.5 ou 50\%):
 
 \begin{listing}
 \begin{verbatim}
->>> mycircle(0, 0.5, 0)
+>>> meucirculo(0, 0.5, 0)
 \end{verbatim}
 \end{listing}
 
-Here's where thinking about paint doesn't make much sense any more.  In the real world, if you've got a pot of green paint, it doesn't matter how much you use, it's still going to look the same.  With colours on a computer, because we're playing with light, using less of that colour generally results in a darker shade.  It's the same as if you shine a torch at night, you get a yellowish light---when the batteries start to run out and the light begins to fade, the yellow colour gets darker and darker.  Just to see for yourself, try drawing a circle with full red and half red (1 and 0.5), and full blue and half blue.
+Aqui é onde pensar sobre tinta não faz muito sentido mais. No mundo real, se você tiver um pote de tinta verde, não importa o quanto você use, você sempre terá o mesmo tom. Com cores em um computador, devido a estarmos brincando com luzes, usando menos de uma cor geralmente resultará em uma tonalidade mais escura. É o mesmo que você acender uma tocha durante a noite, você terá uma luz amarelada --- quando a chama e a luz começarem a diminuir, a cor amarela começará a ficar mais e mais escura. Apenas para você ver, tente desenhar um círculo com um vermelho completo e um vermelho pela metade (1 e 0.5) e um azul completo e um azul pela metade.
 
 \begin{listing}
 \begin{verbatim}
->>> mycircle(1, 0, 0)
->>> mycircle(0.5, 0, 0)
+>>> meucirculo(1, 0, 0)
+>>> meucirculo(0.5, 0, 0)
 
->>> mycircle(0, 0, 1)
->>> mycircle(0, 0, 0.5)
-\end{verbatim}
-\end{listing}
-
-\noindent
-Different combinations of red, green and blue will produce a huge variety of colours.  You can get a gold colour by using 100\% of red, 85\% of green and no blue:
-
-\begin{listing}
-\begin{verbatim}
->>> mycircle(1, 0.85, 0)
+>>> meucirculo(0, 0, 1)
+>>> meucirculo(0, 0, 0.5)
 \end{verbatim}
 \end{listing}
 
 \noindent
-A light pink colour can be achieved by combining 100\% red, 70\% green and 75\% blue:
+Diferentes combinações de vermelho, verde e azul produzirão uma enorme variedade de cores. Você terá a cor de ouro, usando 100\% do vermelho, 85\% do verde e nada do azul:
+
+\begin{listing}
+\begin{verbatim}
+>>> meucirculo(1, 0.85, 0)
+\end{verbatim}
+\end{listing}
+
+\noindent
+Uma cor rosa claro pode ser feita combinando 100\% do vermelho, 70\% do verde e 75\% do azul:
 
 \begin{listing}
 \begin{verbatim}
