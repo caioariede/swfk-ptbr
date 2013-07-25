@@ -256,55 +256,55 @@ Uma cor rosa claro pode ser feita combinando 100\% do vermelho, 70\% do verde e 
 
 \begin{listing}
 \begin{verbatim}
->>> mycircle(1, 0.70,0.75)
+>>> meucirculo(1, 0.70, 0.75)
 \end{verbatim}
 \end{listing}
 
 \noindent
-And you get orange by combining 100\% red and 65\% green; and brown by combining 60\% red, 30\% green and 15\% blue:
+E você consegue a cor laranja, combinando 100\% do vermelho, 65\% do verde; e o marrom com 60\% do vermelho, 30\% do verde e 15\% do azul:
 
 \begin{listing}
 \begin{verbatim}
->>> mycircle(1, 0.65, 0)
->>> mycircle(0.6, 0.3, 0.15)
+>>> meucirculo(1, 0.65, 0)
+>>> meucirculo(0.6, 0.3, 0.15)
 \end{verbatim}
 \end{listing}
 
 \noindent
-Don't forget, you can clear the canvas by using \code{t.clear()}.
+Não se esqueça, você pode limpar a tela usando o \code{t.clear()}.
 
-\section{Darkness}\index{turtle!color!black}
+\section{Escuridão}\index{turtle!color!black}
 
-Here's a question for you:  What happens when you turn all the lights off at night? Everything goes black.
+Aqui vai uma pergunta para você: O que acontece quando você desliga todas as cores a noite? Fica tudo preto.
 \par
-The same thing happens with colours on a computer.  No light equals no colour.  So a circle with 0 for red, 0 for green and 0 for blue:
+A mesma coisa acontece com as cores em um computador. Nenhuma luz é a mesma coisa que nenhuma cor. Então um círculo com 0 de vermelho, 0 de verde e 0 de azul:
 
 \begin{listing}
 \begin{verbatim}
->>> mycircle(0, 0, 0)
+>>> meucirculo(0, 0, 0)
 \end{verbatim}
 \end{listing}
 
-Produces the black spot in figure~\ref{fig25}.
+Produz o círculo preto da figura~\ref{fig25}.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=85mm]{eps/figure25.eps}
 \end{center}
-\caption{A black hole!}\label{fig25}
+\caption{Um buraco negro!}\label{fig25}
 \end{figure}
 
-The opposite is true; if you use 100\% red, 100\% green and 100\% blue, you get white.  Use the following code and the black circle will be wiped out again:
+O recíproca é verdadeira; se você usar 100\% do vermelho, 100\% do verde e 100\% do azul, você terá branco. Use o seguinte código e o círculo preto sumirá novamente:
 
 \begin{listing}
 \begin{verbatim}
->>> mycircle(1,1,1)
+>>> meucirculo(1, 1, 1)
 \end{verbatim}
 \end{listing}
 
-\section{Filling things}\index{turtle!fill}
+\section{Preenchendo coisas}\index{turtle!fill}
 
-You've probably figured out by now that the fill function is switched on by passing the parameter `1', then switched off again with `0'. When you switch it off, the function actually fills in the area you've drawn---assuming you've drawn at least part of a shape. So we can easily draw a filled in square by using code we created earlier. First, let's turn it into a function. To draw a square with turtle we do:
+Você provavelmente já descobriu que a função `fill' é ligada passando o parâmetro `1', então desligada passando o parâmetro `0'. Quando você a desliga, a função na realidade preenche a área que você desenhou --- assumindo que você tenha desenhado pelo menos parte de uma forma. Então nós podemos facilmente desenhar um quadrado preenchido, usando o código que nós criamos previamente. Primeiro, vamos transformá-lo em uma função. Para desenhar um quadrado com a tartaruga, nós fazemos:
 
 \begin{listing}
 \begin{verbatim}
