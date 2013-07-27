@@ -323,14 +323,14 @@ Então, em uma função nós podemos querer passar o tamanho do quadrado por par
 
 \begin{listing}
 \begin{verbatim}
->>> def meuquadrado(size):
-...     t.forward(size)
+>>> def meuquadrado(tamanho):
+...     t.forward(tamanho)
 ...     t.left(90)
-...     t.forward(size)
+...     t.forward(tamanho)
 ...     t.left(90)
-...     t.forward(size)
+...     t.forward(tamanho)
 ...     t.left(90)
-...     t.forward(size)
+...     t.forward(tamanho)
 ...     t.left(90)
 \end{verbatim}
 \end{listing}
@@ -344,41 +344,41 @@ Nós podemos testar a nossa função, chamando:
 \end{verbatim}
 \end{listing}
 
-That's a start, but it's not quite perfect.  If you look at the code above, you'll see a pattern.  We repeat: \code{forward(size)} and \code{left(90)} four times.  That's a waste of typing.  So we can use a for-loop to do it for us (pretty much the same as we did earlier):
+Já é um começo, mas não é algo perfeito. Se você olhar para o código acima, você verá um padrão. Nós repetimos: \code{forward(tamanho)} e \code{left(90)} 4 vezes. Que é um disperdício de digitação. Nós podemos usar um laço `for' para fazer isso por nós (muito parecido com o que já fizemos anteriormente):
 
 \begin{listing}
 \begin{verbatim}
->>> def mysquare(size):
-...     for x in range(0,4):
-...         t.forward(size)
+>>> def meuquadrado(tamanho):
+...     for x in range(0, 4):
+...         t.forward(tamanho)
 ...         t.left(90)
 \end{verbatim}
 \end{listing}
 
-That's a big improvement on the previous version. You can test the function with different sizes:
+Isso é uma versão bem melhor que a anterior. Você pode testar a função com diferentes tamanhos:
 
 \begin{listing}
 \begin{verbatim}
 >>> t.reset()
->>> mysquare(25)
->>> mysquare(50)
->>> mysquare(75)
->>> mysquare(100)
->>> mysquare(125)
+>>> meuquadrado(25)
+>>> meuquadrado(50)
+>>> meuquadrado(75)
+>>> meuquadrado(100)
+>>> meuquadrado(125)
 \end{verbatim}
 \end{listing}
 
-And the turtle should draw something like figure~\ref{fig26}.
+E a tartaruga deverá desenhar algo como a figura~\ref{fig26}.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=72mm]{eps/figure26.eps}
 \end{center}
-\caption{Lots of squares.}\label{fig26}
+\caption{Vários quadrados.}\label{fig26}
 \end{figure}
 
 \noindent
-Now we can try a filled square.  First of all, reset the canvas once again:
+Agora, nós podemos tentar um quadrado preenchido. Primeiro de tudo, vamos apagar a tela novamente:
 
 \begin{listing}
 \begin{verbatim}
