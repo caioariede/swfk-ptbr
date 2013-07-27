@@ -387,17 +387,17 @@ Agora, nós podemos tentar um quadrado preenchido. Primeiro de tudo, vamos apaga
 \end{listing}
 
 \noindent
-Then, turn on filling, and call the square function again:
+Então, ativando o preenchimento e chamando a função meuquadrado novamente:
 
 \begin{listing}
 \begin{verbatim}
 >>> t.begin_fill()
->>> mysquare(50)
+>>> meuquadrado(50)
 \end{verbatim}
 \end{listing}
 
 \noindent
-You'll still see an empty square until you turn filling off:
+Você continuará vendo um quadrado vazio, até desativar o preenchimento:
 
 \begin{listing}
 \begin{verbatim}
@@ -406,32 +406,32 @@ You'll still see an empty square until you turn filling off:
 \end{listing}
 
 \noindent
-Which produces something like the square in figure~\ref{fig27}.
+Que produz algo parecido com o quadrado da figura~\ref{fig27}.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=72mm]{eps/figure27.eps}
 \end{center}
-\caption{A black square.}\label{fig27}
+\caption{Um quadrado preto.}\label{fig27}
 \end{figure}
 
-How about changing the function so that we can either draw a filled or an unfilled square? We need another parameter, and slightly more complicated code, to do this:
+Que tal se mudarmos a função, para que pudessemos desenhar tanto um quadrado preenchido como um sem preenchimento? Nós precisamos de um outro parâmetro, e um código um pouquinho mais complicado para fazer isso:
 
 \begin{listing}
 \begin{verbatim}
->>> def mysquare(size, filled):
-...    if filled == True:
+>>> def meuquadrado(tamanho, preenchido):
+...    if preenchido == True:
 ...        t.begin_fill()
-...    for x in range(0,4):
-...        t.forward(size)
+...    for x in range(0, 4):
+...        t.forward(tamanho)
 ...        t.left(90)
-...    if filled == True:
+...    if preenchido == True:
 ...        t.end_fill()
 ...
 \end{verbatim}
 \end{listing}
 
-The first two lines check to see if the value of parameter `filled' is set to True. If it is, then filling is turned on.  We then loop four times to draw the four sides of the rectangle, before checking a second time whether the parameter `filled' is True, and if so, turn filling off once again. You can now draw a filled square by calling:
+As primeiras duas linhas, verificam se o valor do parâmetro `preenchido' é igual a `True'. Se for, então ativa o preenchimento. Então nós fazemos um laço 4 vezes, para desenhar os quatro lados do quadrado e então, após isso, verificamos novamente se o parâmetro `preenchido' é igual a `True', se sim, desativamos o preenchimento. Agora você pode desenhar um quadrado preenchido, chamando:
 
 \begin{listing}
 \begin{verbatim}
