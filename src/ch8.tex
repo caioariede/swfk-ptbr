@@ -440,29 +440,29 @@ As primeiras duas linhas, verificam se o valor do parâmetro `preenchido' é igu
 \end{listing}
 
 \noindent
-And an unfilled square by calling:
+E um quadrado não preenchido, chamando:
 
 \begin{listing}
 \begin{verbatim}
->>> mysquare(150, False)
+>>> meuquadrado(150, False)
 \end{verbatim}
 \end{listing}
 
 \noindent
-Which causes our turtle to draw the image in figure~\ref{fig28}$\ldots$ $\ldots$which, now that I think about it, looks like a weird square eye.
+Que faz com que a nossa tartaruga desenhe a imagem da figura~\ref{fig28}$\ldots$ $\ldots$que agora que eu vi, parece um olho quadrado estranho.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=72mm]{eps/figure28.eps}
 \end{center}
-\caption{A square eye.}\label{fig28}
+\caption{Um olho quadrado.}\label{fig28}
 \end{figure}
 
-You can draw all sorts of shapes and fill them with colour. Let's turn the star, we drew earlier, into a function. The original code looked like this:
+Você pode desenhar diversas formas e preenche-las com cores. Vamos tornar a estrela que nós criamos anteriormente, em uma função. O código original era mais ou menos assim:
 
 \begin{listing}
 \begin{verbatim}
->>> for x in range(1,19):
+>>> for x in range(1, 19):
 ...     t.forward(100)
 ...     if x % 2 == 0:
 ...         t.left(175)
@@ -472,20 +472,20 @@ You can draw all sorts of shapes and fill them with colour. Let's turn the star,
 \end{verbatim}
 \end{listing}
 
-We can use the same if-statements from the mysquare function, and use the size parameter in the \code{forward} function.
+Nós podemos usar as mesmas expressões `if' da função `meuquadrado' e passar os parâmetros `tamanho' e `preenchido':
 
 \begin{listing}
 \begin{verbatim}
-1.  >>> def mystar(size, filled):
-2.  ...     if filled:
+1.  >>> def minhaestrela(tamanho, preenchido):
+2.  ...     if preenchido:
 3.  ...         t.begin_fill()
-4.  ...     for x in range(1,19):
-5.  ...         t.forward(size)
+4.  ...     for x in range(1, 19):
+5.  ...         t.forward(tamanho)
 6.  ...         if x % 2 == 0:
 7.  ...             t.left(175)
 8.  ...         else:
 9.  ...             t.left(225)
-10. ...     if filled:
+10. ...     if preenchido:
 11. ...         t.end_fill()
 \end{verbatim}
 \end{listing}
