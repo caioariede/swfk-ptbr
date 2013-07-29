@@ -490,14 +490,14 @@ Nós podemos usar as mesmas expressões `if' da função `meuquadrado' e passar 
 \end{verbatim}
 \end{listing}
 
-In lines 2 and 3, we switch filling on, depending upon the value of the parameter \code{filled} (turn filling on, if the parameter is set to True, turn it off, if the parameter is set to False).  We do the reverse in lines 10 and 11 (switch filling back off again).  The other difference about this function is that we pass the size of the star in the parameter \code{size}, and use this value in line 5.
+Nas linhas 2 e 3, nós ativamos o preenchimento, dependendo do valor do parâmetro \code{preenchido} (ativado, caso seja `True' ou desativado, caso seja `False'). E nas linhas 10 e 11 nós desativamos, caso o preenchimento esteja ativado. A outra diferença nessa função, é que nós passamos o tamanho da estrela através do parâmetro `tamanho' e usamos esse valor na linha 5.
 \par
-Now let's set the colour to gold (you might remember that gold can be made by using 100\% of red, 85\% of green and no blue), and then call the function:
+Agora, vamos definir a cor para ouro (lembre-se que, para conseguirmos a cor ouro, precisamos de 100\% de vermelho, 85\% de verde e nada de azul) e então chamar a função:
 
 \begin{listing}
 \begin{verbatim}
 >>> t.color(1, 0.85, 0)
->>> mystar(120, True)
+>>> minhaestrela(120, True)
 \end{verbatim}
 \end{listing}
 
