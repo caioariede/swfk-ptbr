@@ -18,25 +18,25 @@ Gráficos tridimensionais são feitos de uma maneira bem diferente dos gráficos
 \includegraphics*[width=100mm]{eps/turtle1.eps}
 \end{center}
 
-\section{Quick Draw}
+\section{Desenhar rapidamente}
 
-Each programming language has a different method to draw on the screen. Some methods are fast and some are slow, which means that programmers who develop games for a living have to be very careful about the language they choose to work in.
+Cada linguagem de programação tem um método diferente de desenhar na tela. Alguns métodos são mais rápidos, enquanto outros são mais lentos, o que significa que os programadores que criam jogos tem que ser cuidadosos na hora de escolher a linguagem que vão usar para trabalhar.
 \par
-Python has a number of different ways to do graphics as well (including turtle, which we've already used), but the best methods (from a graphics point of view) are usually modules and libraries of code that are not included with Python itself. You will probably have to be programming for a few years before you'll be able to figure out how to install and use one of those complex libraries.
+Assim como o Python também possui diversas formas diferentes de fazer gráficos (incluindo a tartaruga, que nós já usamos), mas os melhores métodos (do ponto de vista dos gráficos) normalmente são módulos e bibliotecas que são incluidas no Python por padrão. Você provavelmente terá que programar por alguns anos para poder instalar e usar algumas dessas bibliotecas complexas.
 
-Luckily, there is a module, which comes with Python, that we can use to do basic graphics (at a slightly faster speed than a turtle).  Perhaps even fast enough to be called the Quick Draw Turtle.
+Felizmente, existe um módulo que vem com o Python, que podemos usar para fazer gráficos simples (um pouco mais rápido que a tartaruga). Talvez rápida o suficiente para a chamarmos de Tartaruga Rápida para Desenhar.
 
 \begin{center}
 \includegraphics*[width=100mm]{eps/turtle2.eps}
 \end{center}
 
-The module is called \code{tkinter}\index{modules!tkinter} (a strange name, which stands for `Tk interface') and it can be used to create full applications (you could even create a simple Word Processor program if you wanted to) as well as simple drawing. We could create a simple application with a button using the following code:
+O módulo se chama \code{tkinter}\index{modules!tkinter} (um nome estrenho, que vem de `Tk interface') e pode ser usada para criar aplicações completas (você pode até mesmo criar um Editor de Textos se quiser), assim como apenas desenhar. Nós podemos criar uma aplicação simples com um botão, usando o seguinte código:
 
 \begin{listing}
 \begin{verbatim}
 1. >>> from tkinter import *
 2. >>> tk = Tk()
-3. >>> btn = Button(tk, text="click me")
+3. >>> btn = Button(tk, text="clique aqui")
 4. >>> btn.pack()
 \end{verbatim}
 \end{listing}
