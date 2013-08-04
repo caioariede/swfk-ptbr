@@ -34,29 +34,29 @@ O módulo se chama \code{tkinter}\index{modules!tkinter} (um nome estrenho, que 
 
 \begin{listing}
 \begin{verbatim}
-1. >>> from tkinter import *
+1. >>> from tkinter import Tk, Button
 2. >>> tk = Tk()
 3. >>> btn = Button(tk, text="clique aqui")
 4. >>> btn.pack()
 \end{verbatim}
 \end{listing}
 
-In line 1,  we import the contents of the \code{Tk} module, so we can use them---the most useful of these is \code{Tk}, which creates a basic window to which we can then add things. After you type in line 2, that window will suddenly appear on the screen.  In line 3, we create a new Button and assign it to the variable \code{btn}. The button is created by passing the \code{tk} object as a parameter, along with a named parameter with the words `click me'.
+Na linha 1, nós importamos o que vamos usar do módulo \code{Tk} --- o mais usado é o \code{Tk}, que cria uma janela básica que podemos adicionar algumas coisas. Ela aparecerá na tela assim que você digitar a linha 2. Na linha 3, nós criamos um novo botão (`Button') e o associamos à variável \code{btn}. O botão é criado passando o objeto \code{tk} como parâmetro, junto de um parâmetro nomeado com as palavras `clique aqui'.
 
 \par
 \fbox{\colorbox{PaleBlue}{\parbox{.75\linewidth} {
-\section*{Named Parameters}
+\section*{Parâmetros Nomeados}
 
-This is the first time we've used `named parameters'\index{named parameters}. These work just like normal parameters, except they can appear in any order, so we need to provide a name.
+Essa é a primeira vez que nós usamos os `parâmetros nomeados'\index{named parameters}. Eles funcionam da mesma forma que os parâmetros normais, exceto que eles podem aparecer em qualquer ordem, então nós devemos nomeá-los.
 
-For example, suppose we had a function rectangle which took two parameters width and height.  Normally we might call this function using something like rectange(200, 100), meaning we want to draw a rectangle 200 pixels wide by 100 pixels high.  But what if the parameters could appear in any order? How do we know which is the width and which is the height?
+Por exemplo, suponha que nós tivessemos uma função `retangulo' que recebe dois parâmetros: largura e altura. Normalmente, nós deveríamos chamar essa função usando algo do tipo \code{retangulo(200, 100)}, que significa que nós queremos um retangulo de 200 pixels de largura, por 100 de altura. Mas e se os parâmetros pudessem aparecer em qualquer ordem? Como saberíamos qual é a largura e qual é a altura?
 
-In this case, it's better to say exactly which is which, for example: \code{rectangle(height=100, width=200)}. In actual fact, the whole idea of named parameters is a bit more complicated than this, and can be used in a number of different ways to make functions a lot more flexible---but that's the subject of a more advanced book than this introduction to programming.
+Nesse caso, seria melhor dizer exatamente o que é o que. Por exemplo: \code{retangulo(altura=100, largura=200)}. Na realidade, a ideia dos parâmetros nomeados é um pouco mais complicada do que isso e pode ser usada de diversas maneiras, para tornar as funções mais flexíveis --- mas isso é assunto para um livro mais aprofundado do que essa introdução à programação.
 \par
 }}}
 \par
 
-The final line (4) is an instruction to tell the button to draw itself. At which point, the window that was created in line 2 will shrink to the size of a small button containing the words `click me'. It will look something like this:
+A última linha (4) é uma instrução que diz ao botão para se desenhar. Nesse ponto, a janela criada na linha 2 irá encolher para o tamanho de um pequeno botão, contendo as palavras `clique aqui'. Algo parecido com isso:
 
 \begin{center}
 \includegraphics*[width=30mm]{eps/figure31.eps}
