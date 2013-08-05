@@ -62,32 +62,32 @@ A última linha (4) é uma instrução que diz ao botão para se desenhar. Nesse
 \includegraphics*[width=30mm]{eps/figure31.eps}
 \end{center}
 
-The button doesn't do much but you can, at least, click it. We can make it do something by changing the previous example a little (make sure you close the window we created earlier). First we can create a function to print out some text:
+O botão não faz nada demais, mas você pode ao menos clicar nele. Nós podemos fazer com que ele faça algo, modificando um pouco o exemplo anterior (assegure que a janela que criamos anteriormente está fechada). Primeiro, nós criamos uma função que imprime um texto:
 
 \begin{listing}
 \begin{verbatim}
->>> def hello():
-...     print('hello there')
+>>> def ola():
+...     print('ola!')
 \end{verbatim}
 \end{listing}
 
 \noindent
-Then modify the example to use this function:
+Então, modificamos o nosso exemplo para usar a função:
 
 \begin{listing}
 \begin{verbatim}
 >>> from tkinter import *
 >>> tk = Tk()
->>> btn = Button(tk, text="click me", command=hello)
+>>> btn = Button(tk, text="clique aqui", command=ola)
 >>> btn.pack()
 \end{verbatim}
 \end{listing}
 
-The named parameter `command' says that we want to use the \code{hello} function, when the button is clicked. If you now click the button, you'll see ``hello there'' written out to the console---printed once each time the button is clicked.
+O parâmetro nomeado `command' diz que nós queremos acionar a função \code{ola}, quando o botão for clicado. Logo, se você clicar no botão, você verá a mensagem ``ola!'' no terminal --- impressa cada vez que você clicar no botão.
 
-\section{Simple Drawing}
+\section{Desenhando algo simples}
 
-Buttons aren't very useful when you want to draw things on the screen---so we need to create and add a different sort of component: a \code{Canvas}\index{modules!tkinter!Canvas}. When creating a canvas, unlike a button (which takes text and command parameters), we need to pass the width and height (in pixels) of the canvas. Apart from that, the code is similar to the button code:
+Botões não ajudam muito quando o que você quer é desenhar algo na tela --- então nós precisamos usar um componente diferente: um \code{Canvas}\index{modules!tkinter!Canvas} (tela). Quando criamos um `canvas', diferente do botão (que recebe os parâmetros `texto' e `comando'), nós precisamos passar a largura e a altura (em pixels), da tela. Tirando isso, o código é similar ao do botão:
 
 \begin{listing}
 \begin{verbatim}
@@ -98,16 +98,16 @@ Buttons aren't very useful when you want to draw things on the screen---so we ne
 \end{verbatim}
 \end{listing}
 
-Similar to the button example, a window will appear when you type line 2.  When you `pack' the canvas on line 4, it will suddenly increase in size. We can draw a line onto the canvas using pixel coordinates. Coordinates are the positions of pixels on a canvas. On a Tk canvas, coordinates describe how far across the canvas (from left to right) and how far down the canvas (top to bottom) to move.  The `left-right part' is called the x-axis.  The `top-bottom part' is called the y-axis.
+Similar ao exemplo do botão, uma janela aparecerá quando você digitar a linha 2. E na linha 4, a janela aumentará seu tamanho. Nós podemos desenhar uma linha na tela, usando pixels como coordenadas. Coordenadas são as posições dos pixels em uma tela. Na tela (ou `canvas') do Tk, as coordenadas dizem qual a largura (da esquerda para a direita) e a altura (do topo até embaixo). A parte do `da esquerda para a direita' é chamada de eixo-x, enquanto o `do topo até embaixo' é chamado de eixo-y.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=80mm]{eps/figure32.eps}
 \end{center}
-\caption{Canvas x and y axis.}\label{fig32}
+\caption{Eixo-x e eixo-y da tela.}\label{fig32}
 \end{figure}
 
-Since the canvas is 500 pixels wide, and 500 pixels high, the coordinates of the bottom-right corner of the screen are 500,500. So the line in figure~\ref{fig32} can be drawn by using start coordinates of 0,0 and end coordinates of 500,500\index{modules!tkinter!create\_line}:
+Como a tela tem 500 pixels de largura e 500 de altura, as coordenadas do canto inferior direito da tela são 500, 500. Então, a linha na figura~\ref{fig32} pode ser desenhada iniciando das coordenadas 0, 0 e terminadas nas coordenadas 500, 500.\index{modules!tkinter!create\_line}:
 
 \begin{listing}
 \begin{verbatim}
@@ -120,7 +120,7 @@ Since the canvas is 500 pixels wide, and 500 pixels high, the coordinates of the
 \end{listing}
 
 \noindent
-Now, to do the same thing with turtle, would have required the following code:
+Agora, para fazer a mesma coisa com a tartaruga, precisariamos usar o seguinte código:
 
 \begin{listing}
 \begin{verbatim}
@@ -128,9 +128,9 @@ Now, to do the same thing with turtle, would have required the following code:
 >>> turtle.setup(width=500, height=500)
 >>> t = turtle.Pen()
 >>> t.up()
->>> t.goto(-250,250)
+>>> t.goto(-250, 250)
 >>> t.down()
->>> t.goto(500,-500)
+>>> t.goto(500, -500)
 \end{verbatim}
 \end{listing}
 
