@@ -200,16 +200,16 @@ Então em seguida, nós podemos criar uma função que usa um número aleatório
 \end{verbatim}
 \end{listing}
 
-In the first two lines we create variables for the top left corner of the rectangle using \code{randrange}, passing the width and the height.  The \code{randrange} function takes a number as an argument (actually, see Appendix~\ref{app:afewpythonmodules} for more uses of \code{randrange})---so \code{randrange(10)} gives you a number between 0 and 9, \code{randrange(100)} gives you a number between 0 and 99, and so on. The next two lines create variables for the bottom right corner of the rectangle (or square!)---we use the top left coordinate (x1 or y1) and add a random number to that variable. Finally we call the \code{create\_rectangle} function using those variables. You can try out the \code{random\_rectangle} function by passing the width and height of the canvas you created:
+Nas primeiras duas linhas, nós definimos as variáveis com as coordenadas dos cantos superior e inferior esquerdo do retângulo, usando o \code{randrange}, passando a largura e a altura. A função \code{randrange}, recebe um número como argumento (veja o Apêndice~\ref{app:afewpythonmodules} para mais detalhes do \code{randrange}) --- então \code{randrange(10)} retorna um número entre 0 e 9, \code{randrange(100)}, retorna um número entre 0 e 99 e por assim em diante. As próximas duas linhas, definem variáveis com as coordenadas dos cantos superior e inferior direito do retângulo (ou quadrado!) --- nós usamos as coordenadas do canto superior e inferior esquerdo (x1 e y1) para somar à um número aleatório nas variáveis e finalmente chamamos a função \code{create\_rectangle} usando essas variáveis. Você pode tentar usar a função \code{retangulo\_aleatorio}, passando a largura e a altura da tela (canvas) que você criou:
 
 \begin{listing}
 \begin{verbatim}
->>> random_rectangle(400, 400)
+>>> retangulo_aleatorio(400, 400)
 \end{verbatim}
 \end{listing}
 
 \noindent
-Or to fill the screen, how about creating a loop to call it a number of times:
+Ou, para preencher a tela, que tal fazermos um laço para chamar essa função várias vezes:
 
 \begin{listing}
 \begin{verbatim}
