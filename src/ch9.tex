@@ -214,21 +214,21 @@ Ou, para preencher a tela, que tal fazermos um laço para chamar essa função v
 \begin{listing}
 \begin{verbatim}
 >>> for x in range(0, 100):
-...     random_rectangle(400, 400)
+...     retangulo_aleatorio(400, 400)
 \end{verbatim}
 \end{listing}
 
 \noindent
-Which produces a bit of a mess (figure~\ref{fig34}, but is interesting nonetheless.
+Que faz um pouco de bagunça (figura~\ref{fig34}, mas que é interessante.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=80mm]{eps/figure34.eps}
 \end{center}
-\caption{A mess of rectangles.}\label{fig34}
+\caption{Uma bagunça de retângulos.}\label{fig34}
 \end{figure}
 
-Remember, back in the last chapter, we set the colour the turtle drew with using percentages of the 3 colours: red, green and blue? With \code{tkinter} you can set the colour using similar ideas, but unfortunately, it's slightly more complicated than with \code{turtle}.  First of all, let's change the random rectangle function to pass in a colour to fill the rectangle with:
+Lembra-se no último capítulo, que nós definimos cores para a tartaruga desenhar, usando as porcentagens de 3 cores: vermelho, verde e azul? Com o \code{tkinter} você pode fazer o mesmo, mas infelizmente, é um pouco mais complicado que o módulo \code{turtle}. Primeiramente, vamos alterar a função \code{retangulo\_aleatorio} para aceitar uma cor de preenchimento como parâmetro:
 
 \begin{listing}
 \begin{verbatim}
