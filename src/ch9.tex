@@ -232,57 +232,57 @@ Lembra-se no último capítulo, que nós definimos cores para a tartaruga desenh
 
 \begin{listing}
 \begin{verbatim}
->>> def random_rectangle(width, height, fill_colour):
-...     x1 = random.randrange(width)
-...     y1 = random.randrange(height)
-...     x2 = random.randrange(x1 + random.randrange(width))
-...     y2 = random.randrange(y1 + random.randrange(height))
-...     canvas.create_rectangle(x1, y1, x2, y2, fill=fill_colour)
+>>> def retangulo_aleatorio(largura, altura, cor_preencher):
+...     x1 = random.randrange(largura)
+...     y1 = random.randrange(altura)
+...     x2 = random.randrange(x1 + random.randrange(largura))
+...     y2 = random.randrange(y1 + random.randrange(altura))
+...     canvas.create_rectangle(x1, y1, x2, y2, fill=preencher_cor)
 \end{verbatim}
 \end{listing}
 
-The canvas \code{create\_rectangle} function can take a parameter `fill' which specifies the fill colour.  We can now pass this into the function. Try the following:
+A função \code{create\_rectangle} da tela, pode receber um parâmetro `fill' que define uma cor para preenchimento. Nós podemos passá-la pela função. Tente o seguinte:
 
 \begin{listing}
 \begin{verbatim}
->>> random_rectangle(400, 400, 'green')
->>> random_rectangle(400, 400, 'red')
->>> random_rectangle(400, 400, 'blue')
->>> random_rectangle(400, 400, 'orange')
->>> random_rectangle(400, 400, 'yellow')
->>> random_rectangle(400, 400, 'pink')
->>> random_rectangle(400, 400, 'purple')
->>> random_rectangle(400, 400, 'violet')
->>> random_rectangle(400, 400, 'magenta')
->>> random_rectangle(400, 400, 'cyan')
+>>> retangulo_aleatorio(400, 400, 'green')
+>>> retangulo_aleatorio(400, 400, 'red')
+>>> retangulo_aleatorio(400, 400, 'blue')
+>>> retangulo_aleatorio(400, 400, 'orange')
+>>> retangulo_aleatorio(400, 400, 'yellow')
+>>> retangulo_aleatorio(400, 400, 'pink')
+>>> retangulo_aleatorio(400, 400, 'purple')
+>>> retangulo_aleatorio(400, 400, 'violet')
+>>> retangulo_aleatorio(400, 400, 'magenta')
+>>> retangulo_aleatorio(400, 400, 'cyan')
 \end{verbatim}
 \end{listing}
 
-Some, and maybe all, of those named colours will work.  But some of them might result in an error message (it depends on whether you're using Windows, Mac OS X or Linux). So far, that's pretty easy.  But what about a colour like gold?  In the \code{turtle} module, we created gold using 100\% of red, 85\% of green and no blue.  In \code{tkinter} we can create gold using:
+Alguns, talvez todas, as cores funcionarão pelo nome. Mas algumas delas irão resultar uma mensagem de erro (depende se você estiver no Windows, no Mac ou no Linux). Bem fácil até agora. E se nós quisermos uma cor ouro? No módulo \code{turtle}, nós criamos a cor ouro usando 100\% do vermelho, 85\% do verde e nada de azul. No \code{tkinter}, nós podemos fazer a cor ouro usando:
 
 \begin{listing}
 \begin{verbatim}
->>> random_rectangle(400, 400, '#ffd800')
+>>> retangulo_aleatorio(400, 400, '#ffd800')
 \end{verbatim}
 \end{listing}
 
-Which, all in all, is a pretty strange way to create a colour.  `ffd800' is called hexadecimal\index{hexadecimal colors}, and is another way to represent numbers.  Explaining how hexadecimal numbers work would take a few more pages than we have to spare for this book, so for the moment, you can use the following function to create a hexadecimal colour:
+Que, apesar de tudo, é uma forma bem estranha de criar uma cor. `ffd800' é o que chamamos de hexadecimal\index{hexadecimal colors}, e é outra maneira de representar números. Explicar como funcionam os números hexadecimais nos levaria a escrever mais algumas páginas, então para economizá-las, vamos usar a seguinte função para criar cores em hexadecimal:
 
 \begin{listing}
 \begin{verbatim}
->>> def hexcolor(red, green, blue):
-...     red = 255*(red/100.0)
-...     green = 255*(green/100.0)
-...     blue = 255*(blue/100.0)
-...     return '#%02x%02x%02x' % (red, green, blue)
+>>> def corhex(vermelho, verde, azul):
+...     vermelho = 255 * (vermelho / 100.0)
+...     verde = 255 * (verde / 100.0)
+...     azul = 255 * (azul / 100.0)
+...     return '#%02x%02x%02x' % (vermelho, verde, azul)
 \end{verbatim}
 \end{listing}
 
-Calling hexcolor with 100\% for red, 85\% for green and 0\% for blue, results in the hexadecimal for a gold colour we just used:
+Chamando `corhex' com 100\% de vermelho, 85\% de verde e 0\% de azul, resultará no código hexadecimal para a cor ouro, que nós queremos:
 
 \begin{listing}
 \begin{verbatim}
->>> print(hexcolor(100, 85, 0))
+>>> print(corhex(100, 85, 0))
 #ffd800
 \end{verbatim}
 \end{listing}
