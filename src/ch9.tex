@@ -327,10 +327,10 @@ canvas.create_arc(10, 10, 200, 100, extent=180, style=ARC)
 \begin{center}
 \includegraphics[width=80mm]{eps/figure36.eps}
 \end{center}
-\caption{An arc fitting inside a rectangle.}\label{fig36}
+\caption{Um arco dentro de um retângulo.}\label{fig36}
 \end{figure}
 
-This places the top left corner of the rectangle at the coordinates 10, 10 (that's 10 pixels across, 10 pixels down), and the bottom right corner of the rectangle at the coordinates 200, 100 (200 pixels across, 100 pixels down).  The next parameter (a \textbf{named} parameter) `extent' is used to specify the degrees of the angle of the arc.  If you don't know anything about degrees in a circle (or arc), then just remember that if you think about a circle, 180 degrees would be half of the circle (or half the arc), 359 degrees would be a full circle, 90 degrees is a quarter of a circle and 0 degrees is$\ldots$ well, nothing at all. Here's some code that draws a bunch of different arcs down the page so you can see the basic differences when we use different degrees (you can see the examples in figure~\ref{fig37}):
+Isso posiciona o canto superior esquerdo do retângulo nas coordenadas 10, 10 (10 para o lado e 10 pixels para baixo), e o canto inferior direito do retângulo nas coordenadas 200, 100 (200 pixels para o lado e 100 para baixo). O próximo parâmetro (um parâmetro \textbf{nomeado}), `extent' é usado para especificar os graus do ângulo do arco. Se você não sabe nada sobre graus em um círculo (ou arco), então apenas se lembre que, quando falamos em um círculo, 180 graus formam a metade de um círculo (ou arco), 359 graus formam um círculo completo, 90 graus formam 1/4 de um círculo e 0 graus formam$\ldots$ bem, nada. Aqui está um código que gera um monte de arcos diferentes, então você pode perceber as diferenças básicas quando usamos graus diferentes (você pode ver os exemplos na figura~\ref{fig37}):
 
 \begin{listing}
 \begin{verbatim}
@@ -346,12 +346,12 @@ This places the top left corner of the rectangle at the coordinates 10, 10 (that
 \begin{center}
 \includegraphics[width=80mm]{eps/figure37.eps}
 \end{center}
-\caption{Differing degrees of arcs.}\label{fig37}
+\caption{Arcos em diferentes graus.}\label{fig37}
 \end{figure}
 
-\section{Drawing Ovals}
+\section{Desenhos Ovais}
 
-While the last statement in the above example draws an oval, you can also draw ovals using the \code{create\_oval}\index{modules!tkinter!create\_oval} function.  Similar to drawing arcs, an oval is drawn inside the boundaries of a rectangle. For example, the following code:
+Apesar de o último comando acima reproduzir um desenho oval, você também pode usar a função \code{create\_oval}\index{modules!tkinter!create\_oval}. Da mesma maneira que desenhar arcos, uma forma oval é desenhada dentro dos limites de um retângulo. Por exemplo, o seguinte código:
 
 \begin{listing}
 \begin{verbatim}
