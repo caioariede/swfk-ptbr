@@ -288,21 +288,21 @@ Chamando `corhex' com 100\% de vermelho, 85\% de verde e 0\% de azul, resultará
 \end{listing}
 
 \noindent
-You can create a bright purple colour using 98\% of red, 1\% of green, and 77\% of blue:
+Você pode criar um rosa choque, usando 98\% de vermelho, 1\% de verde e 77\% de azul:
 
 \begin{listing}
 \begin{verbatim}
->>> print(hexcolor(98, 1, 77))
+>>> print(corhex(98, 1, 77))
 #f902c4
 \end{verbatim}
 \end{listing}
 
 \noindent
-You can use that with the random\_rectangle function we created earlier:
+E você pode usar isso, junto com a função \code{retangulo\_aleatorio} que nós criamos:
 
 \begin{listing}
 \begin{verbatim}
->>> random_rectangle(400, 400, hexcolor(98, 1, 77))
+>>> retangulo_aleatorio(400, 400, hexcolor(98, 1, 77))
 \end{verbatim}
 \end{listing}
 
@@ -310,12 +310,12 @@ You can use that with the random\_rectangle function we created earlier:
 \begin{center}
 \includegraphics[width=80mm]{eps/figure35.eps}
 \end{center}
-\caption{A purple rectangle.}\label{fig35}
+\caption{Um retângulo rosa.}\label{fig35}
 \end{figure}
 
-\section{Drawing Arcs}
+\section{Desenhando Arcos}
 
-An arc is a part of a circle, but to draw one with tkinter you need to draw a rectangle. Which doesn't make a lot of sense until you try to draw a rectangle and then draw an arc inside it (see figure~\ref{fig36}). The code to draw this arc might look something like this\index{modules!tkinter!create\_arc}:
+Um arco é uma parte de um círculo, mas para desenhar um com o tkinter, você precisa desenhar um retângulo. Não faz muito sentido, até que você tente desenhar um retangulo e então desenhar um arco dentro dele (veja na figura~\ref{fig36}). O código para desenhar esse arco é mais ou menos assim:
 
 \begin{listing}
 \begin{verbatim}
