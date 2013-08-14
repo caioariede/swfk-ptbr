@@ -362,7 +362,7 @@ Apesar de o último comando acima reproduzir um desenho oval, você também pode
 \end{verbatim}
 \end{listing}
 
-This example draws an oval in the (imaginary) square drawn from pixel positions 1,1 to 300,200. If we draw a red rectangle with the same coordinates, you can properly see how the oval is drawn inside (figure~\ref{fig38}):
+Este exemplo desenha uma forma oval dentro do quadrado (imaginário) desenhado nas posições 1, 1 e 300, 200. Se nós desenharmos um retângulo vermelho com as mesmas coordenadas, veremos que a forma oval é desenhada dentro (figura~\ref{fig38}):
 
 \begin{listing}
 \begin{verbatim}
@@ -374,23 +374,23 @@ This example draws an oval in the (imaginary) square drawn from pixel positions 
 \begin{center}
 \includegraphics[width=80mm]{eps/figure38.eps}
 \end{center}
-\caption{The outline of an oval.}\label{fig38}
+\caption{O contorno da forma oval.}\label{fig38}
 \end{figure}
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=80mm]{eps/figure39.eps}
 \end{center}
-\caption{The outline of an oval inside a rectangle.}\label{fig39}
+\caption{O contorno da forma oval dentro de um retângulo.}\label{fig39}
 \end{figure}
 
 \noindent
-To draw a circle, rather than an elliptical oval, the imaginary rectangle should be a square (which produces the circle in figure~\ref{fig40}):
+Para desenhar um círculo, ao invés de uma forma oval, o retângulo imaginário deve ser um quadrado (que produz o círculo da figura~\ref{fig40}):
 
 \begin{listing}
 \begin{verbatim}
 >>> tk = Tk()
->>> canvas = Canvas(tk, width=400,height=400)
+>>> canvas = Canvas(tk, width=400, height=400)
 >>> canvas.pack()
 >>> canvas.create_oval(1, 1, 300, 300)
 \end{verbatim}
