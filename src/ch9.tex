@@ -400,18 +400,18 @@ Para desenhar um círculo, ao invés de uma forma oval, o retângulo imaginário
 \begin{center}
 \includegraphics[width=80mm]{eps/figure40.eps}
 \end{center}
-\caption{A simple circle.}\label{fig40}
+\caption{Um simples círculo.}\label{fig40}
 \end{figure}
 
-\section{Drawing Polygons}\index{modules!tkinter!create\_polygon}
+\section{Desenhando Poligonos}\index{modules!tkinter!create\_polygon}
 
-A polygon is any shape with 3 or more sides. Triangles, squares, rectangles, pentagons, hexagons, and so on are all examples of polygons. As well as these more regular shapes, you can also create irregular shaped polygons. For example, to draw a triangle, you need to provide 3 sets of coordinates (that's a position across plus a position down) for each point of the triangle (creating the triangle in figure~\ref{fig41}):
+Um polígono é uma forma com 3 ou mais lados. Triângulos, quadrados, retângulos, pentágonos, hexágonos etc são todos exemplos de polígonos. Além dessas formas mais comuns, você também pode criar polígonos irregulares. Por exemplo, para desenhar um triângulo, você precisa especificar 3 pares de coordenadas para cada ponto do triângulo (criando o triângulo da figura~\ref{fig41}):
 
 \begin{listing}
 \begin{verbatim}
 >>> from tkinter import *
 >>> tk = Tk()
->>> canvas = Canvas(tk, width=400,height=400)
+>>> canvas = Canvas(tk, width=400, height=400)
 >>> canvas.pack()
 >>> canvas.create_polygon(10, 10, 100, 10, 100, 50, fill="", outline="black")
 \end{verbatim}
@@ -421,10 +421,10 @@ A polygon is any shape with 3 or more sides. Triangles, squares, rectangles, pen
 \begin{center}
 \includegraphics[width=80mm]{eps/figure41.eps}
 \end{center}
-\caption{A simple triangle.}\label{fig41}
+\caption{Um simples triângulo.}\label{fig41}
 \end{figure}
 
-We can add an irregular polygon using the following code. Figure~\ref{fig42} shows both the triangle and the oddly shaped polygon.
+Nós podemos adicionar um polígono irregular, usando o seguinte código: A figura~\ref{fig42} exibe o triângulo e o polígulo de forma irregular.
 
 \begin{listing}
 \begin{verbatim}
