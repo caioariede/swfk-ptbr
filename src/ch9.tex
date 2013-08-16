@@ -439,9 +439,9 @@ Nós podemos adicionar um polígono irregular, usando o seguinte código: A figu
 \caption{Um triângulo simples e um polígono e irregular.}\label{fig42}
 \end{figure}
 
-\section{Drawing Images}
+\section{Desenhando Imagens}
 
-You can draw an image on a canvas using \code{tkinter} by first loading the image, then using the \code{create\_image}\index{modules!tkinter!create\_image} function on the canvas object. This sounds a bit illogical, but it works as follows:
+Você pode desenhar uma imagem na tela, usando o \code{tkinter}, primeiramente carregando a imagem e então usando a função \code{create\_image}\index{modules!tkinter!create\_image} do objeto canvas. Isso parece um pouco ilógico, mas funciona assim:
 
 \begin{listing}
 \begin{verbatim}
@@ -449,12 +449,12 @@ You can draw an image on a canvas using \code{tkinter} by first loading the imag
 2. >>> tk = Tk()
 3. >>> canvas = Canvas(tk, width=400, height=400)
 4. >>> canvas.pack()
-5. >>> myimage = PhotoImage(file='test.gif')
-6. >>> canvas.create_image(0, 0, image=myimage, anchor=NW)
+5. >>> imagem = PhotoImage(file='teste.gif')
+6. >>> canvas.create_image(0, 0, image=imagem, anchor=NW)
 \end{verbatim}
 \end{listing}
 
-In lines 1 to 4 we set up the canvas the same as we have in previous examples. In line 5, the image is loaded into the variable \code{myimage}. It's important that the image you want to load is in a directory that's accessible to Python. This is usually the directory that the Python console is running from. You can find out the name of this directory by importing the \code{os}\index{modules!os} module and using the \code{getcwd()} function:
+Nas linha 1 a 4, nós configuramos a tela da mesma forma que antes. Na linha 5, a imagem é carregada na variável \code{imagem}. É importante que a imagem que você quer carregar esteja no mesmo diretório que você iniciou o terminal do Python. Você pode ver que diretório é esse, importando o módulo \code{os}\index{modules!os} e usando a função \code{getcwd()}:
 
 \begin{listing}
 \begin{verbatim}
@@ -464,27 +464,27 @@ In lines 1 to 4 we set up the canvas the same as we have in previous examples. I
 \end{listing}
 
 \begin{WINDOWS}
-This will probably print out something like `c:\\Python30'.
+Isso exibirá algo como `c:\\Python30'.
 \end{WINDOWS}
 
 \begin{MAC}
-This will probably print out something like `/Users/yourname'$\ldots$, so if your name is Jane Matthews, \code{getcwd()} might return `/Users/janematthews'.
+Isso exibirá algo como `/Users/seunome'$\ldots$, assim se o seu nome é João, o \code{getcwd()} retornará `/Users/joao'.
 \end{MAC}
 
 \begin{LINUX}
-This will probably print out something like `/home/yourname'$\ldots$, so if your name is Jane Matthews, \code{getcwd()} might return `/home/jane' or `/home/janematthews', depending upon how your computer has been setup.
+Isso exibirá algo como `/home/seunome'$\ldots$, assim se o seu nome é João, o \code{getcwd()} retornará `/Users/joao', dependendo da configuração do seu computador.
 \end{LINUX}
 
-Copy your image into that directory and then load it using the PhotoImage function (same as line 5). You then use the \code{create\_image} function on the canvas to display your image (line 6). If you've done all this correctly, you'll see something like figure~\ref{fig43}.
+Copie sua imagem para esse diretório e então carregue usando a função `PhotoImage` (assim como na linha 5). Você pode então usar a função \code{create\_image} para exibir a imagem (linha 6). Se você fez tudo certo, você verá algo como na figura~\ref{fig43}.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=80mm]{eps/figure43.eps}
 \end{center}
-\caption{A photo image.}\label{fig43}
+\caption{Uma foto.}\label{fig43}
 \end{figure}
 
-PhotoImage can load image files with the extensions .gif, .ppm and .pgm. If you want to load other types of images (there are lots of different ways you can create image files---for example, digital cameras usually store images with the extension .jpg), then you'll need to use an extension which adds that capability to Python. The Python Imaging Library (PIL)\footnote{The Python Imaging Library can be found at \href{http://www.pythonware.com/products/pil/index.htm}{http://www.pythonware.com/products/pil/index.htm}} adds the ability to load all kinds of images, as well as do things like expand and shrink, change image colours, reverse images and so on. However, installing and using the Python Imaging Library, is a bit beyond the scope of this book.
+O \code{PhotoImage} pode carregar arquivos com as extensões .gif, .ppm e .pgm. Se você quiser carregar outros tipos de imagem (existem diversas formas diferentes de arquivos de imagem --- por exemplo, as câmeras digitais normalmente usam .jpg), então você precisará usar uma extensão que adiciona esse capacidade ao Python. A ``Python Imaging Library'' (PIL)\footnote{A biblioteca PIL pode ser encontrada em \href{http://www.pythonware.com/products/pil/index.htm}{http://www.pythonware.com/products/pil/index.htm}} habilita todos os tipos de imagem, assim como expandir, encolher e outras formas de manipular imagens. Porém, instalar e usá-la está fora do escopo deste livro.
 
 \section{Basic Animation}\index{modules!tkinter!basic animation}
 
