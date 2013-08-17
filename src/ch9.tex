@@ -486,9 +486,9 @@ Copie sua imagem para esse diretório e então carregue usando a função `Photo
 
 O \code{PhotoImage} pode carregar arquivos com as extensões .gif, .ppm e .pgm. Se você quiser carregar outros tipos de imagem (existem diversas formas diferentes de arquivos de imagem --- por exemplo, as câmeras digitais normalmente usam .jpg), então você precisará usar uma extensão que adiciona esse capacidade ao Python. A ``Python Imaging Library'' (PIL)\footnote{A biblioteca PIL pode ser encontrada em \href{http://www.pythonware.com/products/pil/index.htm}{http://www.pythonware.com/products/pil/index.htm}} habilita todos os tipos de imagem, assim como expandir, encolher e outras formas de manipular imagens. Porém, instalar e usá-la está fora do escopo deste livro.
 
-\section{Basic Animation}\index{modules!tkinter!basic animation}
+\section{Animação Básica}\index{modules!tkinter!basic animation}
 
-So far, we've seen how to do static drawing---that's pictures that don't move. What about animation? Animation is not necessarily \code{Tk}'s strong suit, but you can do the basics. For example, we can create a filled triangle and then make it move across the screen using the following code:
+Até agora, nós vimos como fazer desenhos estáticos --- imagens que não se movem. Que tal uma animação? Animações não são o forte do \code{Tk}, mas você pode fazer o básico. Por exemplo, nós podemos criar um triângulo preenchido e então fazê-lo mover pela tela, usando o seguinte código:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -506,17 +506,17 @@ So far, we've seen how to do static drawing---that's pictures that don't move. W
 \end{verbatim}
 \end{listingignore}
 
-The moment you press the Enter key after typing the last line, the triangle will start moving across the screen (you can see it half-way across in figure~\ref{fig44}).
+No momento que você pressionar a tecla Enter, após digitar a última linha, o triângulo começará a se mover pela tela (você pode vê-lo atravessando a tela, na figura~\ref{fig44}).
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=80mm]{eps/figure44.eps}
 \end{center}
-\caption{The triangle moving across the screen.}\label{fig44}
+\caption{O triângulo movendo-se pela tela.}\label{fig44}
 \end{figure}
 
 \par
-\emph{How does it work?}
+\emph{Como funciona?}
 \par
 Lines 1 to 5 we've seen before---it's just the basic setup to display a canvas---and in line 6, we create the triangle (using the \code{create\_polygon} function), and in line 7 you can see the identifier (the number 1) that is returned by this function. In line 8, we setup a simple for-loop to count from 0 to 59.
 
