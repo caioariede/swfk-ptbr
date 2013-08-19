@@ -518,11 +518,11 @@ No momento que você pressionar a tecla Enter, após digitar a última linha, o 
 \par
 \emph{Como funciona?}
 \par
-Lines 1 to 5 we've seen before---it's just the basic setup to display a canvas---and in line 6, we create the triangle (using the \code{create\_polygon} function), and in line 7 you can see the identifier (the number 1) that is returned by this function. In line 8, we setup a simple for-loop to count from 0 to 59.
+Da linha 1 até a 5, nós já vimos --- é apenas a configuração básica para exibir a tela --- e na linha 6, nós criamos o triângulo (usando a função \code{create\_polygon}) e na linha 6, você verá o identificador (o número 1) que é retornado pela função. Na linha 8, nós fizemos um simples laço `for', contando de 0 à 59.
 
-The block of lines (9 to 11) is the code to move the triangle. The \code{move} function on the canvas object will move any drawn object by adding values to the object's x and y coordinates. For example, in line 9 we move the object with id 1 (the identifier for the triangle) 5 pixels across and 0 pixels down. If we wanted to move the back again we might use canvas.move(1, -5, 0)\index{modules!tkinter!move}.
+O bloco das linhas (9 à 11) do código, é o que faz o triângulo mover. A função \code{move} do objeto canvas, irá mover qualquer objeto desenhado, apenas adicionando os valores das coordenadas x e y. Por exemplo, na linha 8, nós movemos o objeto 1 (o identificador do triângulo), 5 pixels para o lado e 0 pixels para baixo. Se nós quisessemos move-lo de volta, nós usaríamos \code{canvas.move{1, -5, 0}\index{modules!tkinter!move}.
  
-The function \code{update} on the \code{tk} object forces it to update (if we didn't use \code{update}, tkinter would wait until the loop had finished before moving the triangle, which means you wouldn't see it move). Finally line 11 tells Python to sleep for 1/20th of a second (0.05), before continuing. We can change this code, so the triangle moves diagonally down the screen, by calling \code{move(1, 5, 5)}.  First, close the canvas (by clicking on the X button on the window), then try this code:
+A função \code{update} do objeto \code{Tk}, atualiza a tela, caso contrário, o tkinter esperaria até o laço terminar para mover o triângulo, o que significa que você não o veria movendo. Finalmente, a linha 11 pede ao Python para "dormir" (sleep) por 1/20 de um segundo (0.05s), antes de continuar. Nós podemos alterar o código para que o triângulo mova pela tela, na diagonal, chamando \code{move(1, 5, 5)}. Primeiro, feche a tela (clicando no X da janela), então tente esse código:
 
 \begin{listingignore}
 \begin{verbatim}
