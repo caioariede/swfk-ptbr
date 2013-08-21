@@ -556,21 +556,22 @@ A figura~\ref{fig45} mostra o triângulo descendo pela tela. Mova o triângulo p
 \begin{center}
 \includegraphics[width=80mm]{eps/figure45.eps}
 \end{center}
-\caption{The triangle moving down the screen.}\label{fig45}
+\caption{O triângulo descendo pela tela.}\label{fig45}
 \end{figure}
 
-\section{Reacting to events$\ldots$}\index{modules!tkinter!events}
+\section{Reagindo à eventos$\ldots$}\index{modules!tkinter!events}
 
-We can also make the triangle react when someone hits a key, by using what are called \emph{event bindings}.  Events are things that occur while a program is running, such as someone moving the mouse, hitting a key, or even closing a window. You can setup \code{Tk} to look out for these events, and then do something in response. To begin handling events we need to start by creating a function. Suppose we want the triangle to move when the enter key is pressed? We can define a function to move the triangle:
+Nós também podemos fazer o triângulo reagir quando alguém aperta uma tecla, usando o que chamamos de \emph{ligação de eventos}. Eventos são coisas que ocorrem enquanto o programa está rodando, por exemplo quando alguém move o mouse, aperta uma tecla ou fecha uma janela. Você pode configurar o \code{Tk} para monitorar alguns desses eventos e fazer algo quando ocorrerem. Para começar a tratar eventos, nós precisamos iniciar criando uma função. Supondo que queremos que o triângulo mova ao apertarmos a tecla Enter, nós precisamos definir uma função para mover o triângulo:
 
 \begin{listing}
 \begin{verbatim}
->>> def movetriangle(event):
+>>> def movetriangulo(evento):
 ...     canvas.move(1, 5, 0)
 \end{verbatim}
 \end{listing}
 
 The function needs to have a single parameter (event), which is used by Tk to send information to the function about what has happened.  We then tell Tk that this function should be used for a particular event, using the \code{bind\_all}\index{modules!tkinter!bind\_all} function on the canvas. The full code looks like this:
+A função precisa receber um único parâmetro (evento), que será usado pelo \code{Tk} para enviar informações à função sobre o que está acontecendo. Nós então dizemos ao \code{Tk}, que essa função deverá ser usada para um evento em particular, usando a função \code{bind\_all}\index{modules!tkinter!bind\_all}, do canvas. O código completo fica assim:
 
 \begin{listing}
 \begin{verbatim}
@@ -579,16 +580,16 @@ The function needs to have a single parameter (event), which is used by Tk to se
 >>> canvas = Canvas(tk, width=400, height=400)
 >>> canvas.pack()
 >>> canvas.create_polygon(10, 10, 10, 60, 50, 35)
->>> def movetriangle(event):
+>>> def movetriangulo(evento):
 ...     canvas.move(1, 5, 0)
 ...
->>> canvas.bind_all('<KeyPress-Return>', movetriangle)
+>>> canvas.bind_all('<KeyPress-Return>', movetriangulo)
 \end{verbatim}
 \end{listing}
 
-The first parameter in the \code{bind\_all} function describes the event which we want Tk to look out for. In this case, it's the event \code{<KeyPress-Return>} (which is a press of the enter key).  We tell Tk that the \code{movetriangle} function should be called when this key-press event occurs.  If you run this code, click on the Tk canvas with your mouse, and then try hitting the Enter (or Return) key on your keyboard.
+O primeiro parâmetro da função \code{bind\_all}, descreve o evento que nós queremos que o \code{Tk} fique de olho. Neste caso, é o evento \code{<KeyPress-Return>} (que é pressionar a tecla enter). Nós dizemos ao \code{Tk} que a função \code{movetriangulo} deverá ser chamada quando ocorrer esse evento. Você verá se rodar o código, clicar na tela do \code{Tk} com o mouse e então apertar a tecla Enter do seu teclado.
 
-How about changing the direction of the triangle depending upon different key presses, such as the arrow keys? First of all we change the \code{move} triangle function to the following:
+Que tal mudar a direção do triângulo, dependendo da tecla que você pressionar, como por exemplo as setas? Primeiro de tudo, nós precisamos mudar a função que move o triângulo, para o seguinte:
 
 \begin{listing}
 \begin{verbatim}
