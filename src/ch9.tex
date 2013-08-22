@@ -593,19 +593,19 @@ Que tal mudar a direção do triângulo, dependendo da tecla que você pressiona
 
 \begin{listing}
 \begin{verbatim}
->>> def movetriangle(event):
-...     if event.keysym == 'Up':
+>>> def movetriangulo(evento):
+...     if evento.keysym == 'Up':
 ...         canvas.move(1, 0, -3)
-...     elif event.keysym == 'Down':
+...     elif evento.keysym == 'Down':
 ...         canvas.move(1, 0, 3)
-...     elif event.keysym == 'Left':
+...     elif evento.keysym == 'Left':
 ...         canvas.move(1, -3, 0)
 ...     else:
 ...         canvas.move(1, 3, 0)
 \end{verbatim}
 \end{listing}
 
-The event object that is passed to \code{movetriangle}, contains a number of \emph{properties}\footnote{Properties are named values, which describe something---for example, a property of the sky is that it's blue (sometimes), a property of a car is that it has wheels. In programming terms, a property has a name and a value.}.  One of these properties is \code{keysym}, which is a string holding the value of the actual key pressed.  If \code{keysym} contains the string `Up', we call \code{canvas.move} with the parameters (1, 0, -3); if it contains down we call with the parameters (1, 0, 3), and so on.  Remember that the first parameter is the identifying number for the shape drawn on the canvas, the second parameter is the value to add to the x (horizontal) coordinate, and the last parameter is the value to add to the y (vertical) coordinate. We then tell Tk that the \code{movetriangle} function should be used to handle events from 4 different keys (up, down, left and right).  So, the code now looks like this:
+O objeto `evento' que é passado para o \code{movetriangulo}, contém várias \emph{propriedades}\footnote{Propriedades são valores nomeados, que descrevem algo --- por exemplo, uma propriedade do céu, é que ele é azul (na maioria das vezes), uma propriedade de um carro é que ele tem rodas. Em termos de programação, uma propriedade tem um nome e um valor.}. Uma dessas propriedades é a \code{keysym}, que é uma string que contém a tecla que foi pressionada. Se o \code{keysym} contém a string `Up' (cima), nós chamamos \code{canvas.move} com os parâmetros (1, 0, -3); se contém `Down' (baixo), nós chamamos com os parâmetros (1, 0, 3) e por assim em diante. Lembre-se que o primeiro parâmetro é o número identificador da forma desenhada na tela, o segundo parâmetro é o valor para adicionar à coordenada `x' (horizontal) e o último parâmetro é o valor a ser adicionado à coordenada `y' (vertical). E então nós dizemos ao \code{Tk} que a função \code{movetriangulo} deve ser usada para controlar os eventos de quatro teclas (cima, baixo, esquerda e direita). Então, o código ficará assim:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -615,24 +615,24 @@ The event object that is passed to \code{movetriangle}, contains a number of \em
 >>> canvas.pack()
 >>> canvas.create_polygon(10, 10, 10, 60, 50, 35)
 1 
->>> def movetriangle(event):
-...     if event.keysym == 'Up':
+>>> def movetriangulo(evento):
+...     if evento.keysym == 'Up':
 ...         canvas.move(1, 0, -3)
-...     elif event.keysym == 'Down':
+...     elif evento.keysym == 'Down':
 ...         canvas.move(1, 0, 3)
-...     elif event.keysym == 'Left':
+...     elif evento.keysym == 'Left':
 ...         canvas.move(1, -3, 0)
 ...     else:
 ...         canvas.move(1, 3, 0)
 ... 
->>> canvas.bind_all('<KeyPress-Up>', movetriangle)
->>> canvas.bind_all('<KeyPress-Down>', movetriangle)
->>> canvas.bind_all('<KeyPress-Left>', movetriangle)
->>> canvas.bind_all('<KeyPress-Right>', movetriangle)
+>>> canvas.bind_all('<KeyPress-Up>', movetriangulo)
+>>> canvas.bind_all('<KeyPress-Down>', movetriangulo)
+>>> canvas.bind_all('<KeyPress-Left>', movetriangulo)
+>>> canvas.bind_all('<KeyPress-Right>', movetriangulo)
 \end{verbatim}
 \end{listingignore}
 
 \noindent
-With this example, the triangle now moves in the direction of the arrow key that you press.
+Com este exemplo, o triângulo agora moverá na mesma direção em que as setas forem pressionadas.
 
 \newpage
