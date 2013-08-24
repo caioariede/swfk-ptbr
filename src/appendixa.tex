@@ -45,44 +45,44 @@ Fiz outra coisa!
 \end{listingignore}
 
 \noindent
-Instead you can give it a new name when you import it, then just use that new name (kind of like a nickname):
+Ao invés disso, você pode dar um nome assim que importá-lo e então apenas usar o novo nome (como se fosse um apelido):
 
 \begin{listingignore}
 \begin{verbatim}
->>> import i_am_a_python_module_that_is_not_very_useful as notuseful
+>>> import eu_sou_um_modulo_do_python_nao_muito_util as poucoutil
 >>>
->>> notuseful.do_something()
-I have done something
+>>> poucoutil.faca_algo_something()
+Fiz algo
 
->>> notuseful.do_something_else()
-I have done something else!
+>>> poucoutil.faca_outra_coisa()
+Fiz outra coisa!
 \end{verbatim}
 \end{listingignore}
 
 \noindent
-You probably won't use the keyword `as' that much, though.
+Apesar de que você não usará a palavra reservada `as' muitas vezes.
 
 \subsection*{assert}\index{keywords!assert}
 
-Assert is an advanced keyword that is used by programmers to say that some code must be true. It's another way of catching errors and problems in code---and usually used by more advanced programs.
+A palavra reservada \textbf{assert} é uma palavra reservada avançada, que é usada por programadores quando eles querem assegurar que um código seja verdadeiro (ou `True'). É uma outra forma de capturar erros e problemas em um código --- e normalmente usado em programas mais avançados.
 
 \subsection*{break}\index{keywords!break}
 
-The \textbf{break} keyword is used to stop some code from running. You might use a break inside a for-loop such as:
+A palavra reservada \textbf{break} é usada para parar algum código que está executando. Você deverá usar o `break' dentro de um laço `for':
 
 \begin{listing}
 \begin{verbatim}
->>> age = 25
+>>> idade = 25
 >>> for x in range(1, 100):
-...     print('counting %s' % x)
-...     if x == age:
-...         print('end counting')
+...     print('contando %s' % x)
+...     if x == idade:
+...         print('termina contagem')
 ...         break
 \end{verbatim}
 \end{listing}
 
 \noindent
-If the variable `age' was set to 10, this would print out:
+Se a variável `idade' for 10, isso é o que será impresso:
 
 \begin{listing}
 \begin{verbatim}
