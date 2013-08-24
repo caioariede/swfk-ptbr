@@ -3,44 +3,44 @@
 % To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/nz
 % or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
 
-\chapter{Python Keywords}\label{app:pythonkeywords}
+\chapter{Palavras Reservadas em Python}\label{app:pythonkeywords}
 
-Keywords in Python (indeed, in most programming languages) are important words that are used by the language itself. If you try to use these special words as variables, or use them in the wrong way, you will get strange (sometimes funny, sometimes confusing) error messages from the Python console.  Each of the Python keywords, and a basic description is given below.
+Palavras reservadas em Python (na verdade, na maioria das linguagens de programação), são palavras importantes, usadas pela própria linguagem. Se você tentar usar algumas dessas palavras especiais como nomes de variáveis, ou usá-las de forma incorreta, você verá um erro estranho (algumas vezes engraçado, outras confuso), no terminal do Python. Abaixo está cada uma das palavras reservadas em Python e uma breve descrição.
 
 \subsection*{and}\index{keywords!and}
 
-The keyword \textbf{and} is used to join two expressions together in a statement (like an if-statement), to say that both expressions must be true.  For example:
+A palavra reservada \textbf{and} é usada para juntar duas expressões em uma só declaração (por exemplo, o `if'), para dizer que essas duas expressões precisam ser verdadeiras. Por exemplo:
 
 \begin{listingignore}
 \begin{verbatim}
-if age > 10 and age < 20
+if idade > 10 and idade < 20
 \end{verbatim}
 \end{listingignore}
 
 \noindent
-This means that age must be greater than 10 and less than 20.
+Isso significa que a idade deve ser maior que 10 \textbf{e} menor que 20.
 
 \subsection*{as}\index{keywords!as}
 
-The keyword \textbf{as} is used to give another name to an imported module. For example, if you had a module with a name like:
+A palavra reservada \textbf{as} é usada para dar um outro nome à um módulo importado. Por exemplo, se você tem um módulo com o seguinte nome:
 
 \begin{listingignore}
 \begin{verbatim}
-i_am_a_python_module_that_is_not_very_useful
+eu_sou_um_modulo_do_python_nao_muito_util
 \end{verbatim}
 \end{listingignore}
 
 \noindent
-It would be enormously annoying to have to type that module name every time you want to use it:
+Seria muito chato ter que digitar o nome do módulo toda vez que você quisesse usá-lo:
 
 \begin{listingignore}
 \begin{verbatim}
->>> import i_am_a_python_module_that_is_not_very_useful
+>>> import eu_sou_um_modulo_do_python_nao_muito_util
 >>>
->>> i_am_a_python_module_that_is_not_very_useful.do_something()
-I have done something
->>>  i_am_a_python_module_that_is_not_very_useful.do_something_else()
-I have done something else!
+>>> eu_sou_um_modulo_do_python_nao_muito_util.faca_algo()
+Fiz algo
+>>> eu_sou_um_modulo_do_python_nao_muito_util.faca_outra_coisa()
+Fiz outra coisa!
 \end{verbatim}
 \end{listingignore}
 
