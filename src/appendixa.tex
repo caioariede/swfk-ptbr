@@ -76,7 +76,7 @@ A palavra reservada \textbf{break} é usada para parar algum código que está e
 >>> for x in range(1, 100):
 ...     print('contando %s' % x)
 ...     if x == idade:
-...         print('termina contagem')
+...         print('fim da contagem')
 ...         break
 \end{verbatim}
 \end{listing}
@@ -86,51 +86,51 @@ Se a variável `idade' for 10, isso é o que será impresso:
 
 \begin{listing}
 \begin{verbatim}
-counting 1
-counting 2
-counting 3
-counting 4
-counting 5
-counting 6
-counting 7
-counting 8
-counting 9
-counting 10
-end counting
+contando 1
+contando 2
+contando 3
+contando 4
+contando 5
+contando 6
+contando 7
+contando 8
+contando 9
+contando 10
+fim da contagem
 \end{verbatim}
 \end{listing}
 
 \noindent
-Take a look at Chapter~\ref{ch:againandagain} to find out more information about for-loops.
+Confira o Capítulo~\ref{ch:againandagain} para mais informações sobre os laços `for'.
 
 \subsection*{class}\index{keywords!class}
 
-The \textbf{class} keyword is used to define a type of object. This is a feature provided in many programming languages, and is very useful when developing more complicated programs, but is a little too advanced for this book.
+A palavra reservada \textbf{class} é usada para definir um tipo de objeto. Essa é uma característica presente em muitas linguagens de programação e é muito útil quando estamos desenvolvendo programas mais complicados, mas esse é um assunto um pouco avançado para este livro.
 
 \subsection*{del}\index{keywords!del}
 
-Del is a special function used to get rid of something. For example, if you had a list of things you wanted for your birthday in your diary, but then changed your mind about one, you would cross it off the list, and add the new one:
+`del' é uma função especial, usada para se livrar de algo. Por exemplo, se você tem uma lista em um diário, contendo os presentes que quer de aniversário, mas mudou de ideia, você poderia riscá-lo da lista, e adicionar um novo:
 
 \begin{center}
 \includegraphics*[width=70mm]{eps/list.eps}
 \end{center}
 
 \noindent
-If we had the same list in python:
+Se tivéssemos a mesma lista em Python:
 
 \begin{listing}
 \begin{verbatim}
->>> what_i_want = ['remote controlled car', 'new bike', 'computer game']
+>>> eu_quero = ['carrinho de controle remoto', 'bicicleta', 'video-game']
 \end{verbatim}
 \end{listing}
 
 \noindent
-We could remove the computer game by using \code{del}, and add the new item by using the function append:
+Nós poderíamos remover o video-game, usando o \code{del} e adicionando o novo ítem usando a função `append':
 
 \begin{listing}
 \begin{verbatim}
->>> del what_i_want[2]
->>> what_i_want.append('roboreptile')
+>>> del eu_quero[2]
+>>> eu_quero.append('roboreptile')
 \end{verbatim}
 \end{listing}
 
