@@ -130,61 +130,61 @@ Nós poderíamos remover o video-game, usando o \code{del} e adicionando o novo 
 \begin{listing}
 \begin{verbatim}
 >>> del eu_quero[2]
->>> eu_quero.append('roboreptile')
+>>> eu_quero.append('robô-dinossauro')
 \end{verbatim}
 \end{listing}
 
 \noindent
-And then to see the new list:
+E então, para ver a nova lista:
 
 \begin{listing}
 \begin{verbatim}
->>> print(what_i_want)
-['remote controlled car', 'new bike', 'roboreptile']
+>>> print(eu_quero)
+['carrinho de controle remoto', 'bicicleta', 'robô-dinossauro']
 \end{verbatim}
 \end{listing}
 
 \noindent
-See Chapter~\ref{ch:8multipliedby3.57} for more information about lists.
+Veja o Capítulo~\ref{ch:8multipliedby3.57} para mais informações sobre listas.
 
 \subsection*{elif}\index{keywords!elif}
 
-The keyword \textbf{elif} is used as part of an if-statement.  See \textbf{if} below...
+A palavra reservada \textbf{elif} é usada como uma parte da condição `if'. Veja sobre o \textbf{if} mais abaixo...
 
 \subsection*{else}\index{keywords!else}
 
-The keyword \textbf{else} is also used as part of an if-statement.  See \textbf{if} below...
+A palavra reservada \textbf{else} também é usada como uma parte da condição `if'. Veja sobre o \textbf{if} mais abaixo...
 
 \subsection*{except}\index{keywords!except}
 
-Another keyword used for catching problems in code. Again this is used in more complicated programs, but too advanced for this book.
+Outra palavra reservada para capturar problemas no código. Novamente, o uso desta é para programas mais complicados, muito avançado para este livro.
 
 \subsection*{exec}\index{keywords!exec}
 
-\textbf{exec} is a special function used to look at a string as though it was a piece of Python code. For example, you can create a variable with a string value as follows:
+O \textbf{exec} é uma função especial, usada para que uma string seja executada como se fosse um código Python. Por exemplo, você quer criar uma variável com uma string de valor, como abaixo:
 
 \begin{listing}
 \begin{verbatim}
->>> myvar = 'hello there'
+>>> minhavar = 'ola!'
 \end{verbatim}
 \end{listing}
 
 \noindent
-Then print the contents:
+E imprimir o seu conteúdo:
 
 \begin{listing}
 \begin{verbatim}
->>> print(myvar)
-hello there
+>>> print(minhavar)
+ola!
 \end{verbatim}
 \end{listing}
 
 \noindent
-But you could also put some Python code in that string instead:
+Mas você também poderia colocar um código em Python dentro de uma string:
 
 \begin{listing}
 \begin{verbatim}
->>> myvar = 'print("hello there")'
+>>> minhavar = 'print("ola!")'
 \end{verbatim}
 \end{listing}
 
