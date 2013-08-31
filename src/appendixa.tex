@@ -239,7 +239,7 @@ Enquanto importando um módulo, você pode querer importar apenas uma parte que 
 \end{verbatim}
 \end{listingignore}
 
-Or, you can just import the \code{Pen} function on its own, and then use it directly (without needing to refer to the turtle module at all):
+Ou, você pode importar apenas a função \code{Pen} e então usá-la diretamente (sem precisar referenciar o módulo `turtle' por completo):
 
 \begin{listingignore}
 \begin{verbatim}
@@ -248,7 +248,7 @@ Or, you can just import the \code{Pen} function on its own, and then use it dire
 \end{verbatim}
 \end{listingignore}
 
-Of course, this does mean that you can't use the parts of the module you haven't imported.  For example, the time module has a functions called localtime and gmtime.  If we import localtime, then try to use gmtime, we'll get an error:
+E é claro que isso significa que você não poderá usar outras partes do módulo que você não importou. Por exemplo, o módulo `time' tem uma função chamada `localtime` e outra `gmtime'. Se nós importarmos o `localtime' e então tentarmos usar a `gmtime', teremos um erro:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -259,7 +259,7 @@ Of course, this does mean that you can't use the parts of the module you haven't
 \end{listingignore}
 
 \noindent
-This works fine, but:
+Isso funciona, mas isso:
 
 \begin{listing}
 \begin{verbatim}
@@ -270,7 +270,7 @@ NameError: name 'gmtime' is not defined
 \end{verbatim}
 \end{listing}
 
-By saying ```gmtime' is not defined'' Python is telling us that it doesn't know about the function \code{gmtime}$\ldots$ yet. If there are a bunch of functions in a particular module that you want to use, and you don't want to refer to them by using the module name (i.e. \code{time.localtime}, or \code{time.something-else}) you can import everything in the module using an asterisk (*):
+A mensagem ```gmtime' is not defined'' indica que o Python não sabe da função \code{gmtime}$\ldots$ ainda. Se houverem um monte de funções em um módulo que você quer usar e você não quer referenciar o nome do módulo toda vez que usá-las (ex. \code{time.localtime}, ou \code{time.outra\_coisa}), você pode importar tudo do módulo, de uma só vez, usando o asterísco (*):
 
 \begin{listingignore}
 \begin{verbatim}
@@ -282,7 +282,7 @@ By saying ```gmtime' is not defined'' Python is telling us that it doesn't know 
 \end{verbatim}
 \end{listingignore}
 
-In this case, we import everything from the time module, and can refer to the individual functions by name.
+Neste caso, nós importamos tudo do módulo `time' e podemos referenciar as funções individualmente pelo nome.
 
 \subsection*{global}\index{keywords!global}
 
