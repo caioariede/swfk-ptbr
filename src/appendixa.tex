@@ -189,48 +189,48 @@ Mas você também poderia colocar um código em Python dentro de uma string:
 \end{listing}
 
 \noindent
-And then you could use exec to turn that string into a mini Python program and run it:
+E então você poderia usar o `exec' para tornar essa string em um mini programa Python e executá-lo:
 
 \begin{listing}
 \begin{verbatim}
->>> exec(myvar)
-hello there
+>>> exec(minhavar)
+ola!
 \end{verbatim}
 \end{listing}
 
-It's a bit of a weird idea, and something that might not make sense to you until you needed it.  Like \code{assert} it's one of those advanced keywords that is used in more sophisticated programs.
+Parece uma ideia um pouco estranha e talvez seja algo que não fará sentido até você precisar usar. Como o \code{assert}, essa é uma das palavras-reservadas avançadas que é usada em programas mais sofisticados.
 
 \subsection*{finally}\index{keywords!finally}
 
-This is another advanced keyword, used to make sure that if an error occurs, some special code runs (usually to tidy up any 'mess' that a piece of code has left behind).
+Esta é outra palavra reservada avaçada, usada para assegurar que, quando um erro ocorrer, um código em especial será executado (normalmente para limpar a 'bagunça' que um outro código deixou para trás).
 
 \subsection*{for}\index{keywords!for}
 
-The \textbf{for} keyword is used to create a for-loop of some kind. For example:
+A palavra reservada \textbf{for} é usada para criar um laço `for' de alguma forma. Por exemplo:
 
 \begin{listing}
 \begin{verbatim}
-for x in range(0,5):
-    print('x is %s' % x)
+for x in range(0, 5):
+    print('x é %s' % x)
 \end{verbatim}
 \end{listing}
 
 \noindent
-The above for-loop executes the block of code (the print statement) 5 times, creating the output:
+O laço `for' acima, executa um bloco de código (o comando `print') 5 vezes, criando a seguinte saída:
 
 \begin{listing}
 \begin{verbatim}
-x is 0
-x is 1
-x is 2
-x is 3
-x is 4
+x é 0
+x é 1
+x é 2
+x é 3
+x é 4
 \end{verbatim}
 \end{listing}
 
 \subsection*{from}\index{keywords!from}
 
-When importing a module, you can just import the part of it you need, using the \textbf{from} keyword. For example, the turtle module has a function \code{Pen()}, which is used to create a Pen object (basically a canvas on which the turtle moves)---you can import the entire turtle module and then use the \code{Pen} function, as follows:
+Enquanto importando um módulo, você pode querer importar apenas uma parte que você precisa, usando a palavra reservada \textbf{from}. Por exemplo, o módulo `turtle' tem uma função chamada \code{Pen()} que é usada para criar um objeto do tipo `Pen' (basicamente uma tela onde a tartaruga se moverá) --- você pode importar o módulo inteiro e então usar a função \code{Pen}, como abaixo:
 
 \begin{listingignore}
 \begin{verbatim}
