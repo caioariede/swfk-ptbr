@@ -321,20 +321,20 @@ Uma expressão tomando uma decisão sobre algo --- que em algumas vezes é usado
 
 \begin{listing}
 \begin{verbatim}
-if toy_price > 1000:
-    print('That toy is over-priced')
-elif toy_price > 100:
-    print('That toy is expensive')
+if preco_brinquedo > 1000:
+    print('O preço desse brinquedo é inviável')
+elif preco_brinquedo > 100:
+    print('Esse brinquedo é muito caro')
 else:
-    print('I would like that toy')
+    print('Eu compraria esse brinquedo')
 \end{verbatim}
 \end{listing}
 
-This if-statement says that if a toy price is over \$1000, it is over-priced; if the toy price is over \$100, then it's expensive.... otherwise it says (prints) ``I would like that toy''. Chapter~\ref{ch:howtoaskaquestion} has more information about if-statements.
+A expressão `if' diz que se o preço do brinquedo for acima de R\$1000, é inviável; se o preço do brinquedo for acima de R\$100, é muito caro.... caso contrário, diz (imprime) ``Eu compraria esse brinquedo''. O Capítulo~\ref{ch:howtoaskaquestion} tem mais informações sobre as expressões `if'.
 
 \subsection*{import}\index{keywords!import}
 
-The \textbf{import} keyword is to tell Python to load a module so it can be used. For example:
+A palavra reservada \textbf{import} diz ao Python para carregar um módulo para ser usado. Por exemplo:
 
 \begin{listing}
 \begin{verbatim}
@@ -342,32 +342,32 @@ The \textbf{import} keyword is to tell Python to load a module so it can be used
 \end{verbatim}
 \end{listing}
 
-This code tells Python you want to use the module \code{sys}.
+Isso diz ao Python que nós queremos usar o módulo \code{sys}.
 
 \section*{in}\index{keywords!in}
 
-The \textbf{in} keyword is used in expressions, to find if an item is within a collection of items. For example, can the number 1 be found in a list (a collection) of numbers:
+A palavra reservada \textbf{in} é usada em expressões, para saber se um item está em uma coleção de itens. Por exemplo, pode o número 1 ser encontrado na lista (uma coleção) de números:
 
 \begin{listing}
 \begin{verbatim}
->>> if 1 in [1,2,3,4]:
-...     print('number is in list')
+>>> if 1 in [1, 2, 3, 4]:
+...     print('número 1 está na lista')
 number is in list
 \end{verbatim}
 \end{listing}
 
 \noindent
-Or can lettuce be found in a shopping list:
+Ou se `alface' pode ser encontrado na lista de compras:
 
 \begin{listing}
 \begin{verbatim}
->>> shopping_list = [ 'eggs', 'milk', 'cheese' ]
->>> if 'lettuce' in shopping_list:
-...     print('lettuce is in the shopping list')
+>>> lista_compras = ['ovos', 'leite', 'queijo']
+>>> if 'alface' in shopping_list:
+...     print('alface está na lista de compras')
 ... else:
-...     print('lettuce is not in the shopping list')
+...     print('alface não está na lista de compras')
 ...
-lettuce is not in the shopping list
+alface não está na lista de compras
 \end{verbatim}
 \end{listing}
 
