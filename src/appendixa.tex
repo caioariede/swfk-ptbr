@@ -286,24 +286,24 @@ Neste caso, nós importamos tudo do módulo `time' e podemos referenciar as fun�
 
 \subsection*{global}\index{keywords!global}
 
-In Chapter~\ref{ch:sortoflikerecycling}, we talked about \emph{scope}.  Scope is the `visibility' of a variable. If a variable is defined outside of a function, usually it can be seen inside the function. If defined inside a function, usually it can't be seen \textbf{outside} of that function.
+No Capítulo~\ref{ch:sortoflikerecycling}, nós falamos sobre \emph{escopo}. Escopo é a `visibilidade' de uma variável. Se a variável é definida fora de uma função, normalmente ela pode ser vista dentro da função. Se definida dentro de uma função, normalmente ela não pode ser vista \textbf{de fora} dessa função.
 \par
-The \code{global} keyword is one exception to this rule. A variable that is defined as global, can be seen everywhere. The definition of the word global is world-wide or universal, so if you think of your Python console as like a mini-world, then global truly means world-wide.  For example:
+A palavra reservada \code{global} é uma exceção à essa regra. Uma variável que é definida como global, pode ser vista de qualquer lugar. A definição da palavra `global' é `universal', então você pode pensar no terminal do Python como sendo um universo. Por exemplo:
 
 \begin{listing}
 \begin{verbatim}
->>> def test():
+>>> def teste():
 ...     global a
 ...     a = 1
 ...     b = 2
 \end{verbatim}
 \end{listing}
 
-What do you think happens when you call print(a), and then print(b), after running the function test?  The first will work, and then second will cause an error message to be displayed:
+O que você acha que acontece quando você chamar \code{print(a)} e então \code{print(b)} depois de executar a função teste? O primeiro irá funcionar, o segundo então causará um erro:
 
 \begin{listing}
 \begin{verbatim}
->>> test()
+>>> teste()
 >>> print(a)
 1
 >>> print(b)
@@ -313,11 +313,11 @@ NameError: name 'b' is not defined
 \end{verbatim}
 \end{listing}
 
-The variable \code{a} is now global (visible across the `world'), but \code{b} is still only visible inside the function.  Note that you must call \code{global} before saving a value using in your global variable.
+A variável \code{a} é global agora (visível por todo mundo), mas \code{b} ainda é uma variável visível apenas dentro da função. Observe que você deve chamar \code{global} antes de salvar ou usar a sua variável global.
 
 \subsection*{if}\index{keywords!if}
 
-A statement making a decision about something---which is sometimes used with the additional keywords \code{else} and \code{elif} (else if).  An if-statement is a way of saying, ``if something is true, then perform an action of some kind''.  For example:
+Uma expressão tomando uma decisão sobre algo --- que em algumas vezes é usado com algumas palavras reservadas adicionais como \code{else} (senão) e o \code{elif} (else if / senão se). Uma expressão `if' é uma forma de dizer, ``se algo for verdade, então faça uma ação''. Por exemplo:
 
 \begin{listing}
 \begin{verbatim}
