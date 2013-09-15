@@ -421,57 +421,57 @@ Nos termos de uma condição `if', nós poderíamos escrever isso assim$\ldots$
 \begin{listing}
 \begin{verbatim}
 if age == 1:
-    print("1 is not an important age")
+    print("1 não é uma idade importante")
 elif age == 2:
-    print("2 is not an important age")
+    print("2 não é uma idade importante")
 elif age == 3:
-    print("3 is not an important age")
+    print("3 não é uma idade importante")
 elif age == 4:
-    print("4 is not an important age")
+    print("4 não é uma idade importante")
 \end{verbatim}
 \end{listing}
 
 \noindent
-$\ldots$continuing on forever. A simpler way to write the statement would be:
+$\ldots$infinitamente. Uma forma mais simples de escrever a mesma condição, seria:
 
 \begin{listing}
 \begin{verbatim}
-if age < 10 or age > 10:
-    print("%s is not an important age" % age)
+if idade < 10 or idade > 10:
+    print("%d não é uma idade importante" % idade)
 \end{verbatim}
 \end{listing}
 
 \noindent
-But one of the most simple ways to write that if-statement is by using \textbf{not}:
+Mas uma das formas mais simples de escrever essa condição `if', é usando o \textbf{not}:
 
 \begin{listing}
 \begin{verbatim}
-if not age == 10:
-    print("%s is not an important age" % age)
+if not idade == 10:
+    print("%d não é uma idade importante" % idade)
 \end{verbatim}
 \end{listing}
 
 \noindent
-Which, you've probably already realised, is just another way of saying, ``if age is not 10''.
+Que provavelmente você já deve ter percebido, é o mesmo que dizer: ``se idade não for 10''.
 
 \subsection*{or}\index{keywords!or}
 
-The \textbf{or} keyword is used to join two expressions together in a statement (such as an if-statement), to say that at least one of the expressions should be true.  For example:
+A palavra-chave \textbf{or} é usada para unir duas expressões em uma única condição (assim como o `if'), para dizer que ao menos uma das expressões deve ser verdadeira. Por exemplo:
 
 \begin{listingignore}
 \begin{verbatim}
->>> if friend == 'Rachel' or friend == 'Rob':
-...     print('The Robinsons')
-... elif friend == 'Bill' or friend == 'Bob':
-...     print('The Baxters')
+>>> if amigo == 'Rachel' or amigo == 'Rob':
+...     print('Os Robinsons')
+... elif amigo == 'Bill' or amigo == 'Bob':
+...     print('Os Baxters')
 \end{verbatim}
 \end{listingignore}
 
-In this case, if the variable \code{friend} contains `Rachel' or `Rob' then it prints `The Robinsons'.  If the variable friend contains `Bill' or `Bob' then it prints `The Baxters'.
+Neste caso, a variável \code{amigo} contém `Rachel' ou 'Rob', então imprime `Os Robinsons'. Se a variável \code{amigo} contém `Bill' ou `Bob' então imprime `Os Baxters'.
 
 \subsection*{pass}\index{keywords!pass}
 
-Sometimes when you're writing a program you only want to write bits of it, to try things out.  The problem with this is that you can't have an if-statement without the block of code that should be run if the expression in the if-statement is true. You also can't have a for-loop without the block of code that should be run in the loop. For example:
+Algumas vezes, você está escrevendo um programa e você quer escrever apenas um pouco, para testar algumas coisas. O problema com isso é que você não pode ter uma condição `if' sem nenhum bloco de código que deverá rodar se a condição for verdadeira. Você também não pode ter um laço `for' sem um bloco de código para ser executado. Por exemplo:
 
 \begin{listing}
 \begin{verbatim}
