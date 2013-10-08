@@ -533,11 +533,11 @@ Depois, você pode adicionar o bloco de código que você quer na condição `if
 
 \subsection*{print}\index{keywords!print}
 
-The \textbf{print} keyword, writes something to the Python console; such as a string, a number or a variable:
+A palavra-chave \textbf{print}, escreve algo no terminal do Python; como uma string, um número ou uma variável:
 
 \begin{listing}
 \begin{verbatim}
-print('hello there')
+print('olá')
 print(10)
 print(x)
 \end{verbatim}
@@ -545,40 +545,40 @@ print(x)
 
 \subsection*{raise}\index{keywords!raise}
 
-Another advanced keyword.  In this case, \textbf{raise} is used to cause an error to happen---which might seem like a strange thing to do but, in advanced programs, is actually quite useful.
+Outra palavra-chave avançada. Neste caso, o \textbf{raise} é usado para causar uma exceção --- que pode parecer algo estranho, mas em programas avançados, é um tanto quanto útil.
 
 \subsection*{return}\index{keywords!return}
 
-The \textbf{return} keyword is used to return a value from a function.  For example, you might create a function to return the amount of money you've saved:
+A palavra-chave \textbf{return} é usada para retornar um valor em uma função. Por exemplo, você pode querer criar uma função que retorna o total de dinheiro que você economizou:
 
 \begin{listingignore}
 \begin{verbatim}
->>> def mymoney():
-...     return money_amount
+>>> def meudinheiro():
+...     return total_de_dinheiro
 \end{verbatim}
 \end{listingignore}
 
 \noindent
-When you call this function, the value returned can be assigned to another variable:
+Quando você chamar essa função, o valor retornado pode ser associado à uma outra variável:
 
 \begin{listingignore}
 \begin{verbatim}
->>> money = mymoney()
+>>> total = meudinheiro()
 \end{verbatim}
 \end{listingignore}
 
 \noindent
-or printed:
+ou impresso:
 
 \begin{listingignore}
 \begin{verbatim}
->>> print(mymoney())
+>>> print(meudinheiro())
 \end{verbatim}
 \end{listingignore}
 
 \subsection*{try}\index{keywords!try}
 
-The \textbf{try} keyword is the beginning of a block of code that ends with the \textbf{except} and/or \textbf{finally} keywords.  All together, these \textbf{try/except/finally} blocks of code are used to handle errors in a program---for example, to make sure that the program displays a useful message to the user, rather than an ugly Python error.
+A palavra-chave \textbf{try}, é o começo do bloco de código que termina com as palavras-chave \textbf{except} e/ou \textbf{finally}. Todos juntos, esses blocos de código \textbf{try/except/finally}, são usados para gerenciar erros em um programa --- por exemplo, para assegurar qeu o seu programa exibe uma mensagem de erro útil para o usuário, ao invés de uma mensagem de erro "feia", do Python.
 
 \subsection*{while}\index{keywords!while}
 
