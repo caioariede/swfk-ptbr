@@ -582,34 +582,34 @@ A palavra-chave \textbf{try}, é o começo do bloco de código que termina com a
 
 \subsection*{while}\index{keywords!while}
 
-A bit like a for-loop, \textbf{while} is another way of looping code.  Where a for-loop counts through a range (of numbers), a while loop keeps running while an expression is True.  You have to be rather careful with while loops, because if the expression is always True, the loop will never end (this is called an infinite loop).  For example:
+Um pouco parecido com o laço `for', o \textbf{while} é outra maneira de repetir um código. Onde um laço `for' conta através de uma sequência (de números), um laço `while' continua executando enquanto a expressão for `True'. Você tem que ser mais cuidadoso com laços `while', pois se a expressão sempre for `True', o laço nunca terminará (isso é chamado de laço infinito). Por exemplo:
 
 \begin{listingignore}
 \begin{verbatim}
 >>> x = 1
 >>> while x == 1:
-...     print('hello')
+...     print('olá')
 \end{verbatim}
 \end{listingignore}
 
-If you run the above code, it will loop forever.  Well, at least until you either close the Python console, or hit \textbf{CTRL+C} (the control key and the C key together) to interrupt it. However the following code:
+Se você executar o código acima, ele nunca terminará. Bem, até que você feche o terminal do Python, ou pressione \textbf{CTRL+C} para interromper. Porém, o seguinte código:
 
 \begin{listing}
 \begin{verbatim}
 >>> x = 1
 >>> while x < 10:
-...     print('hello')
+...     print('olá')
 ...     x = x + 1
 \end{verbatim}
 \end{listing}
 
-Will print `hello' 9 times (each time adding 1 to the variable \code{x}, until \code{x} is no longer less than 10). This is obviously a bit like a for-loop, but does have its uses in certain situations.
+Imprimirá `olá' 9 vezes (cada vez adicionando 1 à variável \code{x}, até que \code{x} não mais seja menor que 10). Esta forma é obviamente um pouco parecido com o laço `for', mas tem suas utilidades em algumas situações.
 
 \subsection*{with}\index{keywords!with}
 
-\textbf{With} is a very advanced keyword.
+\textbf{With} é uma palavra-chave muito avançada.
 
 \subsection*{yield}\index{keywords!yield}
-\textbf{Yield} is another very advanced keyword.
+\textbf{Yield} é outra palavra-chave muito avançada.
 
 \newpage
