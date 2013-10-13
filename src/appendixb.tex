@@ -194,7 +194,7 @@ A função \textbf{float} converte uma string ou número em um número de ponto 
 \end{listing}
 
 \noindent
-You can use a decimal place in the string as well:
+Você pode usar uma casa decimal na string, se quiser:
 
 \begin{listing}
 \begin{verbatim}
@@ -204,7 +204,7 @@ You can use a decimal place in the string as well:
 \end{listing}
 
 \noindent
-A number can be converted to a float by calling:
+Um número pode ser convertido em `float' usando:
 
 \begin{listing}
 \begin{verbatim}
@@ -214,7 +214,7 @@ A number can be converted to a float by calling:
 \end{listing}
 
 \noindent
-Of course, converting a floating point number just returns another floating point number:
+Claro que, convertendo um número de ponto flutuante, retorna apenas outro número de ponto flutuante:
 
 \begin{listing}
 \begin{verbatim}
@@ -224,11 +224,11 @@ Of course, converting a floating point number just returns another floating poin
 \end{listing}
 
 \noindent
-Calling float with no arguments, returns 0.0.
+Chamando `float' sem argumentos, retorna 0.0.
 
 \subsection*{int}\index{functions!int}
 
-The \textbf{int} function converts a string or a number into a whole number (or integer). For example:
+A função \textbf{int} converte uma string ou número em um número inteiro. Por exemplo:
 
 \begin{listing}
 \begin{verbatim}
@@ -239,7 +239,7 @@ The \textbf{int} function converts a string or a number into a whole number (or 
 \end{verbatim}
 \end{listing}
 
-This function works a little differently from the \textbf{float} function. If you try to convert a floating point number in a string, you will get an error message:
+Essa função funciona um pouco diferente da função \textbf{float}. Se você tentar converter um número de ponto flutuante em uma string, você receberá uma mensagem de erro:
 
 \begin{listing}
 \begin{verbatim}
@@ -251,7 +251,7 @@ ValueError: invalid literal for int() with base 10: '123.456'
 \end{listing}
 
 \noindent
-However, if you call int with no argument, then 0 is returned.
+Porém, se você chamar o `int' sem nenhum argumento, ele retornará 0.
 
 \subsection*{len}\index{functions!len}
 
