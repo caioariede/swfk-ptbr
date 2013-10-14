@@ -255,70 +255,70 @@ Porém, se você chamar o `int' sem nenhum argumento, ele retornará 0.
 
 \subsection*{len}\index{functions!len}
 
-The \textbf{len} function returns the length of an object. In this case of a string, it returns the number of characters in the string:
+A função \textbf{len} retorna o tamanho de um objeto. No caso de uma string, retorna o número de caracteres na string:
 
 \begin{listing}
 \begin{verbatim}
->>> len('this is a test string')
-21
+>>> len('essa é uma string de teste')
+27
 \end{verbatim}
 \end{listing}
 
 \noindent
-For a list or a tuple, it returns the number of items:
+Para uma lista ou tupla, retorna o número de itens:
 
 \begin{listing}
 \begin{verbatim}
->>> mylist = [ 'a', 'b', 'c', 'd' ]
->>> print(len(mylist))
+>>> minhalista = ['a', 'b', 'c', 'd']
+>>> print(len(minhalista))
 4
->>> mytuple = (1,2,3,4,5,6)
->>> print(len(mytuple))
+>>> minhalista = (1, 2, 3, 4, 5, 6)
+>>> print(len(minhalista))
 6
 \end{verbatim}
 \end{listing}
 
 \noindent
-For a map, it also returns the number of items:
+Para um dicionário, retorna o número de itens:
 
 \begin{listing}
 \begin{verbatim}
->>> mymap = { 'a' : 100, 'b' : 200, 'c' : 300 }
->>> print(len(mymap))
+>>> dct = {'a' : 100, 'b' : 200, 'c' : 300}
+>>> print(len(dct))
 3
 \end{verbatim}
 \end{listing}
 
 \noindent
-You might find the len function useful with loops, if you want to count through the elements in a list.  You could do this using the following code:
+Você pode achar que a função `len' útil com laços, se quiser percorrer o número de elementos em uma lista. Você poderia fazer isso usando o seguinte código:
 
 \begin{listing}
 \begin{verbatim}
->>> mylist = [ 'a', 'b', 'c', 'd' ]
->>> for item in mylist:
+>>> minhalista = ['a', 'b', 'c', 'd']
+>>> for item in minhalista:
 ...     print(item)
 \end{verbatim}
 \end{listing}
 
 \noindent
-Which would print out all the items in the list (a,b,c,d)---but what if you wanted to print the index position of each item in the list?  In this case we could find the length of the list, then count through the items as follows:
+Que imprimiria todos os itens da lista (a, b, c, d) --- mas e se você quisesse imprimir a posição no índice de cada item da lista? Neste caso, nós poderíamos encontrar o tamanho da lista e então percorrer a lista da seguinte forma:
 
 \begin{listing}
 \begin{verbatim}
->>> mylist = [ 'a', 'b', 'c', 'd' ]
->>> length = len(mylist)
->>> for x in range(0, length):
-...     print('the item at index %s is %s' % (x, mylist[x]))
+>>> minhalista = ['a', 'b', 'c', 'd']
+>>> tamanho = len(minhalista)
+>>> for x in range(0, tamanho):
+...     print('o item no indice %s é %s' % (x, minhalista[x]))
 ... 
-the item at index 0 is a
-the item at index 1 is b
-the item at index 2 is c
-the item at index 3 is d
+o item no indice 0 é a
+o item no indice 1 é b
+o item no indice 2 é c
+o item no indice 3 é d
 \end{verbatim}
 \end{listing}
 
 \noindent
-We store the length of the list in the variable `length', and then use that variable in the \code{range} function to create our loop.
+Nós armazenamos o tamanho da lista na variável `tamanho', e então usá-la na função \code{range} para criar o nosso laço.
 
 \subsection*{max}\index{functions!max}
 
