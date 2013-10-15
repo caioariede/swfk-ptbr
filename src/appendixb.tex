@@ -383,7 +383,7 @@ A função \textbf{range} é usada principalmente em laços, quando você quer p
 \end{listing}
 
 \noindent
-What you might not have realised, is that the \code{range} function actually just returns a special object (called an iterator) which the for-loop then works through. You can convert the iterator into a list (oddly enough, using the function \code{list}), so if you print the return value when calling range, you'll see the numbers it contains:
+O que você não deve ter percebido, é que a função \code{range}, retorna apenas um objeto especial (chamado iterador), que o laço então percorre. Você pode converter o iterador em uma lista (curiosamente, usando a função \code{list}), então se você imprimir o retorno do valor quando chamar o `range', você verá os números que ele contém:
 
 \begin{listing}
 \begin{verbatim}
@@ -393,40 +393,40 @@ What you might not have realised, is that the \code{range} function actually jus
 \end{listing}
 
 \noindent
-You get a list of numbers that can be assigned to variables and used elsewhere in your program:
+Você terá uma lista de números que pode ser atribuida à uma variável e usada em qualquer lugar do programa:
 
 \begin{listingignore}
 \begin{verbatim}
->>> my_list_of_numbers = list(range(0, 30))
->>> print(my_list_of_numbers)
+>>> minha_lista_de_numeros = list(range(0, 30))
+>>> print(minha_lista_de_numeros)
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
 \end{verbatim}
 \end{listingignore}
 
 \noindent
-Range also takes a third argument, called a `step' (the first two arguments are called the `start' and the `stop'). If the step value is not passed into the function (in other words, when you call it with only the start and stop values), by default the number 1 is used. But what happens when we pass the number 2 as the step?  You can see the result in the following example:
+A função `range' também pode receber um terceiro argumento, chamado `step' (passo, em inglês), enquanto os dois primeiros parâmetros são `start' (início) e o `stop' (fim). Se o valor de `step' não for passado à função, ou em outras palavras, se você passar apenas os parâmetros início e fim, por padrão o número 1 será usado. Mas o que acontece quando nós passamos o número 2 como `step'? Você pode ver o resultado no seguinte exemplo:
 
 \begin{listing}
 \begin{verbatim}
->>> my_list_of_numbers = list(range(0, 30, 2))
->>> print(my_list_of_numbers)
+>>> minha_lista_de_numeros = list(range(0, 30, 2))
+>>> print(minha_lista_de_numeros)
 [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28]
 \end{verbatim}
 \end{listing}
 
 \noindent
-Each number in the list increases by 2 from the previous number. We can use larger steps:
+Cada número da lista, soma 2 a partir do último número. Nós podemos usar passos maiores:
 
 \begin{listing}
 \begin{verbatim}
->>> mylist = list(range(0, 500, 50))
->>> print(mylist)
+>>> minhalista = list(range(0, 500, 50))
+>>> print(minhalista)
 [0, 50, 100, 150, 200, 250, 300, 350, 400, 450]
 \end{verbatim}
 \end{listing}
 
-This creates a list from 0 to 500 (but not including 500, of course), incrementing the numbers by 50.
+Isso cria uma lista de 0 à 500 (que não inclui o 500), somando os números em 50.
 
 \subsection*{sum}\index{functions!sum}
 
