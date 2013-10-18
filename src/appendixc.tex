@@ -32,52 +32,52 @@ import random
 import sys
 num = random.randint(1, 100)
 while True:
-    print('Guess a number between 1 and 100')
+    print('Adivinhe um número entre 1 e 100')
     chk = sys.stdin.readline()
     i = int(chk)
     if i == num:
-        print('You guessed right')
+        print('Você acertou')
         break
     elif i < num:
-        print('Try higher')
+        print('Tente um número maior')
     elif i > num:
-        print('Try lower')
+        print('Tente um número menor')
 \end{verbatim}
 \end{listingignore}
 
-Use \code{choice}\index{modules!random!choice},  if you have a list and want to pick a random item from that list. For example:
+Use o \code{choice}\index{modules!random!choice}, se você tiver uma lista e quiser pegar um número aleatório dela. Por exemplo:
 
 \begin{listingignore}
 \begin{verbatim}
 >>> import random
->>> list1 = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' ]
->>> print(random.choice(list1))
+>>> lista1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+>>> print(random.choice(lista1))
 c
->>> list2 = [ 'ice cream', 'pancakes', 'trifle', 'pavlova', 'sponge' ]
->>> print(random.choice(list2))
-trifle
+>>> lista2 = ['sorvete', 'panquecas', 'gelatina']
+>>> print(random.choice(lista2))
+gelatina
 \end{verbatim}
 \end{listingignore}
 
-And finally, use \code{shuffle}\index{modules!shuffle} if you want to mix up a list (like shuffling cards):
+E finalmente, usar o \code{shuffle}\index{modules!random!shuffle} se quiser embaralhar uma lista (como se fossem cartas):
 
 \begin{listingignore}
 \begin{verbatim}
 >>> import random
->>> list1 = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' ]
->>> list2 = [ 'ice cream', 'pancakes', 'trifle', 'pavlova', 'sponge' ]
->>> random.shuffle(list1)
->>> print(list1)
+>>> lista1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+>>> lista2 = ['sorvete', 'panquecas', 'gelatina']
+>>> random.shuffle(lista1)
+>>> print(lista1)
 ['h', 'e', 'a', 'b', 'c', 'g', 'f', 'd']
->>> random.shuffle(list2)
->>> print(list2)
-['pancakes', 'ice cream', 'sponge', 'trifle', 'pavlova']
+>>> random.shuffle(lista2)
+>>> print(lista2)
+['panquecas', 'gelatina', 'sorvete']
 \end{verbatim}
 \end{listingignore}
 
-\subsection*{The `sys' module}\index{modules!sys}
+\subsection*{O módulo `sys'}\index{modules!sys}
 
-The \code{sys} module contains useful `system' functions. This is just an odd way of saying that they are very important within Python. Some of the most useful functions and values available in \code{sys} are: \code{exit}, \code{stdin}, \code{stdout}, and \code{version}.
+O módulo \code{sys} contém funções úteis de sistema. Essa é apenas uma forma de dizer que elas são bem importantes no Python. Algumas das funções mais úteis e valores disponíveis são no \code{sys}, são: \code{exit}, \code{stdin}, \code{stdout} e \code{version}.
 \par
 The \code{exit}\index{modules!sys!exit} function is another way of stopping the Python console. For example if you type:
 
