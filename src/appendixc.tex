@@ -4,13 +4,13 @@
 % or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
 
 
-\chapter{A Few Python Modules}\label{app:afewpythonmodules}\index{modules}
+\chapter{Alguns Módulos do Python}\label{app:afewpythonmodules}\index{modules}
 
-Python has a large number of modules available for doing all sorts of things.  If you want to read about them, you can look at the Python documentation at the following address: \href{http://docs.python.org/modindex.html}{docs.python.org/modindex.html}, however, a few of the more useful modules are explained below.  A warning if you do decide to look at the Python documentation---the list of modules is very long, and some of them are quite complicated.
+O Python disponibiliza um grande número de módulos, fazendo todo tipo de coisa. Se você quiser ler mais sobre eles, você pode ir até a documentação do Python no seguinte endereço: \href{http://docs.python.org}{docs.python.org}, portanto, alguns dos módulos mais úteis estão dispostos abaixo. Um aviso caso você decida olhar na documentação do Python --- a lista de módulos é bem longe e alguns deles são um pouco complicados.
 
-\subsection*{The `random' module}\index{modules!random}
+\subsection*{O módulo `random'}\index{modules!random}
 
-If you've ever played the game where you ask someone to guess a number between 1 and 100, you'll know what to do with the random module.  Random contains a number of functions useful for coming up with$\ldots$ random numbers. It's kind of like asking the computer to pick a number. The random module contains a number of functions, but the most useful are \code{randint}\index{modules!random!randint}, \code{choice} and \code{shuffle}. The first function, \code{random},  picks a random number between a start and end number (in other words, between 1 and 100, or between 100 and 1000, or between 1000 and 5000, and so on).  For example:
+Se você já jogou um jogo, onde você pergunta a alguém um número aleatório entre 1 a 100, você já sabe o que fazer com o módulo `random'. O módulo `random' contém um número de funções úteis para gerar$\ldots$ números aleatórios. É como pedir um número aleatório ao computador. O módulo `random' contém algumas funções, mas as mais importantes são \code{randint}\index{modules!random!randint}, \code{choice} e \code{shuffle}. A primeira função, \code{randint}, dá um número entre um número inicial e um final (em outras palavras, entre 1 e 100, 100 e 1000 ou 1000 e 5000, e por assim em diante). Por exemplo:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -24,7 +24,7 @@ If you've ever played the game where you ask someone to guess a number between 1
 \end{verbatim}
 \end{listingignore}
 
-We could use this to create a simple (and annoying) guessing game, using a while loop:
+Nós podemos usar isso para criar um simples (e chato) jogo de adivinhação, usando um laço `while':
 
 \begin{listingignore}
 \begin{verbatim}
