@@ -131,23 +131,23 @@ isso é um teste
 
 \begin{listing}
 \begin{verbatim}
->>> s = 'test test 
+>>> s = 'teste teste
   File "<stdin>", line 1
-    s = 'test test 
-                  ^
+    s = 'teste teste
+                   ^
 SyntaxError: EOL while scanning single-quoted string
 \end{verbatim}
 \end{listing}
 
-Instead you can use the newline escape character:
+No lugar, você pode usar o caracter de escape de quebra de linha:
 \begin{listing}
 \begin{verbatim}
->>> s = 'test test\ntest'
+>>> s = 'teste teste\nteste'
 \end{verbatim}
 \end{listing}
 
 \noindent
-Finally, \code{version}\index{modules!sys!version} is just a way of displaying the version of Python you are running:
+Finalmente, o \code{version}\index{modules!sys!version} é uma forma de exibir a versão do Python que você está usando:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -158,9 +158,9 @@ Finally, \code{version}\index{modules!sys!version} is just a way of displaying t
 \end{verbatim}
 \end{listingignore}
 
-\subsection*{The `time' module}\index{modules!time}
+\subsection*{O módulo `time'}\index{modules!time}
 
-Python's time module contains functions for displaying$\ldots$ well, the time, obviously. However, if you try to call the most obvious function (\code{time})\index{modules!time!time (function)}, the result won't quite be what you were expecting:
+O módulo `time' do Python contém funções para exibir$\ldots$bem, horas, obviamente. Porém, se você tentar chamar as funções mais óbvias (\code{time})\index{modules!time!time}, o resultado não será bem aquilo que você está esperando:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -170,18 +170,18 @@ Python's time module contains functions for displaying$\ldots$ well, the time, o
 \end{verbatim}
 \end{listingignore}
 
-The number returned by \code{time()} is actually the number of seconds since the 1st of January, 1970 (at 00:00:00am to be exact). You might not think this is enormously useful, however it does, occasionally, have its purpose. For example, if you create a program and want to know how fast bits of it run, you can record the time at the beginning, the time at the end, and then compare the values. For example, how long would it take to print all the numbers from 0 to 100,000?  We can easily create a function to print them out:
+O número retornado pelo \code{time()} é o número de segundos desde o 1º de Janeiro de 1970 (às 00:00:00am para ser mais exato). Você pode não achar isso muito relevante, porém é, ocasionamente, tem os seus usos. Por exemplo, se você criar um programa e quiser saber quão rápido ele executa, você pode gravar o horário do início e o horário do fim, e então comparar os valores. Por exemplo, quanto tempo leva para imprimir todos os números de 0 a 100.000? Nós podemos criar facilmente uma função apra exibí-los:
 
 \begin{listing}
 \begin{verbatim}
->>> def lots_of_numbers(max):
+>>> def muitos_numeros(max):
 ...     for x in range(0, max):
 ...         print(x)
 \end{verbatim}
 \end{listing}
 
 \noindent
-Then call the function:
+Então chamar a função:
 
 \begin{listing}
 \begin{verbatim}
