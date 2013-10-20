@@ -88,46 +88,46 @@ The \code{exit}\index{modules!sys!exit} function is another way of stopping the 
 \end{verbatim}
 \end{listingignore}
 
-The Python console will stop. Depending upon whether you're using Windows, Mac or Linux, a number of different things might happen---but the end result is that the Python console stops running.
+O terminal do Python irá parar. Dependendo do que você usar, se Windows, Mac ou Linux, um número diferente de coisas irá acontecer --- mas o resultado final é o terminal do Python parando de rodar.
 
-\code{Stdin}\index{modules!sys!stdin} has been used elsewhere in this book (see Chapter~\ref{ch:sortoflikerecycling}), to prompt someone using a program to enter some values. For example:
+\code{Stdin}\index{modules!sys!stdin} tem sido usado em alguns lugares neste livro (veja o Capítulo~\ref{ch:sortoflikerecycling}), pedindo à alguém que usa o programa para inserir alguns dados. Por exemplo:
 
 \begin{listingignore}
 \begin{verbatim}
 >>> import sys
->>> myvar = sys.stdin.readline()
-this is a test value
->>> print(myvar)
-this is a test value
+>>> minhavar = sys.stdin.readline()
+este é um valor de teste
+>>> print(minhavar)
+este é um valor de teste
 \end{verbatim}
 \end{listingignore}
 
-\code{Stdout}\index{modules!sys!stdout} is the opposite---used to write messages to the console. In some ways, it's the same as \code{print}, but works more like a file, so sometimes it's more useful to use \code{stdout} than \code{print}:
+\code{Stdout}\index{modules!sys!stdout} é o oposto --- usado para escrever uma mensagem no terminal. De alguma forma, é o mesmo que o \code{print}, mas funciona mais como um arquivo, então em algumas vezes é mais útil usar o \code{stdout} do que o \code{print}:
 
 \begin{listingignore}
 \begin{verbatim}
 >>> import sys
->>> l = sys.stdout.write('this is a test')
-this is a test>>>
+>>> l = sys.stdout.write('isso é um teste')
+isso é um teste>>>
 \end{verbatim}
 \end{listingignore}
 
-Notice where the prompt ($>>>$) reappears?  It's not an error, that it's at the end of the message.  That's because, unlike \code{print}, when you call \code{write}, it doesn't automatically move to the next line. To do the same with \code{write} we can do the following:
+Notou onde o $>>>$ reapareceu? Não é um erro que está no final da mensagem. Isso ocorreu pois diferente do \code{print}, quando chamado o \code{write}, ele não adiciona automaticamente uma quebra de linha no final. Para fazer o mesmo com o \code{write}, nós podemos fazer o seguinte:
 
 \begin{listingignore}
 \begin{verbatim}
 >>> import sys
->>> l = sys.stdout.write('this is a test\n')
-this is a test
+>>> l = sys.stdout.write('isso é um teste\n')
+isso é um teste
 >>>
 \end{verbatim}
 \end{listingignore}
 
 \noindent
-(Note that \code{stdout.write} returns the number of characters written--try \code{print(l)} to see the result).
+(Repare que o \code{stdout.write} retorna o número de caracteres escritos --- tente \code{print(l)} para ver o resultado).
 
 \noindent
-{\textbackslash}n is the \emph{escape} character\index{escape characters} for a newline (what you get when you hit the enter key).  An escape character is a special character that you use in strings when you can't type it directly. For example, if you want to create a string with a newline in the middle, but try to use the enter key, you'll get an error:
+{\textbackslash}n é o caracter de \emph{escape}\index{escape characters} para uma quebra de linha (o que sai quando você aperta o enter). Um caracter de escape, é um caracter especial que você usa em strings quando você não pode digitá-los diretamente. Por exemplo, se você quiser criar uma string contendo uma quebra de linha no meio, e tenta usar a tecla enter, você verá um erro:
 
 \begin{listing}
 \begin{verbatim}
