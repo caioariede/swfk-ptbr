@@ -190,25 +190,25 @@ Então chamar a função:
 \end{listing}
 
 \noindent
-But if we want to know how long it took, we can modify the function and use the \code{time} module:
+Mas se nós quisermos saber quanto tempo isso levará, nós podemos modificar a função e usar o módulo \code{time}:
 
 \begin{listing}
 \begin{verbatim}
->>> def lots_of_number(max):
+>>> def muitos_numeros(max):
 ...     t1 = time.time()
 ...     for x in range(0, max):
 ...         print(x)
 ...     t2 = time.time()
-...     print('it took %s seconds' % (t2-t1))
+...     print('levou %s segundos' % (t2-t1))
 \end{verbatim}
 \end{listing}
 
 \noindent
-If we call it again:
+Se chamarmos novamente:
 
 \begin{listingignore}
 \begin{verbatim}
->>> lots_of_numbers(100000)
+>>> muitos_numeros(100000)
 0
 1
 2
@@ -219,16 +219,16 @@ If we call it again:
 99997
 99998
 99999
-it took 6.92557406425 seconds
+levou 6.92557406425 segundos
 \end{verbatim}
 \end{listingignore}
 
 \noindent
-How does it work?  The first time we call the \code{time()} function, we assign the value to the variable \code{t1}. We then loop and print out all the numbers. Again we call the \code{time()} function and this time assign the value to the variable \code{t2}. Since it took a few seconds for the loop to complete, the value in \code{t2} will be higher (or later to be exact) than \code{t1} (the number of seconds since 1st of Jan, 1970 will have increased). So if you subtract \code{t2} from \code{t1}, you have the number of seconds it took to print all those numbers.
+Como isso funciona? A primeira vez que chamamos a função \code{time()}, nós atribuimos o seu valor à variável \code{t1}. Nós então fazemos um laço e imprimimos todos os números. Novamente, nós chamamos a função \code{time()} e dessa vez atribuímos o seu valor à variavel \code{t2}. Desde que levou alguns segundos para terminar o laço, o valor de \code{t2} será maior que o \code{t1}, então se você subtrair o \code{t2} do \code{t1}, você terá o número de segundos que levou para imprimir todos os números.
 
-Other functions available on the time module include: \code{asctime}, \code{ctime}, \code{localtime}, \code{sleep}, \code{strftime}, and \code{strptime}.
+Outras funções disponíveis no módulo `time', incluem: \code{asctime}, \code{ctime}, \code{localtime}, \code{sleep}, \code{strftime} e \code{strptime}.
 
-The function \code{asctime}\index{modules!time!asctimes} takes a date as a tuple (remember: a tuple is a list of values that cannot be changed) and converts it into a readable form. You can also call it without any argument and it will display the current date and time in a readable form:
+A função \code{asctime}\index{modules!time!asctime} recebe uma data através de uma tupla (lembre-se: a tupla é uma lista de valores que não pode ser modificada) e a converte para uma forma legível. Você também pode chamá-la sem nenhum argumento e ela retornará a data e hora atual em um formato legível:
 
 \begin{listingignore}
 \begin{verbatim}
