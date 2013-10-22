@@ -239,7 +239,7 @@ Sun May 27 20:11:12 2007
 \end{listingignore}
 
 \noindent
-To call it with an argument, we first need to make a tuple with the correct values for date and time.  Let's assign the tuple to the variable \code{t}:
+Para chamá-la com um argumento, nós primeiro precisamos fazer uma tupla com os valores corretos de data e hora. Vamos atribuir a tupla à variável \code{t}:
 
 \begin{listing}
 \begin{verbatim}
@@ -248,7 +248,7 @@ To call it with an argument, we first need to make a tuple with the correct valu
 \end{listing}
 
 \noindent
-The values in the sequence are year, month, day, hours, minutes, seconds, day of the week (0 is Monday, 1 is Tuesday, and so on, up till Sunday which is 6) and finally the day of the year and whether or not it is daylight savings (0 is isn't, 1 it is). Calling \code{asctime} with the above tuple, we get:
+Os valores da sequência são ano, mês, dia, horas, minutos, segundos e dia da semana (0 para segunda-feira, 1 para terça-feira, e por assim em diante até domingo que é 6). Chamando \code{asctime} com a tupla acima, nós temos:
 
 \begin{listing}
 \begin{verbatim}
@@ -260,7 +260,7 @@ Sun May 27 10:30:48 2007
 \end{listing}
 
 \noindent
-But be careful with the values you put in a tuple. You can end up with a nonsensical date if you put in the wrong values:
+Mas fique atento aos valores que você coloca na tupla. Alguns valores errados, podem ocasionar um resultado inesperado:
 
 \begin{listing}
 \begin{verbatim}
@@ -272,9 +272,9 @@ Mon May 27 10:30:48 2007
 \end{listing}
 
 \noindent
-Because the value for `day of the week' was set to 0 (rather than 6), asctime now thinks that May the 27th is a Monday, rather than what it actually is---a Sunday.
+Pois o valor do `dia da semana' foi especificado em 0 (ao invés de 6), o asctime agora pensa que dia 27 de Maio é uma segunda-feira, ao invés do que ela é --- um Domingo.
 
-The function \code{ctime}\index{modules!time!ctime} is used to convert a number of seconds into a readable form.  For example, we can use the \code{time()} function explained in the beginning of this section:
+A função \code{ctime}\index{modules!time!ctime} é usada para converter números de segundos em uma forma legível. Por exemplo, nós podemos usar a função \code{time()}, explanada no começo da seção:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -288,7 +288,7 @@ Sun May 27 23:22:32 2007
 \end{listingignore}
 
 \noindent
-The function \code{localtime}\index{modules!time!localtime} returns the current date and time as a tuple in the same sequence of values we've just used:
+A função \code{localtime}\index{modules!time!localtime} retorna a data e hora atuais como uma tupla, na mesma sequência de valores que usamos:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -299,7 +299,7 @@ The function \code{localtime}\index{modules!time!localtime} returns the current 
 \end{listingignore}
 
 \noindent
-This value we can also pass into \code{asctime}:
+Esse valor, nós também podemos passar para a função \code{asctime}:
 
 \begin{listingignore}
 \begin{verbatim}
