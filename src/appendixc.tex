@@ -359,57 +359,57 @@ Isso funciona bem em alguns casos, mas e se você não gostar da forma que a dat
 \end{verbatim}
 \end{listing}
 
-As you can see, \code{strftime} takes 2 arguments:  the first is a date/time format (which describes how the date/time should be displayed), and the second is the tuple containing the time values.  The format, \%d \%b \%Y is another way of saying: `show the day, the month and then the year'.  We could also display the month as a number, for example:
+Como você pode ver, a função \code{strftime} leva 2 argumentos: o primeiro é o formato da data/hora (que descreve como a data/hora deve ser exibida), e o segundo é a tupla contendo os valores da data/hora. O formato, \%d \%b \%y é uma forma de dizer: mostre o `dia', o `mês' e o `ano'. Nós também poderíamos mostrar o mês como um número, por exemplo:
 
 \begin{listing}
 \begin{verbatim}
 >>> print(time.strftime('%d/%m/%Y', t))
-27/05/2007
+24/10/2013
 \end{verbatim}
 \end{listing}
 
-This format is a way of saying, `display the day, then a forward-slash, then display the month as a number, then a forward-slash, then display the year'.  There are a number of different values you can use in a format\index{date/time formats}:
+Este formato, é o mesmo que, `dia', `barra', `mês', `barra' e `ano'. Existem outras formas diferentes de valores que você pode usar no formato\index{date/time formats}:
 
 \begin{center}
 \begin{tabular}{|l|p{12cm}|}
 \hline
-\%a & a shortened version of a week day (for example, Mon, Tues, Wed, Thurs, Fri, Sat, and Sun) \\
+\%a & versão abreviada do dia da semana (por exemplo, Seg, Ter, Qua, Qui, Sex, Sáb, e Dom) \\
 \hline
-\%A & the full weekday name (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday) \\
+\%A & nome completo do dia da semana (Segunda-feira, Terça-feira, Quarta-feira, Quinta-feira, Sexta-feira, Sábado, Domingo) \\
 \hline
-\%b & a shortened version of a month name (Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct , Nov, Dec) \\
+\%b & abreviação do mês (Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out , Nov, Dez) \\
 \hline
-\%B & the full version of a month name (January, February, March, April, May, and so on) \\
+\%B & versão completa do nome do mês (Janeiro, Fevereiro, Março, Abril, Maio, e por assim em diante) \\
 \hline
-\%c & the full date and time, in the same format the asctime uses \\
+\%c & a versão completa da data e hora, assim como exibida pelo asctime \\
 \hline
-\%d & the day of the month as a number (from 01 to 31) \\
+\%d & o dia do mês (de 01 a 31) \\
 \hline
-\%H & the hour of the day, in 24 hour format (from 00 to 23) \\
+\%H & a hora do dia, no formato 24h (de 00 a 23) \\
+\hlinea
+\%I & a hora do dia, no formato 12h (de 01 a 12) \\
 \hline
-\%I & the hour of the day, in 12 hour format (from 01 to 12) \\
+\%j & o dia do ano (de 001 a 366) \\
 \hline
-\%j & the day of the year as a number (from 001 to 366) \\
+\%m & o mês, em número (de 01 a 12) \\
 \hline
-\%m & the month as a number (from 01 to 12) \\
+\%M & os minutos (de 00 a 59) \\
 \hline
-\%M & the minute as a number (from 00 to 59) \\
+\%p & AM ou PM \\
 \hline
-\%p & morning or afternoon as either AM or PM \\
+\%S & os segundos \\
 \hline
-\%S & the seconds as a number \\
+\%U & a semana do ano (de 00 a 53) \\
 \hline
-\%U & the week number of the year as a number (from 00 to 53) \\
+\%w & o dia da semana, em número.  Domingo é 0, Segunda é 1, até Sábado, que é 6 \\
 \hline
-\%w & the day of the week as a number.  Sunday is 0, Monday is 1, up to Saturday, which is 6 \\
+\%x & um formato simples de data (normalmente dia/mês/ano --- por exemplo, 24/10/2013) \\
 \hline
-\%x & a simple date format (usually month/day/year---for example, 03/25/07) \\
+\%X & um formato simples de hora (normalmente horas:minutos:segundos --- por exemplo: 09:30:00) \\
 \hline
-\%X & a simple time format (usually hour:minutes:seconds---for example 10:30:53) \\
+\%y & o ano, em dois dígitos (por exemplo, 2013 seria 13) \\
 \hline
-\%y & the year in 2 digits (for example, 2007 would be 07) \\
-\hline
-\%Y & the year in 4 digits (e.g. 2007) \\
+\%Y & o ano em 4 dígitos (ex. 2013) \\
 \hline
 \end{tabular}
 \end{center}
