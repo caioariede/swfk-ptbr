@@ -311,7 +311,7 @@ Sun May 27 23:27:22 2007
 \end{listingignore}
 
 \noindent
-The function \code{sleep}\index{modules!time!sleep} is quite useful when you want to delay your program for a certain period of time.  For example, if you wanted to print out one number every second, the following loop wouldn't be very successful:
+A função \code{sleep}\index{modules!time!sleep} é bem útil quando você quer atrasar o seu programa por um certo período de tempo. Por exemplo, se quiser imprimir um número a cada segundo, o laço seguinte não estaria correto:
 
 \begin{listing}
 \begin{verbatim}
@@ -325,7 +325,7 @@ The function \code{sleep}\index{modules!time!sleep} is quite useful when you wan
 \end{verbatim}
 \end{listing}
 
-It would instantly print out all the numbers from 1 to 60. However if you tell Python to go to sleep for a second between each print statement:
+Ele imprimiria todos os números de 1 a 60 instantaneamente. Porém, se você disser ao Python para `dormir' por um segundo a cada `print':
 
 \begin{listing}
 \begin{verbatim}
@@ -337,9 +337,9 @@ It would instantly print out all the numbers from 1 to 60. However if you tell P
 \end{listing}
 
 \noindent
-There will be a short (1 second) delay between the display of each number. Telling a computer to sleep might not seem all that useful, but there are times when it can be.  Think about your alarm clock that wakes you up in the morning.  When you hit the sleep button, it stops buzzing for a few minutes, giving you an extra few moments of sleep (at least until someone calls you for breakfast).  The \code{sleep} function is just as useful in certain situations.
+Terá um pequeno atraso (1 segundo) a cada exibição de cada número. Dizendo ao computador esperar não parece muito útil, mas algumas vezes pode ser. Pense em um alarme de relógio que acorda você de manhã. Quando você aperta o botão `soneca', ele para de alertar por alguns minutos, dando a você alguns minutos de sono. A função \code{sleep} é dessa forma, útil em algumas situações.
 
-The function \code{strftime}\index{modules!time!strftime} is used to change the way a date and time value is displayed, and \code{strptime} is used to take a string and convert it into a date/time tuple. Let's look at strftime first.  Just before we saw how to change a tuple into a string using \code{asctime}:
+A função \code{strftime}\index{modules!time!strftime} é usada para mudar a forma com que uma data e hora é exibida, e a função \code{strptime} é usada para transformar uma string em uma tupla de data/hora. Vamos olhar a `strftime' primeiro. Anteriormente, nós vimos como transformar uma tupla em string, usando a função \code{asctime}:
 
 \begin{listing}
 \begin{verbatim}
@@ -350,7 +350,7 @@ Sun May 27 10:30:48 2007
 \end{listing}
 
 \noindent
-That works fine for most situations, but what if you don't like the way that string is displayed---what if you only want to display the date and not the time?  We can do that with \code{strftime}:
+Isso funciona bem em alguns casos, mas e se você não gostar da forma que a data é exibida? --- e se você só quiser exibir a data e não a hora? Nós podemos fazer isso com a \code{strftime}:
 
 \begin{listing}
 \begin{verbatim}
