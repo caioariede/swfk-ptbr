@@ -414,7 +414,7 @@ Este formato, é o mesmo que, `dia', `barra', `mês', `barra' e `ano'. Existem o
 \end{tabular}
 \end{center}
 
-The function \code{strptime}\index{modules!time!strptime} is almost the reverse of \code{strftime}---it takes a string and converts it into a tuple containing the date and time values. It also takes the same values in the format string. An example of using this function is:
+A função \code{strptime}\index{modules!time!strptime} é quase o inverso da \code{strftime} --- ela recebe uma string como argumento e a converte em tuma tupla, contendo os valores da data e hora. Ela também recebe alguns valores no formato de string. Um examplo de uso, seria:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -426,7 +426,7 @@ The function \code{strptime}\index{modules!time!strptime} is almost the reverse 
 \end{listingignore}
 
 \noindent
-If the date in our string is day/month/year (for example, 01/02/2007), we might use:
+Se a data na sua string for dia/mês/ano (por exemplo, 01/02/2007), vocë terá que usar:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -438,7 +438,7 @@ If the date in our string is day/month/year (for example, 01/02/2007), we might 
 \end{listingignore}
 
 \noindent
-Or if the date is month/day/year, we might use:
+Ou se a data for mês/dia/ano, devemos usar:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -450,24 +450,24 @@ Or if the date is month/day/year, we might use:
 \end{listingignore}
 
 \noindent
-We can combine the 2 functions to convert a string in one format to another. Let's do it in a function:
+Nós podemos usar as 2 funções para converter uma string de um formato para outro. Por exemplo:
 
 \begin{listing}
 \begin{verbatim}
 >>> import time
->>> def convert_date(datestring, format1, format2):
-...     t = time.strptime(datestring, format1)
-...     return time.strftime(format2, t)
+>>> def converter_data(string_data, formato1, formato2):
+...     t = time.strptime(string_data, formato1)
+...     return time.strftime(formato2, t)
 ...
 \end{verbatim}
 \end{listing}
 
 \noindent
-We can use this function by passing in the date string, the format of that string, and then the format that we want the returned date in:
+Nós podemos usar a função, passando a string com a data, a string com o formato da data e o novo formato que queremos que seja retornado:
 
 \begin{listing}
 \begin{verbatim}
->>> print(convert_date('03/05/2007', '%m/%d/%Y', '%d %B %Y'))
+>>> print(converter_data('03/05/2007', '%m/%d/%Y', '%d %B %Y'))
 05 March 2007
 \end{verbatim}
 \end{listing}
