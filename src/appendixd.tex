@@ -43,37 +43,37 @@ Porém, visto que vimos o uso dos parênteses no Capítulo 2, você pode ter dec
 \end{listing}
 
 \noindent
-The answer is the same, because multiplication is done before addition.  In either equation, the two multiplication operations are performed first, and the results are added.  However, the second equation is possibly slightly better than the first---because it's immediately obvious to the reader which operations are performed first.  A less knowledgeable programmer (who doesn't know as much about the order of operations) might think that, in the first equation, you multiply 3 by 25, then add 10, then multiply the result by 32 (the answer to that is 2720---completely wrong).  With the brackets, it's a bit more obvious what gets calculated first.
+A resposta é a mesma, pois a multiplicação é feita antes da adição. Nas duas equações, as duas operações de multiplicação são feitas primeiro, e os resultados são somados. Porém, a segunda equação é possivelmente um pouco melhor que a primeira --- pois, ao leitor, é imediatamente óbvio quais operações são executadas primeiro. Um programador menos experiente (que não sabe exatamente a ordem das operações) pode pensar que, na primeira equação, você multiplica 3 por 25 e adiciona 10, então multiplica o resultado por 32 (a resposta para isso é 2720 -- completamente incorreta). Com parênteses, fica mais óbvio o que é executado primeiro.
 
 \noindent
-3.  The answer to \textbf{Exercise 3} will be something like the following:
+3. A resposta para o \textbf{Exercício 3} será algo assim:
 
 \begin{listing}
 \begin{verbatim}
->>> first_name = 'Mary'
->>> second_name = 'Wilson'
->>> print('My name is %s %s' % (first_name, second_name))
-My name is Mary Wilson
+>>> nome = 'Maria'
+>>> sobrenome = 'Almeida'
+>>> print('Meu nome é %s %s' % (nome, sobrenome))
+Meu nome é Maria Almeida
 \end{verbatim}
 \end{listing}
 
-\subsection*{Chapter \ref{ch:turtles}}
+\subsection*{Capítulo \ref{ch:turtles}}
 
 \noindent
-1. A rectangle is like a square, except two of its sides are longer than the other two.  By telling the turtle to do the following operations, you can easily draw a rectangle:
+1. Um retângulo é como um quadrado, exceto que dois dos seus lados são maiores que os outros dois. Dizendo à tartaruga para fazer as seguintes operações, você desenhará um retângulo:
 
 \begin{itemize}
- \item move forward a certain number of pixels
- \item turn left
- \item move forward a shorter number of pixels
- \item turn left
- \item move forward, the number of pixels in the first movement
- \item turn left
- \item move forward the shorter number of pixels in the second movement
+ \item vá um certo número de pixels à frente
+ \item vire para a esquerda
+ \item vá mais um pouco à frente
+ \item vire para esquerda
+ \item vá em frente, o mesmo número de pixels do primeiro comando
+ \item vire a esquerda
+ \item vá em frente, o mesmo número de pixels do segundo comando
 \end{itemize}
 
 \noindent
-For example, the following code will drawing the rectangle in figure\ref{fig46}.
+Por exemplo, o código seguinte desenhará o retângulo da figura\ref{fig46}.
 
 \begin{listing}
 \begin{verbatim}
