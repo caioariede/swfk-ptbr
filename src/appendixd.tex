@@ -135,23 +135,23 @@ olá 0
 \end{listing}
 
 \noindent
-The reason it stops after the first print is that during the first run of the loop, the value of the variable \code{x} is zero.  Since zero is less than nine, the break statement stops the loop from running any further.
+O motivo pelo qual ele para após o primeiro `print', é que durante a primeira execução do laço, o valor da variável \code{x} é zero. Sendo o zero menor que nove, então o comando `break' para a execução do laço imediatamente.
 
 \noindent
-2. To figure out how much money you get when you are paid 3\% interest, you need to multiply the number by 0.03.  To begin with we should create a variable and point it at the amount of our savings:
+2. Para descobrir quanto de dinheiro você teria quando recebesse um juros de 3\%, você precisa multiplicar o número por 0.03. Para começar, nós criamos uma variável e apontamos à ela o valor das nossas economias:
 
 \begin{listing}
 \begin{verbatim}
->>> amount = 100
+>>> total = 100
 \end{verbatim}
 \end{listing}
 
-To the amount of interest paid for 1 year would be that amount multiplied by 0.03:
+O total de juros recebidos ao decorrer de 1 ano, será o total multiplicado por 0.03:
 
 \begin{listing}
 \begin{verbatim}
->>> amount = 100
->>> print(amount * 0.03)
+>>> total = 100
+>>> print(total * 0.03)
 3.0
 \end{verbatim}
 \end{listing}
