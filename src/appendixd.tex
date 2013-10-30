@@ -156,32 +156,32 @@ O total de juros recebidos ao decorrer de 1 ano, será o total multiplicado por 
 \end{verbatim}
 \end{listing}
 
-That's \$3!  Not bad since we didn't need to do anything to get it.  We need to print out this value and then add it to the total, and do it 10 times to work out the interest that we are paid for 10 years:
+Isso seria R\$3! Nada mal, desde que não precisemos fazer nada para conseguí-lo. Nós precisamos imprimir esse valor e adicioná-lo ao total, e fazer isso por 10 vezes para chegar aos juros uqe vamos conseguir em 10 anos:
 
 \begin{listing}
 \begin{verbatim}
->>> amount = 100
->>> for year in range(1, 11):
-...     interest = amount * 0.03
-...     print('interest earned for year %s is %s' % (year, interest))
-...     amount = amount + interest
+>>> total = 100
+>>> for ano in range(1, 11):
+...     rendimento = total * 0.03
+...     print('o rendimento no ano %s é de %s' % (ano, rendimento))
+...     total = total + rendimento
 ... 
-interest earned for year 1 is 3.0
-interest earned for year 2 is 3.09
-interest earned for year 3 is 3.1827
-interest earned for year 4 is 3.278181
-interest earned for year 5 is 3.37652643
-interest earned for year 6 is 3.4778222229
-interest earned for year 7 is 3.58215688959
-interest earned for year 8 is 3.68962159627
-interest earned for year 9 is 3.80031024416
-interest earned for year 10 is 3.91431955149
+o rendimento no ano 1 é de 3.0
+o rendimento no ano 2 é de 3.09
+o rendimento no ano 3 é de 3.1827
+o rendimento no ano 4 é de 3.278181
+o rendimento no ano 5 é de 3.37652643
+o rendimento no ano 6 é de 3.4778222229
+o rendimento no ano 7 é de 3.58215688959
+o rendimento no ano 8 é de 3.68962159627
+o rendimento no ano 9 é de 3.80031024416
+o rendimento no ano 10 é de 3.91431955149
 \end{verbatim}
 \end{listing}
 
-In the first line we create a for-loop using the variable \code{year} and the function \code{range} to count from 1 to 10.  The second line calculates the interest, multiplying the value in variable \code{amount} by 0.03.  The next line is the print statement---which uses place holders (\code{\%s}) to include the values for \code{year} and \code{interest}.  Finally in the last line, we add the interest back into the amount.
-All the decimal places---the numbers after the period (.) in the print lines---are a bit confusing, but you can tell that the amount of interest each year increases a little bit as you add the interest.
-The code might be a bit more helpful if we also add the total saved each year:
+Na primeira linha, nós criamos um laço `for' usando a variável \code{year} e a função \code{range}, para contar de 1 à 10. A segunda linha, calcula o rendimento, multiplicando o valor da variável \code{total} por 0.03. Na próxima linha, está o comando `print' --- que imprime os valores do \code{ano} e \code{rendimento}. Finalmente, na última linha, nós adicionamos o rendimento de volta ao total.
+Todas as casas decimais --- os números após o ponto (.), nas linhas de `print' --- confudem um pouco, mas você pode que o total do rendimento após cada ano, cresce um pouco confome você adiciona o rendimento.
+O código pode ficar um pouco mais útil, se adicionarmos o total ganho a cada ano:
 
 \begin{listing}
 \begin{verbatim}
