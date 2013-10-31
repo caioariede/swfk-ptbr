@@ -185,43 +185,43 @@ O código pode ficar um pouco mais útil, se adicionarmos o total ganho a cada a
 
 \begin{listing}
 \begin{verbatim}
->>> amount = 100
->>> for year in range(1, 11):
-...     interest = amount * 0.03
-...     print('interest earned for savings %s for year %s is %s' % 
-...         (amount, year, interest))
-...     amount = amount + interest
+>>> total = 100
+>>> for ano in range(1, 11):
+...     rendimento = total * 0.03
+...     print('rendimento por economizar %s em %s é %s' % 
+...         (total, ano, rendimento))
+...     total = total + rendimento
 ... 
-interest earned for savings 100 for year 1 is 3.0
-interest earned for savings 103.0 for year 2 is 3.09
-interest earned for savings 106.09 for year 3 is 3.1827
-interest earned for savings 109.2727 for year 4 is 3.278181
-interest earned for savings 112.550881 for year 5 is 3.37652643
-interest earned for savings 115.92740743 for year 6 is 3.4778222229
-interest earned for savings 119.405229653 for year 7 is 3.58215688959
-interest earned for savings 122.987386542 for year 8 is 3.68962159627
-interest earned for savings 126.677008139 for year 9 is 3.80031024416
-interest earned for savings 130.477318383 for year 10 is 3.91431955149
+rendimento por economizar 100 em 1 é 3.0
+rendimento por economizar 103.0 em 2 é 3.09
+rendimento por economizar 106.09 em 3 é 3.1827
+rendimento por economizar 109.2727 em 4 é 3.278181
+rendimento por economizar 112.550881 em 5 é 3.37652643
+rendimento por economizar 115.92740743 em 6 é 3.4778222229
+rendimento por economizar 119.405229653 em 7 é 3.58215688959
+rendimento por economizar 122.987386542 em 8 é 3.68962159627
+rendimento por economizar 126.677008139 em 9 é 3.80031024416
+rendimento por economizar 130.477318383 em 10 é 3.91431955149
 \end{verbatim}
 \end{listing}
 
-\subsection*{Chapter \ref{ch:sortoflikerecycling}}
+\subsection*{Capítulo \ref{ch:sortoflikerecycling}}
 
 \noindent
-1. Turning the for-loop into a function is actually quite easy.  The function will look something like this:
+1. Tornando o laço `for' em uma função é fácil. A função ficaria mais ou menos assim:
 
 \begin{listing}
 \begin{verbatim}
->>> def calculate_interest(amount, rate):
-...     for year in range(1, 11):
-...         interest = amount * rate
-...         print('interest earned for savings %s for year %s is %s' % 
-...             (amount, year, interest))
-...         amount = amount + interest
+>>> def calcular_rendimento(total, taxa):
+...     for ano in range(1, 11):
+...         rendimento = total * taxa
+...         print('rendimento por economizar %s em %s é %s' % 
+...             (total, ano, rendimento))
+...         total = total + rendimento
 \end{verbatim}
 \end{listing}
 
-If you compare the function with the code above, you might notice that, apart from the first line, there's only one change to the original code (0.03 is now the parameter \code{rate}). Because \code{amount} was already a variable, there's no change required when it becomes a parameter. You'll find the output is also the same when you run the function:
+Se você comparar a função com o código acima, você notará que além da primeira linha, existe apenas uma diferença do código original (0.03 é passado como parâmetro \code{taxa}). Pelo \code{amount} já ser uma variável, não existe a necessidade de alterar quando é passado por parâmetro. Você verá que a saída é a mesma quando você executa a função:
 
 \begin{listing}
 \begin{verbatim}
