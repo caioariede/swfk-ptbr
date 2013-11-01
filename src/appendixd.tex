@@ -225,66 +225,66 @@ Se você comparar a função com o código acima, você notará que além da pri
 
 \begin{listing}
 \begin{verbatim}
->>> calculate_interest(100, 0.03)
-interest earned for savings 100 for year 1 is 3.0
-interest earned for savings 103.0 for year 2 is 3.09
-interest earned for savings 106.09 for year 3 is 3.1827
-interest earned for savings 109.2727 for year 4 is 3.278181
-interest earned for savings 112.550881 for year 5 is 3.37652643
-interest earned for savings 115.92740743 for year 6 is 3.4778222229
-interest earned for savings 119.405229653 for year 7 is 3.58215688959
-interest earned for savings 122.987386542 for year 8 is 3.68962159627
-interest earned for savings 126.677008139 for year 9 is 3.80031024416
-interest earned for savings 130.477318383 for year 10 is 3.91431955149
+>>> calcular_rendimento(100, 0.03)
+rendimento por economizar 100 em 1 é 3.0
+rendimento por economizar 103.0 em 2 é 3.09
+rendimento por economizar 106.09 em 3 é 3.1827
+rendimento por economizar 109.2727 em 4 é 3.278181
+rendimento por economizar 112.550881 em 5 é 3.37652643
+rendimento por economizar 115.92740743 em 6 é 3.4778222229
+rendimento por economizar 119.405229653 em 7 é 3.58215688959
+rendimento por economizar 122.987386542 em 8 é 3.68962159627
+rendimento por economizar 126.677008139 em 9 é 3.80031024416
+rendimento por economizar 130.477318383 em 10 é 3.91431955149
 \end{verbatim}
 \end{listing}
 
 \noindent
-2. Changing the function to pass in the year as a parameter also involves only minor changes:
+2. Alterando a função para aceitar a quantidade de anos como parâmetro, envolve pequenas mudanças:
 
 \begin{listing}
 \begin{verbatim}
->>> def calculate_interest(amount, rate, years):
-...     for year in range(1, years):
-...         interest = amount * rate
-...         print('interest earned for savings %s for year %s is %s' %
-...             (amount, year, interest))
-...         amount = amount + interest
+>>> def calcular_rendimento(total, taxa, anos):
+...     for ano in range(1, anos):
+...         rendimento = total * taxa
+...         print('rendimento por economizar %s em %s é %s' %
+...             (total, ano, rendimento))
+...         total = total + rendimento
 \end{verbatim}
 \end{listing}
 
 \noindent
-We can now easily change the starting amount, the rate of interest and the number of years:
+Nós podemos agora, facilmente alterar o total, a taxa de rendimento e o número de anos:
 
 \begin{listing}
 \begin{verbatim}
->>> calculate_interest(1000, 0.05, 6)
-interest earned for savings 1000 for year 1 is 50.0
-interest earned for savings 1050.0 for year 2 is 52.5
-interest earned for savings 1102.5 for year 3 is 55.125
-interest earned for savings 1157.625 for year 4 is 57.88125
-interest earned for savings 1215.50625 for year 5 is 60.7753125
+>>> calcular_rendimento(1000, 0.05, 6)
+rendimento por economizar 1000 em 1 é 50.0
+rendimento por economizar 1050.0 em 2 é 52.5
+rendimento por economizar 1102.5 em 3 é 55.125
+rendimento por economizar 1157.625 em 4 é 57.88125
+rendimento por economizar 1215.50625 em 5 é 60.7753125
 \end{verbatim}
 \end{listing}
 
 \noindent
-3. The mini-program is a bit more complicated than the functions we've already created.  First we need to import the sys module so we can ask for input.  Then we need to prompt the user of our program for each of the values.  Apart from that, the function stays roughly the same:
+3. Um mini-programa é um pouco mais complicado do que as funções que nós já fizemos. Primeiramente, nós precisamos importar o módulo `sys' para pedirmos alguns dados. Então nós precisamos pedir ao usuário do programa, cada um dos dados. Fora isso, a função será a mesma:
 
 \begin{listing}
 \begin{verbatim}
 >>> import sys
->>> def calculate_interest():
-...     print('Enter the amount you have to save')
-...     amount = float(sys.stdin.readline())
-...     print('Enter the interest rate')
-...     rate = float(sys.stdin.readline())
-...     print('Enter the number of years')
-...     years = int(sys.stdin.readline())
-...     for year in range(1, years):
-...         interest = amount * rate
-...         print('interest earned for savings %s for year %s is %s' % 
-...             (amount, year, interest))
-...         amount = amount + interest
+>>> def calcular_rendimento():
+...     print('Digite o total que você quer guardar')
+...     total = float(sys.stdin.readline())
+...     print('Digite a taxa de juros')
+...     taxa = float(sys.stdin.readline())
+...     print('Digite o número de anos')
+...     anos = int(sys.stdin.readline())
+...     for ano in range(1, anos):
+...         rendimento = total * taxa
+...         print('rendimento por economizar %s em %s é %s' % 
+...             (total, taxa, rendimento))
+...         total = total + rendimento
 \end{verbatim}
 \end{listing}
 
