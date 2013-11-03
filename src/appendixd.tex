@@ -317,7 +317,7 @@ rendimento por economizar 895.423848271 em 11 é 53.7254308963
 \subsection*{Capítulo \ref{ch:turtlesgalore}}
 
 \noindent
-1. Existe uma forma difícil e uma fácil de desenhar um octágo. A forma difícil não é difícil por ser complicada, é difícil pois requer muita digitação:
+1. Existe uma forma difícil e uma fácil de desenhar um octógono. A forma difícil não é difícil por ser complicada, é difícil pois requer muita digitação:
 
 \begin{listing}
 \begin{verbatim}
@@ -342,7 +342,7 @@ t = turtle.Pen()
 \end{listing}
 
 \noindent
-You can see from that code that we tell the turtle to move forward 50 pixels, then turn right 45 degrees.  We do this 8 times.  Which is a lot of time.  The easier way to draw an octagon is the following code (which produces the octagon in figure~\ref{fig48}):
+Você pode ver que nesse código, nós dissemos à tartaruga para mover para frente em 50 pixels, então virar 45 graus a direita. Nós fizemos isso 8 vezes, que é muita coisa. A forma fácil de desenhar um octógono, é o código abaixo (que produz o octógono da figura~\ref{fig48}):
 
 \begin{listing}
 \begin{verbatim}
@@ -356,16 +356,16 @@ You can see from that code that we tell the turtle to move forward 50 pixels, th
 \begin{center}
 \includegraphics[width=82mm]{eps/figure48.eps}
 \end{center}
-\caption{Turtle drawing an octagon.}\label{fig48}
+\caption{Tartaruga desenhando um octógono.}\label{fig48}
 \end{figure}
 
 \noindent
-2.  If you take another look at the other functions in Chapter~\ref{ch:turtlesgalore}, you'll already see how to create a filled shape. We can convert the octagon code into a function that takes a colour, but we'll also want to reuse the hexcolour function 
+2. se você olhar as outras funções, do Capítulo~\ref{ch:turtlesgalore}, você verá como criar uma forma preenchida. Nós podemos mover o código do octógono para uma função que recebe uma cor.
 
 \begin{listing}
 \begin{verbatim}
->>> def octagon(red, green, blue):
-...     t.color(red, green, blue)
+>>> def octogono(vermelho, verde, azul):
+...     t.color(vermelho, verde, azul)
 ...     t.begin_fill()
 ...     for x in range(0,8):
 ...         t.forward(50)
@@ -374,11 +374,11 @@ You can see from that code that we tell the turtle to move forward 50 pixels, th
 \end{verbatim}
 \end{listing}
 
-We set the colour, then turn filling on.  Then we run the for loop to draw the octagon, finally we switch filling back off again to fill in the shape. How about a blue octagon (see figure~\ref{fig49}):
+Nós especificamos a cor e então ligamos o preenchimento (\code{begin\_fill}). Então nós executamos o laço `for' para desenhar o octógono e finalmente desligamos o preenchimento (\code{end\_fill}). Que tal um octógono azul? Como no da figura ~\ref{fig49}:
 
 \begin{listing}
 \begin{verbatim}
->>> octagon(0, 0, 1)
+>>> octogono(0, 0, 1)
 \end{verbatim}
 \end{listing}
 
