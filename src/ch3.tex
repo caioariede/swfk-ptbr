@@ -4,7 +4,7 @@
 % or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
 
 
-\chapter{Tartarugas e outras criaturas lentas}\index{turtle}\label{ch:turtles}
+\chapter{Tartarugas e outras criaturas lentas}\index{Tartaruga}\label{ch:turtles}
 
 Existem algumas similaridades entre as tartarugas do mundo real e a do Python. No mundo real, uma tartaruga é um réptil verde, que se move lentamente e carrega sua casa nas suas costas. No mundo do Python, uma tartaruga é uma pequena seta preta que se move lentamente pela tela. Sem se referir à uma casa nas costas.
 
@@ -32,7 +32,7 @@ Então nós precisamos exibir uma tela para desenhar. Uma tela parecida com a qu
 \end{verbatim}
 \end{listing}
 
-Nesse código, nós chamamos uma função (Pen\index{Pen}) do módulo `turtle', que automaticamente cria uma tela para nós desenharmos. Uma função é um pedaço de código reutilizável (nós veremos funções mais tarde) que faz algo útil --- neste caso, um objeto que representa uma tartaruga é retornado pela função `Pen' --- nós armazenamos esse objeto na variável `tartaruga'. Quando você digitar o código no terminal do Python, você verá uma tela em branco, assim como na figura~\ref{fig10}.
+Nesse código, nós chamamos uma função (Pen\index{A função Pen}) do módulo `turtle', que automaticamente cria uma tela para nós desenharmos. Uma função é um pedaço de código reutilizável (nós veremos funções mais tarde) que faz algo útil --- neste caso, um objeto que representa uma tartaruga é retornado pela função `Pen' --- nós armazenamos esse objeto na variável `tartaruga'. Quando você digitar o código no terminal do Python, você verá uma tela em branco, assim como na figura~\ref{fig10}.
 
 \begin{figure}
 \begin{center}
@@ -67,7 +67,7 @@ Do ponto de vista da tartaruga, ela moveu 50 passos para frente. Do nosso ponto 
 \noindent
 \emph{Então, o que é um pixel?}
 
-Um pixel\index{pixels} é um ponto na tela. Quando você olha para o seu computador, tudo é feito de pequenos pontos (quadrados). Os programas que você usa e os jogos que você joga no computador, ou com o seu PlayStation, ou Xbox, ou Wii; todos são formados por um monte de pontos coloridos diferentes, exibidos na tela. Na verdade, se você olhar para a tela do seu computador usando uma lente de aumento, você verá esses pontos. Então, se olharmos bem perto da linha desenhada pela tartaruga, nós veremos que a seta que representa a tartaruga, também é formata por um monte de pontos quadrados, como podemos ver na figura~\ref{fig12}.
+Um pixel\index{Pixels} é um ponto na tela. Quando você olha para o seu computador, tudo é feito de pequenos pontos (quadrados). Os programas que você usa e os jogos que você joga no computador, ou com o seu PlayStation, ou Xbox, ou Wii; todos são formados por um monte de pontos coloridos diferentes, exibidos na tela. Na verdade, se você olhar para a tela do seu computador usando uma lente de aumento, você verá esses pontos. Então, se olharmos bem perto da linha desenhada pela tartaruga, nós veremos que a seta que representa a tartaruga, também é formata por um monte de pontos quadrados, como podemos ver na figura~\ref{fig12}.
 
 \begin{figure}
 \begin{center}
@@ -78,7 +78,7 @@ Um pixel\index{pixels} é um ponto na tela. Quando você olha para o seu computa
 
 Nós falaremos mais tarde sobre esses pontos, ou pixels, em outro capítulo.
 
-Depois, podemos dizer para a tartaruga virar para a esquerda\index{turtle!turning left} ou direita\index{turtle!turning right}:
+Depois, podemos dizer para a tartaruga virar para a esquerda\index{Tartaruga!vriando à esquerda} ou direita\index{Tartaruga!virando à direita}:
 
 \begin{listing}
 \begin{verbatim}
@@ -86,7 +86,7 @@ Depois, podemos dizer para a tartaruga virar para a esquerda\index{turtle!turnin
 \end{verbatim}
 \end{listing}
 
-Isso diz à tartaruga para virar para a esquerda, 90 graus. Você pode não ter aprendido sobre graus\index{degrees} na escola ainda, mas uma maneira fácil de se pensar, é que eles são como as divisões em um relógio, assim como na figura~\ref{fig13}.
+Isso diz à tartaruga para virar para a esquerda, 90 graus. Você pode não ter aprendido sobre graus\index{Graus} na escola ainda, mas uma maneira fácil de se pensar, é que eles são como as divisões em um relógio, assim como na figura~\ref{fig13}.
 
 \begin{figure}
 \begin{center}
@@ -137,7 +137,7 @@ Nossa tartaruga desenhou um quadrado e ficou virada para a mesma direção que e
 \caption{Desenhando um quadrado.}\label{fig16}
 \end{figure}
 
-Nós podemos limpar o que está na tela, usando o comando clear\index{turtle!clear}:
+Nós podemos limpar o que está na tela, usando o comando clear\index{Tartaruga!Limpando}:
 
 \begin{listing}
 \begin{verbatim}
@@ -145,7 +145,7 @@ Nós podemos limpar o que está na tela, usando o comando clear\index{turtle!cle
 \end{verbatim}
 \end{listing}
 
-Algumas das outras funções básicas que você pode usar são: \code{reset}\index{turtle!reset}, que também limpa a tela, mas também coloca a tartaruga de volta na sua posição inicial; \code{backward}\index{turtle!backward}, que move a tartaruga para trás; \code{right}, que vira a tartaruga para a direita; \code{up}\index{turtle!up (stop drawing)} que diz à tartaruga para parar de desenhar conforme ela anda (como se tirasse o pincel da tela); e finalmente o \code{down}\index{turtle!down (start drawing)} que diz à tartaruga para voltar a desenhar. Você pode chamar essas funções da mesma forma que chamou as outras:
+Algumas das outras funções básicas que você pode usar são: \code{reset}\index{Tartaruga!Recomeçando}, que também limpa a tela, mas também coloca a tartaruga de volta na sua posição inicial; \code{backward}\index{Tartaruga!Indo para trás}, que move a tartaruga para trás; \code{right}, que vira a tartaruga para a direita; \code{up}\index{Tartaruga!Indo para frente} que diz à tartaruga para parar de desenhar conforme ela anda (como se tirasse o pincel da tela); e finalmente o \code{down}\index{Tartaruga!Indo para baixo} que diz à tartaruga para voltar a desenhar. Você pode chamar essas funções da mesma forma que chamou as outras:
 
 \begin{listing}
 \begin{verbatim}
