@@ -6,7 +6,7 @@
 
 \chapter{Como fazer uma pergunta}\label{ch:howtoaskaquestion}
 
-Em termos de programação, uma pergunta normalmente significa que nós queremos fazer ou uma coisa, ou outra, dependendo da resposta. Isso é chamado de \textbf{expressão if}\index{if-statement}. Por exemplo:
+Em termos de programação, uma pergunta normalmente significa que nós queremos fazer ou uma coisa, ou outra, dependendo da resposta. Isso é chamado de \textbf{expressão if}\index{Expressão `if'}. Por exemplo:
 
 \begin{quotation}
 Quantos anos você tem? Se você tem mais de 20 anos, você é muito velho!
@@ -23,7 +23,7 @@ if idade > 20:
 
 Uma expressão `if' é composta de um `if' seguido pelo que chamamos de `condição', seguido por dois-pontos (:). As linhas linhas após o `if' devem ficar em um bloco --- e se a resposta para a pergunta for `sim' (ou `True', como chamamos em programação) os comandos no bloco serão executados.
 \par
-A condição\index{conditions} é uma expressão de programação que retorna `sim' (True) ou `não' (False). Existem alguns símbolos (ou operadores) usados para criar condições, como:
+A condição\index{Condições} é uma expressão de programação que retorna `sim' (True) ou `não' (False). Existem alguns símbolos (ou operadores) usados para criar condições, como:
 
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -96,7 +96,7 @@ chegou aqui
 
 \section{Faça isso$\ldots$ SENÃO!!!}
 
-Nós também podemos estender a expressão `if', para que faça algo caso a condição não seja verdade. Por exemplo, exibir a palavra `Olá' no terminal, se a idade for 12, senão exibir a mensagem `Tchau'. Para fazer isso, nós precisamos usar uma expressão `se-então-senão'\index{if-then-else-statement} (o mesmo que dizer \emph{``se algo é verdadeiro, então faça \textbf{isso}, senão faça \textbf{aquilo}''}):
+Nós também podemos estender a expressão `if', para que faça algo caso a condição não seja verdade. Por exemplo, exibir a palavra `Olá' no terminal, se a idade for 12, senão exibir a mensagem `Tchau'. Para fazer isso, nós precisamos usar uma expressão `se-então-senão'\index{Expressão if-then-else} (o mesmo que dizer \emph{``se algo é verdadeiro, então faça \textbf{isso}, senão faça \textbf{aquilo}''}):
 
 \begin{listing}
 \begin{verbatim}
@@ -147,7 +147,7 @@ Nós podemos estender a expressão `if' ainda mais, usando o `elif' (abreviaçã
 
 No código acima, a linha 2 verifica se o valor da variável \code{idade} é igual a 10. Se não, então ele pula para a linha 4, onde é verificado se o valor da variável \code{idade} é igual a 11. Novamente, se não, então ele pula para a linha 6, para verificar se a variável é igual a 12. Neste caso é, então o Python prossegue no bloco na linha 7 e executa o comando `print'. (Felizmente você deve ter notado que existem 5 grupos neste código --- linhas 3, 5, 7, 9 e linha 11)
 
-\section{Combinando condições}\index{conditions!combining}
+\section{Combinando condições}\index{Condições!Combinação}
 Você pode combinar condições usando a palavra-chave `and' (`e', em inglês) e `or' (`ou', em inglês). Nós podemos reduzir o exemplo acima, um pouco, usando o `or' para juntar as condições:
 
 \begin{listing}
@@ -172,7 +172,7 @@ Se qualquer uma das condições na linha 1 forem verdade (ex.: se idade for 10 \
 
 Felizmente você deve ter notado que se \textbf{ambas} as condições na linha 1 forem verdade, então o bloco de código na linha 2 será executado (se a idade for maior ou igual a 10 \textbf{e} a idade for menor ou igual a 13). Então  se o valor da variável idade for 12, então `você tem 12' será impresso no terminal: pois 12 é maior que 10 e também é menor que 13.
 
-\section{Vácuo}\index{None}
+\section{Vácuo}\index{O valor None}
 
 Existe outro tipo de valor, que pode ser atribuído à uma variável, que não falamos sobre nos capítulos anteriores: \textbf{Nada}.
 \par
@@ -251,7 +251,7 @@ Você conseguiu 900
 \end{verbatim}
 \end{listing}
 
-\section{Qual é a diferença$\ldots$?}\label{whatsthedifference}\index{equality}
+\section{Qual é a diferença$\ldots$?}\label{whatsthedifference}\index{Igualdade}
 
 Qual é a diferença entre \code{10} e \code{'10'}?
 \par
