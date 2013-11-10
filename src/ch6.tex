@@ -18,7 +18,7 @@ Claro que você reciclaria tudo que fosse possível. Que é uma coisa boa, pois 
 
 Reciclar ou reutilizar, no mundo da programação, é igualmente importante. Não porque o seu programa irá desaparecer debaixo de uma pilha de lixo --- mas se você não reutilizar algumas coisas que você faz, você eventualmente desgastará os seus dedos, digitando excessivamente.
 
-Existem diversas maneiras de reutilizar código em Python (e nas linguagens de programação em geral), mas nós já vimos uma das maneiras, no Capítulo 3, com a função `range'. Funções\index{functions} são uma maneira de reutilizar código --- assim você pode escrever o código apenas uma vez, então usá-lo nos seus programas várias vezes. Vamos primeiro tentar um exemplo simples de função:
+Existem diversas maneiras de reutilizar código em Python (e nas linguagens de programação em geral), mas nós já vimos uma das maneiras, no Capítulo 3, com a função `range'. Funções\index{Funções} são uma maneira de reutilizar código --- assim você pode escrever o código apenas uma vez, então usá-lo nos seus programas várias vezes. Vamos primeiro tentar um exemplo simples de função:
 
 \begin{listing}
 \begin{verbatim}
@@ -71,7 +71,7 @@ Olá João Roberto
 \end{listing}
 
 \noindent
-Nós podemos retornar valores de uma função, usando a expressão \code{return}\index{return}:
+Nós podemos retornar valores de uma função, usando a expressão \code{return}\index{Comando `return'}:
 
 \begin{listing}
 \begin{verbatim}
@@ -112,7 +112,7 @@ NameError: name 'a' is not defined
 \end{verbatim}
 \end{listing} 
 
-No exemplo acima, nós criamos uma função \code{teste\_variavel}, que multiplica o valor de duas variáveis (\code{a} e \code{b}) e retorna o resultado. Se nós chamarmos essa função usando o \code{print}, nós teremos o resultado: 200. Porém se nós tentarmos imprimir o valor de \code{a} (ou \code{b}, por exemplo), nós receberemos uma mensagem a erro ```a' is not defined'' (`a' não está definido). Isso é algo que chamamos de `\emph{escopo}'\index{scope}, no mundo da programação.
+No exemplo acima, nós criamos uma função \code{teste\_variavel}, que multiplica o valor de duas variáveis (\code{a} e \code{b}) e retorna o resultado. Se nós chamarmos essa função usando o \code{print}, nós teremos o resultado: 200. Porém se nós tentarmos imprimir o valor de \code{a} (ou \code{b}, por exemplo), nós receberemos uma mensagem a erro ```a' is not defined'' (`a' não está definido). Isso é algo que chamamos de `\emph{escopo}'\index{Escopo}, no mundo da programação.
 \par
 Imagine uma função como uma pequena ilha flutuante no oceano --- e é muito longe para nadar da ilha até outro lugar qualquer. Ocasionalmente, um avião a sobrevoa e derruba pedaços de papel na ilha (são aqueles parâmetros, chegando na função) que os habitants então juntam e formam uma mensagem, colocam a mensagem dentro de uma garrafa e então lançam a garrafa ao mar (esse é o valor de retorno). O que os habitantes da ilha fazem, ou quantos deles foram necessários para formar a mensagem, não faz diferença à pessoa que pegou a garrafa e está lendo a mensagem. Essa é, provavelmente, a forma mais simples de explicar o escopo --- mas existe um pequeno problema nessa ideia. Um dos habitantes tem um par de binóculos gigante e pode ver tudo além do continente. Ele pode ver o que outras pessoas estão fazendo lá e isso pode afetar a mensagem que ele está criando:
 
@@ -184,7 +184,7 @@ Isso é um pouco mais eficiente que redigitar o laço `for' toda vez que você q
 
 \section{Pedaços e peças}
 
-Quando o Python é instalado no seu computador, uma montanha de funções e módulos também são instalados. Algumas funções são disponibilizadas por padrão. \code{range} é dessas funções, que nós já vimos. \code{file}\index{functions!file} é outra função que não usamos ainda.
+Quando o Python é instalado no seu computador, uma montanha de funções e módulos também são instalados. Algumas funções são disponibilizadas por padrão. \code{range} é dessas funções, que nós já vimos. \code{file}\index{Funções!file} é outra função que não usamos ainda.
 
 \begin{WINDOWS}
 
@@ -269,9 +269,9 @@ O apêndice~\ref{app:builtinfunctions} (no final do livro) tem mais informaçõe
 \par
 }}}
 
-\section{Módulos}\index{modules}
+\section{Módulos}\index{Módulos}
 
-Nós já vimos muitas formas diferentes de reutilizar códigos. Uma delas é criar uma função própria, ou então usar uma função pré-existente no Python (como o \code{range}, \code{file}, \code{int} e \code{str}). A outra é um tipo especial de função, em objetos --- que nós chamamos usando o símbolo ponto --- e a outra seria utilizando um módulo, que é uma forma de agrupar muitas funções e objetos, de forma eficiente. Um exemplo disso é o módulo `time'\index{modules!time}:
+Nós já vimos muitas formas diferentes de reutilizar códigos. Uma delas é criar uma função própria, ou então usar uma função pré-existente no Python (como o \code{range}, \code{file}, \code{int} e \code{str}). A outra é um tipo especial de função, em objetos --- que nós chamamos usando o símbolo ponto --- e a outra seria utilizando um módulo, que é uma forma de agrupar muitas funções e objetos, de forma eficiente. Um exemplo disso é o módulo `time'\index{Módulos!time}:
 
 \begin{listing}
 \begin{verbatim}
@@ -288,7 +288,7 @@ O comando `import' é usado para dizer ao Python que nós queremos usar um módu
 \end{verbatim}
 \end{listingignore}
 
-\code{localtime}\index{modules!time!localtime} é uma função \emph{dentro} do módulo `time', que retorna a data e hora atual, quebrada em partes individuais --- ano, mês, dia, hora, minuto, segundo, dia da semana, dia do ano e se é horário de verão ou não (1 se for, 0 se não). As partes individuais são armazenadas em uma tupla (veja \emph{Tuplas e Listas} na página~\pageref{tuplesandlists}. Você pode usar outra função do módulo `time' para converter a data e hora retornada pelo \code{localtime}, em algo mais legível:
+\code{localtime}\index{Módulos!time!localtime} é uma função \emph{dentro} do módulo `time', que retorna a data e hora atual, quebrada em partes individuais --- ano, mês, dia, hora, minuto, segundo, dia da semana, dia do ano e se é horário de verão ou não (1 se for, 0 se não). As partes individuais são armazenadas em uma tupla (veja \emph{Tuplas e Listas} na página~\pageref{tuplesandlists}. Você pode usar outra função do módulo `time' para converter a data e hora retornada pelo \code{localtime}, em algo mais legível:
 
 \begin{listingignore}
 \begin{verbatim}
@@ -308,7 +308,7 @@ Sat Nov 18 22:37:15 2006
 \end{verbatim}
 \end{listingignore}
 
-Suponha que você queira perguntar a alguém um valor. Você pode fazer isso usando o comando \code{print} e o módulo `\code{sys}'\index{modules!sys} --- importando-o da mesma forma que fez com o módulo \code{time}:
+Suponha que você queira perguntar a alguém um valor. Você pode fazer isso usando o comando \code{print} e o módulo `\code{sys}'\index{Módulos!sys} --- importando-o da mesma forma que fez com o módulo \code{time}:
 
 \begin{listing}
 \begin{verbatim}
@@ -316,7 +316,7 @@ import sys
 \end{verbatim}
 \end{listing}
 
-Dentro do módulo `sys', tem um objeto chamado `stdin'\index{modules!sys!stdin} (abreviação de `standard input' ou `entrada padrão'). \code{stdin} tem um método (ou função) bastante útil, chamado \code{readline} --- que é usado para ler uma linha de texto que alguém digita (até que ela pressione Enter). Você pode testar o \code{readline}, usando os seguintes comandos no terminal do Python:
+Dentro do módulo `sys', tem um objeto chamado `stdin'\index{Módulos!sys!stdin} (abreviação de `standard input' ou `entrada padrão'). \code{stdin} tem um método (ou função) bastante útil, chamado \code{readline} --- que é usado para ler uma linha de texto que alguém digita (até que ela pressione Enter). Você pode testar o \code{readline}, usando os seguintes comandos no terminal do Python:
 
 \begin{listing}
 \begin{verbatim}
