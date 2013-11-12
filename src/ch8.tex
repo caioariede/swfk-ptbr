@@ -4,7 +4,7 @@
 % or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
 
 
-\chapter{Mais e mais tartarugas}\index{turtle!advanced}\label{ch:turtlesgalore}
+\chapter{Mais e mais tartarugas}\index{Tartaruga!Avançado}\label{ch:turtlesgalore}
 
 Voltando ao módulo \code{turtle}, que começamos a ver no Capítulo~\ref{ch:turtles}. Lembre-se que para configurar a tela para a tartaruga desenhar, nós precisamos importar o módulo e criar um objeto `Pen':
 
@@ -117,7 +117,7 @@ Aqui está algo um pouco mais complicado:
 \end{verbatim}
 \end{listing}
 
-No código acima, nós verificamos se a variável \code{x} contém um número par. Para fazer isso, nós usamos um operador chamado módulo (\%)\index{modulo operator}, na expressão: \code{x \% 2 == 0}.
+No código acima, nós verificamos se a variável \code{x} contém um número par. Para fazer isso, nós usamos um operador chamado módulo (\%)\index{Operador `%'}, na expressão: \code{x \% 2 == 0}.
 \par
 x \% 2 é igual a zero, se o número na variável \code{x} puder ser dividido por dois, sem sobrar nada --- se isso não faz muito sentido, não se preocupe, apenas lembre de usar `\code{x \% 2 == 0}' para verificar se o número contido em uma variável é um número par. O resultado desse código, é uma estrela de 9 pontas, como na figura~\ref{fig23}.
 
@@ -182,7 +182,7 @@ Que é uma forma beeeem longa de se desenhar o carrinho feio e com visual bem pr
 
 \section{Colorindo}
 
-A função \code{color}\index{turtle!color}, aceita 3 parâmetros. O primeiro parâmetro é o valor para o vermelho, o segundo é o valor para o verde e o último é o valor para o azul.
+A função \code{color}\index{Tartaura!Função `color'}, aceita 3 parâmetros. O primeiro parâmetro é o valor para o vermelho, o segundo é o valor para o verde e o último é o valor para o azul.
 \par
 \emph{Por que vermelho, verde e azul?}
 \par
@@ -273,7 +273,7 @@ E você consegue a cor laranja, combinando 100\% do vermelho, 65\% do verde; e o
 \noindent
 Não se esqueça, você pode limpar a tela usando o \code{t.clear()}.
 
-\section{Escuridão}\index{turtle!color!black}
+\section{Escuridão}\index{Tartaruga!Função `color'!black}
 
 Aqui vai uma pergunta para você: O que acontece quando você desliga todas as cores a noite? Fica tudo preto.
 \par
@@ -302,7 +302,7 @@ O recíproca é verdadeira; se você usar 100\% do vermelho, 100\% do verde e 10
 \end{verbatim}
 \end{listing}
 
-\section{Preenchendo coisas}\index{turtle!fill}
+\section{Preenchendo coisas}\index{Tartaruga!Função `fill'}
 
 Você provavelmente já descobriu que a função `fill' é ligada passando o parâmetro `1', então desligada passando o parâmetro `0'. Quando você a desliga, a função na realidade preenche a área que você desenhou --- assumindo que você tenha desenhado pelo menos parte de uma forma. Então nós podemos facilmente desenhar um quadrado preenchido, usando o código que nós criamos previamente. Primeiro, vamos transformá-lo em uma função. Para desenhar um quadrado com a tartaruga, nós fazemos:
 
