@@ -30,7 +30,7 @@ Felizmente, existe um módulo que vem com o Python, que podemos usar para fazer 
 \includegraphics*[width=100mm]{eps/turtle2.eps}
 \end{center}
 
-O módulo se chama \code{tkinter}\index{modules!tkinter} (um nome estrenho, que vem de `Tk interface') e pode ser usada para criar aplicações completas (você pode até mesmo criar um Editor de Textos se quiser), assim como apenas desenhar. Nós podemos criar uma aplicação simples com um botão, usando o seguinte código:
+O módulo se chama \code{tkinter}\index{Módulos!tkinter} (um nome estrenho, que vem de `Tk interface') e pode ser usada para criar aplicações completas (você pode até mesmo criar um Editor de Textos se quiser), assim como apenas desenhar. Nós podemos criar uma aplicação simples com um botão, usando o seguinte código:
 
 \begin{listing}
 \begin{verbatim}
@@ -47,7 +47,7 @@ Na linha 1, nós importamos o que vamos usar do módulo \code{Tk} --- o mais usa
 \fbox{\colorbox{PaleBlue}{\parbox{.75\linewidth} {
 \section*{Parâmetros Nomeados}
 
-Essa é a primeira vez que nós usamos os `parâmetros nomeados'\index{named parameters}. Eles funcionam da mesma forma que os parâmetros normais, exceto que eles podem aparecer em qualquer ordem, então nós devemos nomeá-los.
+Essa é a primeira vez que nós usamos os `parâmetros nomeados'\index{Parâmetros nomeados}. Eles funcionam da mesma forma que os parâmetros normais, exceto que eles podem aparecer em qualquer ordem, então nós devemos nomeá-los.
 
 Por exemplo, suponha que nós tivessemos uma função `retangulo' que recebe dois parâmetros: largura e altura. Normalmente, nós deveríamos chamar essa função usando algo do tipo \code{retangulo(200, 100)}, que significa que nós queremos um retangulo de 200 pixels de largura, por 100 de altura. Mas e se os parâmetros pudessem aparecer em qualquer ordem? Como saberíamos qual é a largura e qual é a altura?
 
@@ -87,7 +87,7 @@ O parâmetro nomeado `command' diz que nós queremos acionar a função \code{ol
 
 \section{Desenhando algo simples}
 
-Botões não ajudam muito quando o que você quer é desenhar algo na tela --- então nós precisamos usar um componente diferente: um \code{Canvas}\index{modules!tkinter!Canvas} (tela). Quando criamos um `canvas', diferente do botão (que recebe os parâmetros `texto' e `comando'), nós precisamos passar a largura e a altura (em pixels), da tela. Tirando isso, o código é similar ao do botão:
+Botões não ajudam muito quando o que você quer é desenhar algo na tela --- então nós precisamos usar um componente diferente: um \code{Canvas}\index{Módulos!tkinter!Canvas} (tela). Quando criamos um `canvas', diferente do botão (que recebe os parâmetros `texto' e `comando'), nós precisamos passar a largura e a altura (em pixels), da tela. Tirando isso, o código é similar ao do botão:
 
 \begin{listing}
 \begin{verbatim}
@@ -107,7 +107,7 @@ Similar ao exemplo do botão, uma janela aparecerá quando você digitar a linha
 \caption{Eixo-x e eixo-y da tela.}\label{fig32}
 \end{figure}
 
-Como a tela tem 500 pixels de largura e 500 de altura, as coordenadas do canto inferior direito da tela são 500, 500. Então, a linha na figura~\ref{fig32} pode ser desenhada iniciando das coordenadas 0, 0 e terminadas nas coordenadas 500, 500.\index{modules!tkinter!create\_line}:
+Como a tela tem 500 pixels de largura e 500 de altura, as coordenadas do canto inferior direito da tela são 500, 500. Então, a linha na figura~\ref{fig32} pode ser desenhada iniciando das coordenadas 0, 0 e terminadas nas coordenadas 500, 500.\index{Módulos!tkinter!create\_line}:
 
 \begin{listing}
 \begin{verbatim}
@@ -151,7 +151,7 @@ Com a tartaruga, nós desenhamos uma caixa movendo para frente, virando, para fr
 \end{verbatim}
 \end{listingignore}
 
-No exemplo acima, nós criamos uma tela com 400 pixels de largura, 400 pixels de altura e então nós desenhamos um quadrado no canto superior esquerdo (10 pixels da esquerda para a direita e 10 pixels do topo para baixo). Você deve estar se perguntando: que número é aquele que apareceu após digitar o \code{create\_rectangle}\index{modules!tkinter!create\_rectangle}? Isso é um número de identificação para a forma que nós desenhamos (seja uma linha, um quadrado ou um círculo). Nós falaremos desse número mais tarde.
+No exemplo acima, nós criamos uma tela com 400 pixels de largura, 400 pixels de altura e então nós desenhamos um quadrado no canto superior esquerdo (10 pixels da esquerda para a direita e 10 pixels do topo para baixo). Você deve estar se perguntando: que número é aquele que apareceu após digitar o \code{create\_rectangle}\index{Módulos!tkinter!create\_rectangle}? Isso é um número de identificação para a forma que nós desenhamos (seja uma linha, um quadrado ou um círculo). Nós falaremos desse número mais tarde.
 
 Portanto, os parâmetros passados para o \code{create\_rectangle} são: posição do canto superior esquerdo, posição do canto inferior esquerdo, posição do canto superior direito e posição do canto inferior direito. Para não termos que digitar tudo isso toda vez, vamos nos referir à essas posições como x1, y2 e x2, y2. Nós podemos desenhar um retângulo apenas usando um número maior no x2:
 
@@ -179,7 +179,7 @@ O último retângulo está basicamente dizendo: vá 100 pixels pela tela (a part
 \caption{caixas no tkinter.}\label{fig33}
 \end{figure}
 
-Vamos tentar preencher o canvas com retângulos de diferentes tamanhos. Nós podemos fazer isso usando o módulo \code{random}\index{modules!random}. Primeiro, importe o módulo `random':
+Vamos tentar preencher o canvas com retângulos de diferentes tamanhos. Nós podemos fazer isso usando o módulo \code{random}\index{Módulos!random}. Primeiro, importe o módulo `random':
 
 \begin{listing}
 \begin{verbatim}
@@ -187,7 +187,7 @@ Vamos tentar preencher o canvas com retângulos de diferentes tamanhos. Nós pod
 \end{verbatim}
 \end{listing}
 
-Então em seguida, nós podemos criar uma função que usa um número aleatório para as coordenadas do canto superior e inferior. A função que vamos usar chama \code{randrange}\index{modules!random!randrange}:
+Então em seguida, nós podemos criar uma função que usa um número aleatório para as coordenadas do canto superior e inferior. A função que vamos usar chama \code{randrange}\index{Módulos!random!randrange}:
 
 \begin{listing}
 \begin{verbatim}
@@ -266,7 +266,7 @@ Alguns, talvez todas, as cores funcionarão pelo nome. Mas algumas delas irão r
 \end{verbatim}
 \end{listing}
 
-Que, apesar de tudo, é uma forma bem estranha de criar uma cor. `ffd800' é o que chamamos de hexadecimal\index{hexadecimal colors}, e é outra maneira de representar números. Explicar como funcionam os números hexadecimais nos levaria a escrever mais algumas páginas, então para economizá-las, vamos usar a seguinte função para criar cores em hexadecimal:
+Que, apesar de tudo, é uma forma bem estranha de criar uma cor. `ffd800' é o que chamamos de hexadecimal\index{Cores em Hexadecimal}, e é outra maneira de representar números. Explicar como funcionam os números hexadecimais nos levaria a escrever mais algumas páginas, então para economizá-las, vamos usar a seguinte função para criar cores em hexadecimal:
 
 \begin{listing}
 \begin{verbatim}
@@ -351,7 +351,7 @@ Isso posiciona o canto superior esquerdo do retângulo nas coordenadas 10, 10 (1
 
 \section{Desenhos Ovais}
 
-Apesar de o último comando acima reproduzir um desenho oval, você também pode usar a função \code{create\_oval}\index{modules!tkinter!create\_oval}. Da mesma maneira que desenhar arcos, uma forma oval é desenhada dentro dos limites de um retângulo. Por exemplo, o seguinte código:
+Apesar de o último comando acima reproduzir um desenho oval, você também pode usar a função \code{create\_oval}\index{Módulos!tkinter!create\_oval}. Da mesma maneira que desenhar arcos, uma forma oval é desenhada dentro dos limites de um retângulo. Por exemplo, o seguinte código:
 
 \begin{listing}
 \begin{verbatim}
@@ -403,7 +403,7 @@ Para desenhar um círculo, ao invés de uma forma oval, o retângulo imaginário
 \caption{Um círculo simples.}\label{fig40}
 \end{figure}
 
-\section{Desenhando Poligonos}\index{modules!tkinter!create\_polygon}
+\section{Desenhando Poligonos}\index{Módulos!tkinter!create\_polygon}
 
 Um polígono é uma forma com 3 ou mais lados. Triângulos, quadrados, retângulos, pentágonos, hexágonos etc são todos exemplos de polígonos. Além dessas formas mais comuns, você também pode criar polígonos irregulares. Por exemplo, para desenhar um triângulo, você precisa especificar 3 pares de coordenadas para cada ponto do triângulo (criando o triângulo da figura~\ref{fig41}):
 
@@ -441,7 +441,7 @@ Nós podemos adicionar um polígono irregular, usando o seguinte código: A figu
 
 \section{Desenhando Imagens}
 
-Você pode desenhar uma imagem na tela, usando o \code{tkinter}, primeiramente carregando a imagem e então usando a função \code{create\_image}\index{modules!tkinter!create\_image} do objeto canvas. Isso parece um pouco ilógico, mas funciona assim:
+Você pode desenhar uma imagem na tela, usando o \code{tkinter}, primeiramente carregando a imagem e então usando a função \code{create\_image}\index{Módulos!tkinter!create\_image} do objeto canvas. Isso parece um pouco ilógico, mas funciona assim:
 
 \begin{listing}
 \begin{verbatim}
@@ -454,7 +454,7 @@ Você pode desenhar uma imagem na tela, usando o \code{tkinter}, primeiramente c
 \end{verbatim}
 \end{listing}
 
-Nas linha 1 a 4, nós configuramos a tela da mesma forma que antes. Na linha 5, a imagem é carregada na variável \code{imagem}. É importante que a imagem que você quer carregar esteja no mesmo diretório que você iniciou o terminal do Python. Você pode ver que diretório é esse, importando o módulo \code{os}\index{modules!os} e usando a função \code{getcwd()}:
+Nas linha 1 a 4, nós configuramos a tela da mesma forma que antes. Na linha 5, a imagem é carregada na variável \code{imagem}. É importante que a imagem que você quer carregar esteja no mesmo diretório que você iniciou o terminal do Python. Você pode ver que diretório é esse, importando o módulo \code{os}\index{Módulos!os} e usando a função \code{getcwd()}:
 
 \begin{listing}
 \begin{verbatim}
@@ -486,7 +486,7 @@ Copie sua imagem para esse diretório e então carregue usando a função `Photo
 
 O \code{PhotoImage} pode carregar arquivos com as extensões .gif, .ppm e .pgm. Se você quiser carregar outros tipos de imagem (existem diversas formas diferentes de arquivos de imagem --- por exemplo, as câmeras digitais normalmente usam .jpg), então você precisará usar uma extensão que adiciona esse capacidade ao Python. A ``Python Imaging Library'' (PIL)\footnote{A biblioteca PIL pode ser encontrada em \href{http://www.pythonware.com/products/pil/index.htm}{http://www.pythonware.com/products/pil/index.htm}} habilita todos os tipos de imagem, assim como expandir, encolher e outras formas de manipular imagens. Porém, instalar e usá-la está fora do escopo deste livro.
 
-\section{Animação Básica}\index{modules!tkinter!basic animation}
+\section{Animação Básica}\index{Módulos!tkinter!basic animation}
 
 Até agora, nós vimos como fazer desenhos estáticos --- imagens que não se movem. Que tal uma animação? Animações não são o forte do \code{Tk}, mas você pode fazer o básico. Por exemplo, nós podemos criar um triângulo preenchido e então fazê-lo mover pela tela, usando o seguinte código:
 
@@ -520,7 +520,7 @@ No momento que você pressionar a tecla Enter, após digitar a última linha, o 
 \par
 Da linha 1 até a 5, nós já vimos --- é apenas a configuração básica para exibir a tela --- e na linha 6, nós criamos o triângulo (usando a função \code{create\_polygon}) e na linha 6, você verá o identificador (o número 1) que é retornado pela função. Na linha 8, nós fizemos um simples laço `for', contando de 0 à 59.
 
-O bloco das linhas (9 à 11) do código, é o que faz o triângulo mover. A função \code{move} do objeto canvas, irá mover qualquer objeto desenhado, apenas adicionando os valores das coordenadas x e y. Por exemplo, na linha 8, nós movemos o objeto 1 (o identificador do triângulo), 5 pixels para o lado e 0 pixels para baixo. Se nós quisessemos move-lo de volta, nós usaríamos \code{canvas.move{1, -5, 0}\index{modules!tkinter!move}.
+O bloco das linhas (9 à 11) do código, é o que faz o triângulo mover. A função \code{move} do objeto canvas, irá mover qualquer objeto desenhado, apenas adicionando os valores das coordenadas x e y. Por exemplo, na linha 8, nós movemos o objeto 1 (o identificador do triângulo), 5 pixels para o lado e 0 pixels para baixo. Se nós quisessemos move-lo de volta, nós usaríamos \code{canvas.move{1, -5, 0}\index{Módulos!tkinter!move}.
  
 A função \code{update} do objeto \code{Tk}, atualiza a tela, caso contrário, o tkinter esperaria até o laço terminar para mover o triângulo, o que significa que você não o veria movendo. Finalmente, a linha 11 pede ao Python para "dormir" (sleep) por 1/20 de um segundo (0.05s), antes de continuar. Nós podemos alterar o código para que o triângulo mova pela tela, na diagonal, chamando \code{move(1, 5, 5)}. Primeiro, feche a tela (clicando no X da janela), então tente esse código:
 
@@ -559,7 +559,7 @@ A figura~\ref{fig45} mostra o triângulo descendo pela tela. Mova o triângulo p
 \caption{O triângulo descendo pela tela.}\label{fig45}
 \end{figure}
 
-\section{Reagindo à eventos$\ldots$}\index{modules!tkinter!events}
+\section{Reagindo à eventos$\ldots$}\index{Módulos!tkinter!events}
 
 Nós também podemos fazer o triângulo reagir quando alguém aperta uma tecla, usando o que chamamos de \emph{ligação de eventos}. Eventos são coisas que ocorrem enquanto o programa está rodando, por exemplo quando alguém move o mouse, aperta uma tecla ou fecha uma janela. Você pode configurar o \code{Tk} para monitorar alguns desses eventos e fazer algo quando ocorrerem. Para começar a tratar eventos, nós precisamos iniciar criando uma função. Supondo que queremos que o triângulo mova ao apertarmos a tecla Enter, nós precisamos definir uma função para mover o triângulo:
 
@@ -570,8 +570,8 @@ Nós também podemos fazer o triângulo reagir quando alguém aperta uma tecla, 
 \end{verbatim}
 \end{listing}
 
-The function needs to have a single parameter (event), which is used by Tk to send information to the function about what has happened.  We then tell Tk that this function should be used for a particular event, using the \code{bind\_all}\index{modules!tkinter!bind\_all} function on the canvas. The full code looks like this:
-A função precisa receber um único parâmetro (evento), que será usado pelo \code{Tk} para enviar informações à função sobre o que está acontecendo. Nós então dizemos ao \code{Tk}, que essa função deverá ser usada para um evento em particular, usando a função \code{bind\_all}\index{modules!tkinter!bind\_all}, do canvas. O código completo fica assim:
+The function needs to have a single parameter (event), which is used by Tk to send information to the function about what has happened.  We then tell Tk that this function should be used for a particular event, using the \code{bind\_all}\index{Módulos!tkinter!bind\_all} function on the canvas. The full code looks like this:
+A função precisa receber um único parâmetro (evento), que será usado pelo \code{Tk} para enviar informações à função sobre o que está acontecendo. Nós então dizemos ao \code{Tk}, que essa função deverá ser usada para um evento em particular, usando a função \code{bind\_all}\index{Módulos!tkinter!bind\_all}, do canvas. O código completo fica assim:
 
 \begin{listing}
 \begin{verbatim}
