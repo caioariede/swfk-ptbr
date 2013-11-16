@@ -77,14 +77,14 @@ Andamento do trabalho
 * Capítulo 1 (ch1.tex) **- pendente de revisão**
 * Capítulo 2 (ch2.tex) **- pendente de revisão**
 * Capítulo 3 (ch3.tex) **- pendente de revisão**
-* Capítulo 4 (ch4.tex) **- em andamento**
-* Capítulo 5 (ch5.tex)
-* Capítulo 6 (ch6.tex)
-* Capítulo 7 (ch7.tex)
-* Capítulo 8 (ch8.tex)
-* Capítulo 9 (ch9.tex)
-* Capítulo 10 (ch10.tex)
-* Apêndice A (appendixa.tex)
-* Apêndice B (appendixb.tex)
-* Apêndice C (appendixc.tex)
-* Apêndice D (appendixd.tex)
+* Capítulo 4 (ch4.tex) **- pendente de revisão**
+* Capítulo 5 (ch5.tex) **- pendente de revisão**
+* Capítulo 6 (ch6.tex) **- pendente de revisão**
+* Capítulo 7 (ch7.tex) **- pendente de revisão**
+* Capítulo 8 (ch8.tex) **- pendente de revisão**
+* Capítulo 9 (ch9.tex) **- pendente de revisão**
+* Capítulo 10 (ch10.tex) **- pendente de revisão**
+* Apêndice A (appendixa.tex) **- pendente de revisão**
+* Apêndice B (appendixb.tex) **- pendente de revisão**
+* Apêndice C (appendixc.tex) **- pendente de revisão**
+* Apêndice D (appendixd.tex) **- pendente de revisão**
